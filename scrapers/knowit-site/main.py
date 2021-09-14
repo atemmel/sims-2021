@@ -9,8 +9,8 @@ URL = "https://www.knowit.eu/our-clients/"
 def build_article(element):
     article = dict()
     segregated = element["href"].split("/")
-    article["company-field"] = segregated[2]
-    article["company-name"] = segregated[3]
+    article["company-field"] = segregated[2].replace("-", " ")
+    article["company-name"] = segregated[3].replace("-", " ")
     element = element.find("div", class_="content-block_textblock editorial")
     title_element = element.find("h2", class_="content-block_heading")
     article["title"] = title_element.text
