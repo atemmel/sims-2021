@@ -4,11 +4,13 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://www.knowit.eu/our-clients/"
+BASE_URL = "https://www.knowit.eu"
+URL = BASE_URL + "/our-clients/"
 
 def build_article(element):
     article = dict()
     segregated = element["href"].split("/")
+    article["url"] = BASE_URL + element["href"]
     article["company-field"] = segregated[2].replace("-", " ")
     article["company-name"] = segregated[3].replace("-", " ")
     element = element.find("div", class_="content-block_textblock editorial")
