@@ -54,7 +54,7 @@ def extract_message_from_response(response):
     return [item[item["response_type"]] for item in generic]
 
 def main():
-    auth = read_json_to_dict("./auth.json");
+    auth = read_json_to_dict("./auth.json")
 
     try:
         assistant, response = create_session(auth)
