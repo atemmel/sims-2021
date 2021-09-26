@@ -5,8 +5,10 @@ from ibm_watson import AssistantV2
 from ibm_watson import ApiException
 import json
 
+from requests.models import ContentDecodingError
+
 def read_json_to_dict(string):
-    with open(string) as file:
+    with open(string, "r", encoding="UTF-8") as file:
         return json.loads(file.read())
 
 def send_message(assistant, session_id, config, message):
@@ -53,8 +55,39 @@ def extract_message_from_response(response):
     generic = response["output"]["generic"]
     return [item[item["response_type"]] for item in generic]
 
+def load_articles(config):
+    return read_json_to_dict(config["scraped_articles"])
+    
+def find_article_category(articles, category):
+    foundArticles = []
+    for article in articles:
+        if article["company-field"] == category:
+            foundArticles.append(article)
+    return foundArticles
+
+def replace_entities_in_response(response, articles):
+    message = response["output"]["generic"][0]["text"]
+    category = response["output"]["entities"][0]["value"]
+    articles_in_category = find_article_category(articles,category)
+    selected_articles = articles_in_category[:3]
+    string_of_articletext = ""
+    for article in selected_articles:
+        string_of_articletext += "\n" + article["title"] + "\n" + " (" +  article["url"] + ") \n"
+
+    string_to_replace = "{" + category + "}"
+    return message.replace(string_to_replace, string_of_articletext) 
+
+    
+    
+
+
 def main():
     auth = read_json_to_dict("./auth.json")
+    config = read_json_to_dict("./config.json")
+    articles = load_articles(config)
+   
+    
+
 
     try:
         assistant, response = create_session(auth)
@@ -73,7 +106,12 @@ def main():
                     print("Could not send message:")
                     print(json.dumps(response, indent=2))
                 else:
-                    print(extract_message_from_response(response))
+                    
+                    if len(response["output"]["entities"]) > 0:
+                        print(replace_entities_in_response(response, articles))
+                    else:
+                        print(extract_message_from_response(response))
+
 
             except (KeyboardInterrupt, EOFError):
                 print("\nExiting...")
