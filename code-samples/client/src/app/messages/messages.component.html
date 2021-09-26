@@ -1,0 +1,5 @@
+<div *ngIf="messageService.messages.length">
+  <div *ngFor="let message of messageService.messages">
+    <span>{{message.who}}</span><a target="_blank" [attr.href]="message.url">{{message.text}}</a>
+  </div>
+</div>
