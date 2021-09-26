@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { WebSocketService } from './web-socket.service';
+import { MessagesComponent } from './messages/messages.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private webSocketService: WebSocketService) {}
 
   ngOnInit() {
-    this.webSocketService.listen('my event').subscribe((data) => {
+    this.webSocketService.listen('event').subscribe((data) => {
       console.log(data)
     });
   }
