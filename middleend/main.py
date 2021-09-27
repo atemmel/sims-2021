@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import eventlet
+import socketio
 
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import AssistantV2
@@ -6,6 +8,35 @@ from ibm_watson import ApiException
 import json
 
 from requests.models import ContentDecodingError
+sio = socketio.Server(cors_allowed_origins='*')
+app = socketio.WSGIApp(sio)
+articles, assistant, session_id, auth = None, None, None, None
+
+def do_repl(articles, assistant, session_id, auth):
+    while True:
+        try:
+            message = input(">> ")
+            response = send_message(assistant, session_id, auth, message)
+            if not send_message_succeeded(response):
+                print("Could not send message:")
+                print(json.dumps(response, indent=2))
+            else:
+                
+                if len(response["output"]["entities"]) > 0:
+                    print(replace_entities_in_response(response, articles))
+                else:
+                    print(extract_message_from_response(response))
+
+
+        except (KeyboardInterrupt, EOFError):
+            print("\nExiting...")
+            break
+
+
+
+
+
+
 
 def read_json_to_dict(string):
     with open(string, "r", encoding="UTF-8") as file:
@@ -53,6 +84,7 @@ def send_message_succeeded(response):
 
 def extract_message_from_response(response):
     generic = response["output"]["generic"]
+    print(generic)
     return [item[item["response_type"]] for item in generic]
 
 def load_articles(config):
@@ -77,18 +109,38 @@ def replace_entities_in_response(response, articles):
     string_to_replace = "{" + category + "}"
     return message.replace(string_to_replace, string_of_articletext) 
 
-    
-    
+@sio.on('connect')
+def connect(sid, env):
+    print('connecting ', sid)
 
+@sio.on('disconnect')
+def disconnect(sid):
+    print('disconnect ', sid)
+
+@sio.on('event')
+def message(sid, data):
+    response = send_message(assistant, session_id, auth, data)
+    if not send_message_succeeded(response):
+        print("Could not send message:")
+        print(json.dumps(response, indent=2))
+    else:
+        if len(response["output"]["entities"]) > 0:
+            #Might make a list and store each string in replace_entities depending on what the front gais want.
+            response= replace_entities_in_response(response, articles)
+        else:
+            response = extract_message_from_response(response)
+            
+        sio.emit('event', {'text': response, 'url': ''}, room=sid)
+        print(response)
+    
 
 def main():
+    global articles,assistant, session_id, auth
+    port = 80
     auth = read_json_to_dict("./auth.json")
     config = read_json_to_dict("./config.json")
     articles = load_articles(config)
-   
     
-
-
     try:
         assistant, response = create_session(auth)
         if not create_session_succeeded(response):
@@ -97,25 +149,8 @@ def main():
             return 1
 
         session_id = response["session_id"]
+        eventlet.wsgi.server(eventlet.listen(('', port)), app)
 
-        while True:
-            try:
-                message = input(">> ")
-                response = send_message(assistant, session_id, auth, message)
-                if not send_message_succeeded(response):
-                    print("Could not send message:")
-                    print(json.dumps(response, indent=2))
-                else:
-                    
-                    if len(response["output"]["entities"]) > 0:
-                        print(replace_entities_in_response(response, articles))
-                    else:
-                        print(extract_message_from_response(response))
-
-
-            except (KeyboardInterrupt, EOFError):
-                print("\nExiting...")
-                break
 
         delete_session(assistant, session_id, auth)
     except ApiException as ex:
