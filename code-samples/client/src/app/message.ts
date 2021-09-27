@@ -1,5 +1,8 @@
+import { Article } from './article';
+import { Who } from './who';
+
 export class Message {
-  who: string;
-  url: string;
   text: string;
+  who: Who;
+  articles: any;
 }

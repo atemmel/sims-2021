@@ -20,8 +20,9 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // Called when the user clicks on the send button in app.component.html.
+  // Sends the users input to the server
   sendMessage(data: string) {
-    console.log("Sending message: ", data)
     this.webSocketService.emit('event', data);
   }
 }

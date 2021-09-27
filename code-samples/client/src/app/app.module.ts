@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

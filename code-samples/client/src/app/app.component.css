@@ -1,0 +1,26 @@
+h1 {
+  margin: auto;
+}
+
+.container {
+  width: 400px;
+  margin-top: 50px;
+}
+
+.card {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.bottom {
+  position: relative;
+}
+
+input, button {
+  display: inline-block;
+}
+
+button {
+  position: absolute;
+  top: 0;
+}

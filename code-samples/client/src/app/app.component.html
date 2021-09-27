@@ -1,6 +1,12 @@
-<h1>Chatbot</h1>
+<div class="container">
+  <h2> Chatbot </h2>
+  <div class="card shadow-sm p-2">
+    <app-messages></app-messages>
 
-<input id="message" type="text" placeholder="message" #input>
-<button (click)="sendMessage(input.value)">send</button>
+  </div>
 
-<app-messages></app-messages>
+  <div class="bottom bg-primary">
+    <input id="message" type="text" placeholder="Type something" class="w-75 d-inline-block p-1" #input>
+    <button type="button" class="btn btn-primary w-25 d-inline-block p-1" (click)="sendMessage(input.value)">send</button>
+  </div>
+</div>
