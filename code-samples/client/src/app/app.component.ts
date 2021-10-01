@@ -27,17 +27,16 @@ export class AppComponent implements OnInit {
     // Remove whitespace before and after the input string
     let text = input.value.trim();
 
+    // Clear the input field
+    input.value = "";
+
     // Do nothing if the input field is empty when the user
     // clicks on enter or the send button
     if (text === "") {
-      input.value = "";
       return;
     };
 
     // Send the string to the middleend
     this.webSocketService.emit('event', text);
-
-    // Clear the input field
-    input.value = "";
   }
 }
