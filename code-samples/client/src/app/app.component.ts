@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     // Do nothing if the input field is empty when the user
     // clicks on enter or the send button
     if (text === "") {
-      text = "";
+      input.value = "";
       return;
     };
 
