@@ -22,7 +22,21 @@ export class AppComponent implements OnInit {
 
   // Called when the user clicks on the send button in app.component.html.
   // Sends the users input to the server
-  sendMessage(data: string) {
-    this.webSocketService.emit('event', data);
+  sendMessage(input: any) {
+
+    // Remove whitespace before and after the input string
+    let text = input.value.trim();
+
+    // Clear the input field
+    input.value = "";
+
+    // Do nothing if the input field is empty when the user
+    // clicks on enter or the send button
+    if (text === "") {
+      return;
+    };
+
+    // Send the string to the middleend
+    this.webSocketService.emit('event', text);
   }
 }
