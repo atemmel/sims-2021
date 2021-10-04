@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Automobile",
+        "synonyms": ["Car", "Vehicle", "Cars"],
+        "implies": []
+    },
+	{
+		"name": "Google Analytics",
+		"synonyms": [],
+		"implies": ["Google", "Analytics"]
+	},
+	{
+		"name": "Adobe Analytics",
+		"synonyms": [],
+		"implies": ["Adobe", "Analytics"]
+	},
+	{
+		"name": "Volkswagen",
+		"synonyms": ["VW"],
+		"implies": ["Automobile"]
+	},
+	{
+		"name": "Impact Mapping",
+		"synonyms": ["IM"],
+		"implies": []
+	},
+	{
+		"name": "Phone",
+		"synonyms": ["Telephone", "Mobile"],
+		"implies": []
+	},
+	{
+		"name": "Tele2",
+		"synonyms": [],
+		"implies": ["Phone"]
+	},
+	{
+		"name": "Episerver",
+		"synonyms": [],
+		"implies": ["Backend"]
+	},
+	{
+		"name": "Website",
+		"synonyms": ["Site", "Websites"],
+		"implies": ["Frontend"]
+	},
+	{
+		"name": "Backend",
+		"synonyms": ["Server"],
+		"implies": []
+	},
+	{
+		"name": "Frontend",
+		"synonyms": [],
+		"implies": ["UX"]
+	},
+	{
+		"name": "Website",
+		"synonyms": ["Site"],
+		"implies": ["Frontend"]
+	},
+	{
+		"name": "Image",
+		"synonyms": ["Image", "Images", "Picture", "Pictures"],
+		"implies": ["Media"]
+	},
+	{
+		"name": "App",
+		"synonyms": ["Application"],
+		"implies": ["Frontend"]
+	},
+	{
+		"name": "Photography",
+		"synonyms": ["Photo"],
+		"implies": ["Image"]
+	},
+	{
+		"name": "Television",
+		"synonyms": ["TV", "Video"],
+		"implies": ["Media"]
+	},
+	{
+		"name": "Media",
+		"synonyms": [],
+		"implies": []
+	},
+	{
+		"name": "IT",
+		"synonyms": [],
+		"implies": []
+	},
+	{
+		"name": "User Experience",
+		"synonyms": ["UX", "Ease of use"],
+		"implies": []
+	},
+	{
+		"name": "Intranet",
+		"synonyms": [],
+		"implies": []
+	}
+]
