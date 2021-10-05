@@ -1,0 +1,821 @@
+
+[
+	{
+		"visit-adress":{
+			"country":"Norway",
+			"street": "Kystveien 2",
+			"city": "Arendal"
+			
+		},
+
+		"contact-info":{
+		"phone": "+4791863065",
+		"mail": "secure@knowit.no",
+		"fax": "+4722836171"
+		},
+
+		"post-adress":{
+			"company-name": "Knowit",
+			"street": "Kystveien 2",
+			"zip": "4841",
+			"city": "Arendal"
+		}
+
+	},
+
+
+	{
+		"visit-adress":{
+			"country":"Norway",
+			"street": "Nøstegaten 58",
+			"city": "Bergen"
+		},
+
+		"contact-info":{
+		"phone": "02486",
+		"mail": "",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Postboks 453 Sentrum",
+			"zip": "5825",
+			"city": "Bergen"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Maskinistgatan 8",
+			"city": "Borlänge"
+		},
+
+		"contact-info":{
+		"phone": "+46243214440",
+		"mail": "borlange@knowit.se",
+		"fax": "+46243793070"
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Maskinistgatan 8",
+			"zip": "78122",
+			"city": "Borlänge"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"company-name":"Germany",
+			"street": "Flughafenallee 26 / 6. OG",
+			"city": "Bremen"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "Dirk.Radder@knowit.de",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Dataunit GmbH",
+			"street": "Flughafenallee 26 / 6. OG",
+			"zip": "28199",
+			"city": "Bremen"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Poland",
+			"street": "Unii Lubelskiej 4c",
+			"city": "Bydgoszcz"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Unii Lubelskiej 4c",
+			"zip": "PL-85-059",
+			"city": "Bydgoszcz"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Vågskrivargatan 5",
+			"city": "Gävle"
+		},
+
+		"contact-info":{
+		"phone": "+4626510800",
+		"mail": "gavle@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Gävleborg AB",
+			"street": "Vågskrivargatan 5",
+			"zip": "80320",
+			"city": "Gävle"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Östra Hamngatan 16",
+			"city": "Gothenburg"
+		},
+
+		"contact-info":{
+		"phone": "+46 31 711 27 30",
+		"mail": "info@knowit.se",
+		"fax": "+46 31 700 87 30"
+		},
+
+		"post-adress":{
+			"company-name": "Knowit",
+			"street": "Östra Hamngatan 16",
+			"zip": "41109",
+			"city": "Gothenburg"
+		}
+
+	},
+
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Kungsgatan 4",
+			"city": "Helsingborg"
+		},
+
+		"contact-info":{
+		"phone": "+46406302400",
+		"mail": "info@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Kungsgatan 4",
+			"zip": "25221",
+			"city": "Helsingborg"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Finland",
+			"street": "Tehtaankatu 27-29, 4.krs.",
+			"city": "Helsinki"
+		},
+
+		"contact-info":{
+		"phone": "040 3400 600",
+		"mail": "sales@knowit.fi",
+		"fax": "040 3400 601"
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Tehtaankatu 27-29 D",
+			"zip": "00150",
+			"city": "Helsinki"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Trädgårdsgatan 37",
+			"city": "Jönköping"
+		},
+
+		"contact-info":{
+		"phone": "+4687006600",
+		"mail": "jonkoping@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Jönköping AB",
+			"street": "Trädgårdsgatan 37",
+			"zip": "55316",
+			"city": "Jönköping"
+		}
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Campus Gräsvik 1",
+			"city": "Karlskrona"
+		},
+
+		"contact-info":{
+		"phone": "+46 455 314 000",
+		"mail": "info@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Campus Gräsvik 1",
+			"zip": "37141",
+			"city": "Karlskrona"
+		}
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Tullhusgatan 1B",
+			"city": "Karlstad"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "karlstad@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Karlstad AB",
+			"street": "Box 3383",
+			"zip": "10368",
+			"city": "Stockholm"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Vestre Strandgate 27-29",
+			"city": "Kristiansand"
+		},
+
+		"contact-info":{
+		"phone": "+47 900 58 766",
+		"mail": "Erik.Mong@knowit.no",
+		"fax": "+4722836171"
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Sør AS",
+			"street": "Vestre Strandgate 27-29",
+			"zip": "4611",
+			"city": "Kristiansand"
+		}
+
+	},
+
+	
+	{
+		"visit-adress":{
+			"country":"Denmark",
+			"street": "Pilestræde 52 A",
+			"city": "Copenhagen"
+		},
+
+		"contact-info":{
+		"phone": "+4521122121",
+		"mail": "jim.nielsen@knowit.dk",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Pilestræde 52 A",
+			"zip": "1112",
+			"city": "København K"
+		}
+
+	},
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Klostergatan 13",
+			"city": "Linköping"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "linkoping@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Klostergatan 13",
+			"zip": "58223",
+			"city": "Linköping"
+		}
+
+	},
+
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Klostergatan 13",
+			"city": "Linköping"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "linkoping@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Klostergatan 13",
+			"zip": "58223",
+			"city": "Linköping"
+		}
+
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Poland",
+			"street": "Składowa 35 (fourth floor)",
+			"city": "Łódź"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Składowa 35",
+			"zip": "PL-90-127",
+			"city": "Łódź"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Sandviksgatan 60",
+			"city": "Luleå"
+		},
+
+		"contact-info":{
+		"phone": "+4692013232",
+		"mail": "lulea@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Sandviksgatan 60",
+			"zip": "97233",
+			"city": "Luleå"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Mobilvägen 10",
+			"city": "Lund"
+		},
+
+		"contact-info":{
+		"phone": "+46 406 919 600",
+		"mail": "info@knowit.se",
+		"fax": "+46 406 919 696"
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Dockplatsen 16",
+			"zip": "21119",
+			"city": "Malmö"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Stortorget 9",
+			"city": "Malmö"
+		},
+
+		"contact-info":{
+		"phone": "+46406302400",
+		"mail": "info@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit",
+			"street": "Stortorget 9",
+			"zip": "21122",
+			"city": "Malmö"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Norway",
+			"street": "Lakkegata 53",
+			"city": "Oslo"
+		},
+
+		"contact-info":{
+		"phone": "02486",
+		"mail": "post@knowit.no",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Postboks 9417 Grønland",
+			"zip": "0135",
+			"city": "Oslo"
+		}
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Norway",
+			"street": "Drammensveien 130B – inngang B12",
+			"city": "Oslo"
+		},
+
+		"contact-info":{
+		"phone": "02486",
+		"mail": "post@knowit.no",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Drammensveien 130",
+			"zip": "0277",
+			"city": "Oslo"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Norway",
+			"street": "Løkkeveien 99",
+			"city": "Stavanger"
+		},
+
+		"contact-info":{
+		"phone": "+4798257824",
+		"mail": "kundesenter@knowit.no",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Stavanger AS",
+			"street": "Løkkeveien 99",
+			"zip": "4008",
+			"city": "Stavanger"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Klarabergsgatan 60",
+			"city": "Stockholm"
+		},
+
+		"contact-info":{
+		"phone": "+4687006600",
+		"mail": "info@knowit.se",
+		"fax": "+4687006610"
+		},
+
+		"post-adress":{
+			"company-name": "Knowit",
+			"street": "Box 3383",
+			"zip": "10368",
+			"city": "Stockholm"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Klarabergsgatan 60",
+			"city": "Stockholm"
+		},
+
+		"contact-info":{
+		"phone": "+4687006600",
+		"mail": "info@knowit.se",
+		"fax": "+4687006610"
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Dataunit",
+			"street": "Box 1087",
+			"zip": "10139",
+			"city": "Stockholm"
+		}
+
+	},
+
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Isafjordsgatan 1",
+			"city": "Stockholm"
+		},
+
+		"contact-info":{
+		"phone": "+46 8 726 75 00",
+		"mail": "info@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Isafjordsgatan 1",
+			"zip": "16440",
+			"city": "Kista"
+		}
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Stuvarvägen 25",
+			"city": "Sundsvall"
+		},
+
+		"contact-info":{
+		"phone": "+4660161680",
+		"mail": "sundsvall@knowit.se",
+		"fax": "+4660173665"
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Stuvarvägen 25",
+			"zip": "85229",
+			"city": "Sundsvall"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Storgatan 73",
+			"city": "Sundsvall"
+		},
+
+		"contact-info":{
+		"phone": "+46 727 33 55 81",
+		"mail": "invativa@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Invativa",
+			"street": "Storgatan 73",
+			"zip": "85230",
+			"city": "Sundsvall"
+		}
+		
+	},
+
+	{
+		"visit-adress":{
+			"country":"Finland",
+			"street": "Pakkahuoneenaukio 2 A",
+			"city": "Tammerfors"
+		},
+
+		"contact-info":{
+		"phone": "+358 10 4364 000",
+		"mail": "sales@knowit.fi",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "P.O. Box 13",
+			"zip": "33201",
+			"city": "Tampere"
+		}
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Norway",
+			"street": "Professor Brochs gate 8A",
+			"city": "Trondheim"
+		},
+
+		"contact-info":{
+		"phone": "+4790783674",
+		"mail": "klaus.stafto@knowit.no",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Objectnet AS",
+			"street": "Professor Brochs gate 8A",
+			"zip": "7030",
+			"city": "Trondheim"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Västra Norrlandsgatan 29",
+			"city": "Umeå"
+		},
+
+		"contact-info":{
+		"phone": "+4690124200",
+		"mail": "umea@knowit.se",
+		"fax": "+4690125740"
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Västra Norrlandsgatan 29",
+			"zip": "90329",
+			"city": "Umeå"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"",
+			"street": "Fyristorg 6",
+			"city": "Uppsala"
+		},
+
+		"contact-info":{
+		"phone": "+46184721000",
+		"mail": "Magnus.Tauvon@knowit.se",
+		"fax": "+46184721001"
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Uppsala AB",
+			"street": "Fyristorg 6",
+			"zip": "75310",
+			"city": "Uppsala"
+		}
+
+	},
+
+	
+	{
+		"visit-adress":{
+			"country":"Poland",
+			"street": "Hrubieszowska 2",
+			"city": "Warszawa"
+		},
+
+		"contact-info":{
+		"phone": "",
+		"mail": "",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Hrubieszowska 2",
+			"zip": "PL-01-209",
+			"city": "Warszawa"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Finland",
+			"street": "Aurakatu 14 C",
+			"city": "Åbo"
+		},
+
+		"contact-info":{
+		"phone": "+358 10 4364 000",
+		"mail": "sales@knowit.fi",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Aurakatu 14 C",
+			"zip": "20100",
+			"city": "Turku"
+		}
+
+	},
+
+	{
+		"visit-adress":{
+			"country":"Denmark",
+			"street": "Vesterbro Torv 3, 4. sal",
+			"city": "Aarhus"
+		},
+
+		"contact-info":{
+		"phone": "+4522498329",
+		"mail": "roar.nissen@knowit.dk",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "",
+			"street": "Vesterbro Torv 3, 4. sal",
+			"zip": "8000",
+			"city": "Aarhus C"
+		}
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Rudbecksgatan 7",
+			"city": "Örebro"
+		},
+
+		"contact-info":{
+		"phone": "+46702368692",
+		"mail": "orebro@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Örebro AB",
+			"street": "Rudbecksgatan 7",
+			"zip": "70211",
+			"city": "Örebro"
+		}
+
+	},
+	
+	{
+		"visit-adress":{
+			"country":"Sweden",
+			"street": "Biblioteksgatan 6A",
+			"city": "Östersund"
+		},
+
+		"contact-info":{
+		"phone": "+46 760 49 74 56",
+		"mail": "invativa@knowit.se",
+		"fax": ""
+		},
+
+		"post-adress":{
+			"company-name": "Knowit Invativa",
+			"street": "Biblioteksgatan 6A",
+			"zip": "83130",
+			"city": "Östersund"
+		}
+
+	}
+
+
+
+	
+
+]
