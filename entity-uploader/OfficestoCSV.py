@@ -3,7 +3,7 @@ import json
 cities = []
 offices = {}
 
-with open("offices.json", "r", encoding="UTF-8") as file:
+with open("../datasets/offices.json", "r", encoding="UTF-8") as file:
    offices = json.loads(file.read())
 
 with open("offices.csv", "w", encoding="UTF-8", newline='') as file:
