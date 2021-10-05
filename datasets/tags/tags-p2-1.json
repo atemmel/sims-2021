@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Social media",
+        "synonyms": ["Socials", "Facebook", "Instagram"],
+        "implies": []
+    },
+    {
+        "name": "Interaction design",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Health",
+        "synonyms": ["Healthcare"],
+        "implies": []
+    },
+    {
+        "name": "Mental health",
+        "synonyms": [],
+        "implies": ["Health"]
+    },
+    {
+        "name": "AI",
+        "synonyms": ["Artificial Intelligence"],
+        "implies": []
+    },
+    {
+        "name": "Education",
+        "synonyms": ["Learning", "Educations"],
+        "implies": []
+    },
+    {
+        "name": "User Interface",
+        "synonyms": ["UI"],
+        "implies": []
+    },
+    {
+        "name": "Machine Learning",
+        "synonyms": ["ML"],
+        "implies": ["AI"]
+    },
+    {
+        "name": "CMS",
+        "synonyms": ["Content Management System"],
+        "implies": []
+    },
+    {
+        "name": "Cloud",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Azure",
+        "synonyms": ["Microsoft Azure"],
+        "implies": ["Cloud"]
+    },
+    {
+        "name": "Web service",
+        "synonyms": ["Web services"],
+        "implies": []
+    },
+    {
+        "name": "E-commerce",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "B2B",
+        "synonyms": ["Business-to-Business"],
+        "implies": ["E-commerce"]
+    },
+    {
+        "name": "B2C",
+        "synonyms": ["Business-to-Customer"],
+        "implies": ["E-commerce"]
+    },
+    {
+        "name": "E-service",
+        "synonyms": ["E-services"],
+        "implies": []
+    },
+    {
+        "name": "Digitalization",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Google Cloud",
+        "synonyms": ["GCP"],
+        "implies": ["Cloud"]
+    },
+    {
+        "name": "Pattern",
+        "synonyms": ["Patterns"],
+        "implies": ["Machine Learning"]
+    },
+    {
+        "name": "Chatbot",
+        "synonyms": ["Chatbots", "Bot"],
+        "implies": ["AI"]
+    },
+    {
+        "name": "Award",
+        "synonyms": ["Awards"],
+        "implies": []
+    }
+]
