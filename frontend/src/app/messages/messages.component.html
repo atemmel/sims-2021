@@ -1,0 +1,19 @@
+<div *ngIf="messageService.messages.length">
+  <div *ngFor="let message of messageService.messages">
+
+    <!-- Checks if the message is from the customer, who.ts -->
+    <div *ngIf="message.who === Who.Customer">
+      <b>You: </b>{{message.text}}
+    </div>
+
+    <!-- Checks if the message is from the bot, who.ts -->
+    <div *ngIf="message.who === Who.Bot">
+      <b>Bot: </b>{{message.text}}
+
+      <!-- If the bot has suggestions for articles it goes through them here -->
+      <div *ngFor="let article of message.articles">
+        <a [attr.href]="article.url" target="_blank">{{article.title}}</a>
+      </div>
+    </div>
+  </div>
+</div>
