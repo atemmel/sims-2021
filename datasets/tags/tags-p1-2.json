@@ -98,5 +98,10 @@
 		"name": "Intranet",
 		"synonyms": [],
 		"implies": []
+	},
+	{
+		"name": "Analytics",
+		"synonyms": [],
+		"implies": []
 	}
 ]

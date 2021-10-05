@@ -1,0 +1,28 @@
+[
+	{
+		"name": "Internet of Things",
+		"synonyms": [
+			"IoT"
+		],
+		"implies": []
+	},
+	{
+		"name": "Machine Learning",
+		"synonyms": [
+			"ML"
+		],
+		"implies": [
+			"Ai"
+		]
+	},
+	{
+		"name": "Neural Network",
+		"synonyms": [
+			"Neural networks"
+		],
+		"implies": [
+			"Machine Learning",
+			"Ai"
+		]
+	}
+]

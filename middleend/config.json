@@ -1,3 +1,4 @@
 {
 	"scraped_articles": "../scrapers/knowit-site/knowit-site-se-translated-to-en.json"
+	"port": 80
 }

@@ -1,24 +1,26 @@
 #!/usr/bin/env python
+
 import eventlet
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import ApiException, AssistantV2
 import json
 import socketio
-from threading import Lock
 from time import sleep
+
+import common
+from backend_connection import BackendConnection
 
 sio = socketio.Server(cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
-articles, assistant, auth = None, None, None
-clients_session = {}
-clients_lock = Lock()
+articles = None
+backend_connection = None
 
 def do_repl(articles, assistant, session_id, auth):
     while True:
         try:
             message = input(">> ")
-            response = send_message(assistant, session_id, auth, message)
-            if not send_message_succeeded(response):
+            response = backend_connection.send_message(assistant, session_id, auth, message)
+            if not backend_connection.send_message_succeeded(response):
                 print("Could not send message:")
                 print(json.dumps(response, indent=2))
             else:
@@ -33,68 +35,6 @@ def do_repl(articles, assistant, session_id, auth):
             print("\nExiting...")
             break
 
-def connect_client(auth, assistant, client):
-    response = create_session(auth, assistant)
-    if not create_session_succeeded(response):
-        return False
-    clients_lock.acquire()
-    clients_session[client] = response["session_id"]
-    clients_lock.release()
-    return True
-
-def disconnect_client(auth, assistant, client):
-    clients_lock.acquire()
-    delete_session(assistant, clients_session[client], auth)
-    del clients_session[client]
-    clients_lock.release()
-
-def read_json_to_dict(string):
-    with open(string, "r", encoding="UTF-8") as file:
-        return json.loads(file.read())
-
-def send_message(assistant, session_id, config, message):
-    print("Sending message:", message)
-    response = assistant.message(
-        assistant_id = config["assistant_id"],
-        session_id = session_id,
-        input = {
-            'message_type': 'text',
-            'text': message,
-        }
-    ).get_result()
-
-    return response
-
-def create_assistant(auth):
-    authenticator = IAMAuthenticator(auth["authenticator"])
-    assistant = AssistantV2(
-        version='2021-06-14',
-        authenticator=authenticator
-    )
-
-    assistant.set_service_url(auth["service_url"])
-    return assistant
-
-
-def create_session(auth, assistant):
-    response = assistant.create_session(
-        assistant_id = auth["assistant_id"]
-    ).get_result()
-
-    return response
-
-def delete_session(assistant, session_id, auth):
-    assistant.delete_session(
-        assistant_id = auth["assistant_id"],
-        session_id = session_id,
-    )
-
-def create_session_succeeded(response):
-    return "session_id" in response.keys()
-
-def send_message_succeeded(response):
-    return "output" in response.keys()
-
 def extract_message_from_response(response):
     generic = response["output"]["generic"]
     print(generic)
@@ -106,7 +46,7 @@ def extract_message_from_response(response):
     return res
 
 def load_articles(config):
-    return read_json_to_dict(config["scraped_articles"])
+    return common.read_json_to_dict(config["scraped_articles"])
     
 def find_article_category(articles, category):
     foundArticles = []
@@ -154,22 +94,22 @@ def get_articles_and_urls(response, articles):
 def connect(sid, _):
     print('connecting', sid)
     # Returns true/false, should perhaps be handled(?)
-    connect_client(auth, assistant, sid)
+    backend_connection.connect_client(sid)
 
 @sio.on('disconnect')
 def disconnect(sid):
     print('disconnect', sid)
-    disconnect_client(auth, assistant, sid)
+    backend_connection.disconnect_client(sid)
 
 @sio.on('event')
 def message(sid, data):
-    clients_lock.acquire()
-    session_id = clients_session[sid]
-    clients_lock.release()
+    backend_connection.clients_lock.acquire()
+    session_id = backend_connection.clients_session[sid]
+    backend_connection.clients_lock.release()
 
-    response = send_message(assistant, session_id, auth, data)
+    response = backend_connection.send_message(data, session_id)
     print(response)
-    if not send_message_succeeded(response):
+    if not backend_connection.send_message_succeeded(response):
         print("Could not send message:")
         print(json.dumps(response, indent=2))
     else:
@@ -184,20 +124,17 @@ def message(sid, data):
 
 
 def main():
-    global articles, assistant, auth
-    port = 80
-    auth = read_json_to_dict("./auth.json")
-    config = read_json_to_dict("./config.json")
+    global articles, backend_connection
+    config = common.read_json_to_dict("./config.json")
     articles = load_articles(config)
     
-    assistant = create_assistant(auth)
+    backend_connection = BackendConnection("./auth.json")
     try:
-        eventlet.wsgi.server(eventlet.listen(('', port)), app)
+        eventlet.wsgi.server(eventlet.listen(('', config["port"])), app)
 
         # Cleanup
         sleep(1)
-        for session in clients_session:
-            delete_session(assistant, session, auth)
+        backend_connection.clean_up_all_sessions()
     except ApiException as ex:
         print("Method failed with status code", str(ex.code) , ":" , ex.message)
 
