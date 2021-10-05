@@ -1,9 +1,14 @@
 [
     {
         "name": "Automobile",
-        "synonyms": ["Car", "Vehicle", "Cars"],
-        "implies": []
+        "synonyms": ["Car", "Cars"],
+        "implies": ["Vehicle"]
     },
+	{
+		"name": "Vehicle",
+		"synonyms": "Vehicles",
+		"implies": []
+	},
 	{
 		"name": "Google Analytics",
 		"synonyms": [],

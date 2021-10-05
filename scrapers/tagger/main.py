@@ -14,22 +14,40 @@ def load_json(path):
 def select_article_contents(soup):
     return soup.find_all("div", class_="content-block_content")
 
+def index_word_within_word(small, big):
+    index = big.find(small)
+    if index == -1:
+        return -1
+    left_index = index - 1
+    right_index = index + len(small)
+    if (left_index > 0 and not big[left_index].isspace()) or (right_index < len(big) - 1 and not big[right_index].isspace()):
+        return -1
+    return index
+
+def location_str(string, index):
+    delta = 16
+    min_cutoff = 0 if index - delta < 0 else index - delta
+    max_cutoff = TRANSLATOR_MAX_STRING_SIZE - 1 if index + delta >= TRANSLATOR_MAX_STRING_SIZE else index + delta
+    return string[min_cutoff:max_cutoff]
+
 def tags_of_string(string, tags):
     string = string.upper()
     string = string.replace("\n", " ").replace("\t", " ")
-    strings = string.split(" ")
     found_tags = []
-    for string in strings:
-        for tag in tags:
-            if tag["name"].upper() == string:
-                print(tag["name"], "found")
+    for tag in tags:
+        index = index_word_within_word(tag["name"].upper(), string)
+        if index != -1:
+            print(tag["name"], "found")
+            print(location_str(string, index))
+            found_tags.append(tag["name"])
+            continue
+        for synonym in tag["synonyms"]:
+            index = index_word_within_word(synonym.upper(), string)
+            if index != -1:
+                print(synonym, "found")
+                print(location_str(string, index))
                 found_tags.append(tag["name"])
-                continue
-            for synonym in tag["synonyms"]:
-                if synonym.upper() == string:
-                    print(synonym, "found")
-                    found_tags.append(tag["name"])
-                    break
+                break
     return list(set(found_tags))
 
 articles = load_json("../../datasets/knowit-site-se-translated-to-en.json")

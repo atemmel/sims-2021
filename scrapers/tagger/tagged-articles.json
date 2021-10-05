@@ -34,8 +34,8 @@
         "company-name": "svp worldwide",
         "content": "Thanks to connected functions, the sewing machine became a sales success.",
         "tags": [
-            "App",
-            "Phone"
+            "Phone",
+            "App"
         ],
         "title": "The world's most advanced sewing machine",
         "url": "https://www.knowit.se/kunder/industri/svp-worldwide/varldens-mest-avancerade-symaskin/"
@@ -45,8 +45,7 @@
         "company-name": "husqvarna",
         "content": "To ensure a successful project, Husqvarna chose to turn to us. We developed the complete IT system with both back-end and front-end components.",
         "tags": [
-            "App",
-            "IT"
+            "App"
         ],
         "title": "The making of IoT – Automower® Connect",
         "url": "https://www.knowit.se/kunder/industri/husqvarna/the-making-of-iot-automower-connect/"
@@ -55,9 +54,7 @@
         "company-field": "Public sector",
         "company-name": "flens kommun",
         "content": "The municipality of Flen is preparing for efficiency and better service for its citizens by moving its IT systems to the cloud and building new e-services. The entire infrastructure must be migrated and an important enabler for this is the so-called directory service, which controls the management of identities and permissions to services and functions.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "An inclusive municipality",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/flens-kommun/en-inkluderande-kommun/"
     },
@@ -66,8 +63,7 @@
         "company-name": "vrk",
         "content": "Finland's public sector is becoming increasingly accessible. An equally fresh and innovative example is Service Locations, an app that guides all kinds of community service.",
         "tags": [
-            "App",
-            "IT"
+            "App"
         ],
         "title": "AR guides to community service",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/vrk/ar-guidar-till-samhallsservice/"
@@ -77,8 +73,7 @@
         "company-name": "electricity",
         "content": "Together with the city of Gothenburg, among others, we are developing the project ElectriCity - an exciting collaboration where research and society develop new solutions for tomorrow's sustainable public transport.",
         "tags": [
-            "Automobile",
-            "IT"
+            "Automobile"
         ],
         "title": "A journey to the public transport of the future",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/electricity/en-resa-till-framtidens-kollektivtrafik/"
@@ -88,8 +83,7 @@
         "company-name": "sida",
         "content": "Openaid.se is the website that visualizes and presents open data about Swedish development assistance. Here is data that shows when, to whom and for what purpose Swedish development assistance funds were paid out, and what the results were.",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "Open data on Swedish development assistance",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/sida/oppna-data-om-det-svenska-bistandet/"
@@ -98,9 +92,7 @@
         "company-field": "Manufacturing industry",
         "company-name": "hiab",
         "content": "HIAB chose Cybercom (now Knowit) as a strategic connectivity partner in the creation of a connectivity roadmap.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "HIAB - connected cranes",
         "url": "https://www.knowit.se/kunder/industri/hiab/hiab-uppkopplade-kranar/"
     },
@@ -120,8 +112,8 @@
         "content": "Play with the idea. It's time to go home and you order a car for the office, step in and sink into an armchair. Once there, you get out and the car drives away, no garage is needed and you do not have to think about finding a parking space.",
         "tags": [
             "App",
-            "Automobile",
-            "IT"
+            "Vehicle",
+            "Automobile"
         ],
         "title": "Technology for self-driving cars",
         "url": "https://www.knowit.se/kunder/industri/sjalvkorande-bilar/teknik-for-sjalvkorande-bilar/"
@@ -132,6 +124,7 @@
         "content": "By staffing projects with different competencies and experiences from different geographical areas, we can offer a high delivery quality at a cheaper cost, increase the understanding of different cultures and enrich ourselves both as companies and people.",
         "tags": [
             "App",
+            "Vehicle",
             "IT"
         ],
         "title": "We follow the customer out into the world - ASSA ABLOY",
@@ -141,10 +134,7 @@
         "company-field": "Public sector",
         "company-name": "sida",
         "content": "All of us who live and work in Sweden are involved and contribute to Swedish development assistance. It is our joint investment in a globally sustainable development. Sida's new website explains the assistance in such a way that everyone can take it in and feel involved.",
-        "tags": [
-            "Website",
-            "IT"
-        ],
+        "tags": [],
         "title": "Sida.se - a website for our joint assistance",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/sida/sida.se-en-webb-for-vart-gemensamma-bistand/"
     },
@@ -153,8 +143,7 @@
         "company-name": "byggkoncern polen",
         "content": "An international construction group in Poland is testing smart helmets to increase safety on construction sites. The helmet has been developed in collaboration with Cybercom (now Knowit) and Intel.",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "Attached helmet protects construction workers",
         "url": "https://www.knowit.se/kunder/industri/byggkoncern-polen/uppkopplad-hjalm-skyddar-byggarbetare/"
@@ -171,9 +160,7 @@
         "company-field": "Life science & medical",
         "company-name": "virtamed",
         "content": "Wouldn't it be great if surgeons could practice surgery to develop their skills and minimize the risk of mistakes? Computer simulation enables just this by creating virtual training scenarios. It gives both prospective and experienced surgeons the opportunity to practice arthroscopic surgery and many other procedures in a risk-free environment before starting to treat real patients.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Safer operations with connected simulators",
         "url": "https://www.knowit.se/kunder/halsa/virtamed/sakrare-operationer-med-uppkopplade-simulatorer/"
     },
@@ -189,9 +176,7 @@
         "company-field": "Public sector",
         "company-name": "myndighetssverige",
         "content": "Ink on paper, isn't it a bit outdated? Technology that enables digital signatures exists and legislation does not stand in the way either. Nevertheless, countless agreements are signed by hand with all that entails with time- and resource-intensive printouts, mailings, transports and paper archives.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Digital signature streamlines Government Sweden",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/myndighetssverige/digital-signatur-effektiviserar-myndighetssverige/"
     },
@@ -199,9 +184,7 @@
         "company-field": "Life science & medical",
         "company-name": "iot",
         "content": "Water is our most important food where access and quality are crucial for a society to function. To ensure a good quality of our drinking water, regular inspections are carried out, which are followed up through evaluations.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "IoT ensures water quality in Poland",
         "url": "https://www.knowit.se/kunder/halsa/iot/iot-sakrar-vattenkvalitet-i-polen/"
     },
@@ -209,9 +192,7 @@
         "company-field": "Manufacturing industry",
         "company-name": "troax",
         "content": "Troax wanted to make it easier for its customers to order custom machine protection solutions, and turned to us for help with this.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Troax - Web Based Product Configurator (Drawit)",
         "url": "https://www.knowit.se/kunder/industri/troax/troax-webbaserad-produktkonfigurator/"
     },
@@ -220,8 +201,7 @@
         "company-name": "sportfiskarna",
         "content": "The non-profit organization Sportfiskarna has together with Knowit developed an IT strategy that supports the business' strong growth. The role, priorities and processes of the IT department have become clearer and new bridges have been built between departments to create strong synergies within the organization.",
         "tags": [
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "Anglers get a new IT strategy",
         "url": "https://www.knowit.se/kunder/halsa/sportfiskarna/sportfiskarna-far-en-ny-it-strategi/"
@@ -242,8 +222,7 @@
         "content": "The EU concerns everyone - but is perceived by many as cumbersome and a little difficult to access. What is the EU really doing? How is Sweden affected by the EU? What is the money used for? The website for the Swedish Parliament's EU information gives you the answers - in a playful way.",
         "tags": [
             "Website",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "EU information with both theory and practice",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/sveriges-riksdag/riksdagens-eu-information/"
@@ -253,8 +232,7 @@
         "company-name": "roxtec",
         "content": "We guide the global industrial company Roxtec in its digital transformation. A work that supports a changed organization, a more efficient sales process and opportunities to reach new customers. This is how we have jointly transformed growth strategy into reality with the help of increased digitalisation and a strong customer focus.",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "We are digitizing the industrial company Roxtec",
         "url": "https://www.knowit.se/kunder/industri/roxtec/roxtec/"
@@ -264,7 +242,7 @@
         "company-name": "stockholms stad",
         "content": "We helped the city of Stockholm to develop a chat bot that guides young people in high school elections. Say hello to Gymnasieboten!",
         "tags": [
-            "Automobile",
+            "Vehicle",
             "IT"
         ],
         "title": "Gymnasieboten - Stockholm city",
@@ -275,9 +253,9 @@
         "company-name": "lansforsakringar",
         "content": "When Länsförsäkringar was to launch a new intranet for 23 federal companies, the assignment went to us. With functions that facilitate employees' daily work and quickly let them find what they are looking for, the new County contributed both to higher efficiency and a better user experience.",
         "tags": [
-            "Episerver",
+            "User Experience",
             "Intranet",
-            "IT"
+            "Episerver"
         ],
         "title": "The county - an intranet that streamlines",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/lansforsakringar/lanet/"
@@ -287,10 +265,6 @@
         "company-name": "stockholms stad",
         "content": "Gold in the Swedish Design Prize and the award \"Heritage in Motion Award 2017\" for best website and digital content - discover Stockholmskällan's new website.",
         "tags": [
-            "IT",
-            "Television",
-            "Website",
-            "App",
             "Image"
         ],
         "title": "Stockholmskällan dresses Stockholm's history in a new suit",
@@ -311,9 +285,7 @@
         "company-name": "stockholms stad",
         "content": "Since 2005, we are a proud digital partner for the city of Stockholm. This means both a fun and extensive assignment, which among other things resulted in the award Best Website of the Year 2015.",
         "tags": [
-            "Website",
-            "Intranet",
-            "IT"
+            "Intranet"
         ],
         "title": "A digital Stockholm for everyone",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/stockholms-stad/stockholms-stad/"
@@ -323,8 +295,7 @@
         "company-name": "anicura",
         "content": "We help AniCura Group with digital presence to increase awareness of AniCura and their services in Sweden and Europe. We created a new external website - developed with the user in focus.",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "AniCura - together for the benefit of the animals",
         "url": "https://www.knowit.se/kunder/handel-tjanster/anicura/anicura---tillsammans-for-djurens-basta/"
@@ -334,8 +305,7 @@
         "company-name": "internetstiftelsen",
         "content": "We were commissioned to produce the film about the Internet Foundation. The one who in the simplest way possible would explain the full breadth of the business and reflect the brand.",
         "tags": [
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "The film about the Internet Foundation",
         "url": "https://www.knowit.se/kunder/handel-tjanster/internetstiftelsen/filmen-om-internetstiftelsen/"
@@ -355,8 +325,7 @@
         "company-name": "swims",
         "content": "With its new global e-commerce, SWIMS has gained a home that is in harmony with the technologically advanced and aesthetically strong brand.",
         "tags": [
-            "Episerver",
-            "IT"
+            "Episerver"
         ],
         "title": "Global e-commerce for SWIMS",
         "url": "https://www.knowit.se/kunder/handel-tjanster/swims/swims/"
@@ -366,9 +335,8 @@
         "company-name": "svt",
         "content": "At a time when linear TV viewing is declining, we created one of Sweden's most popular digital sports services for SVT.",
         "tags": [
-            "Television",
             "Phone",
-            "IT"
+            "Television"
         ],
         "title": "SVT Sport - A given winner",
         "url": "https://www.knowit.se/kunder/media-utbildning/svt/svt-sport/"
@@ -379,8 +347,7 @@
         "content": "When the architectural firm White wanted to reach out to an international market, we were commissioned to create their new website. The result was a website that vibrates with color and movement, and inspires you to discover the exciting environments White creates. Plus a place among the world's recognized best sites!",
         "tags": [
             "Website",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "White Architects - an absolutely world-class website",
         "url": "https://www.knowit.se/kunder/handel-tjanster/white-arkitekter/white-arkitekter/"
@@ -390,8 +357,7 @@
         "company-name": "arla",
         "content": "Arla Unika wanted to make it even easier for discerning cheese connoisseurs to get hold of the special cheeses. We have succeeded in helping Arla Unika and met their ambition through a new e-commerce site that supports their position as a sharp gourmet brand.",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "A world filled with luxurious cheeses",
         "url": "https://www.knowit.se/kunder/handel-tjanster/arla/arla-unika/"
@@ -409,9 +375,8 @@
         "company-name": "forsvarsmakten",
         "content": "What is the role of the Armed Forces in Sweden? And how does it affect you and your life? As part of the Swedish Armed Forces' brand-building campaign Du Nya, Du Fria, we had a chatbot tell us about just this.",
         "tags": [
-            "Image",
             "Website",
-            "IT"
+            "Image"
         ],
         "title": "Chatbot gave the Armed Forces a voice",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/forsvarsmakten/forsvarsmakten/"
@@ -421,7 +386,6 @@
         "company-name": "kappahl",
         "content": "The Swedish fashion company KappAhl today has stores in several European countries and production offices all over the world. The more the company has grown, the greater the need for improved internal communication between different offices, distribution centers and stores.",
         "tags": [
-            "Intranet",
             "User Experience",
             "IT"
         ],
@@ -432,10 +396,7 @@
         "company-field": "Retail & services",
         "company-name": "fastighetsbyran",
         "content": "Inspiring, individualized and informal. These were the key words when we created a new intranet for Sweden's largest broker, Fastighetsbyrån. The result was a personalized intranet with sales drive - and an immediate success among employees.",
-        "tags": [
-            "Intranet",
-            "IT"
-        ],
+        "tags": [],
         "title": "The drawer - The real estate agency's inspiring intranet",
         "url": "https://www.knowit.se/kunder/handel-tjanster/fastighetsbyran/byraladan/"
     },
@@ -444,9 +405,9 @@
         "company-name": "amnesty",
         "content": "We were commissioned by Amnesty Sweden to develop a new website that engages. But it also strengthens Amnesty's position as a leading expert on human rights.",
         "tags": [
+            "IT",
             "Website",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "Amnesty - a website that makes a difference",
         "url": "https://www.knowit.se/kunder/handel-tjanster/amnesty/amnesty/"
@@ -457,8 +418,7 @@
         "content": "How can knowledge about products' environmental impact be spread in the best way? We created a new collaboration platform where academia, industry, research and authorities meet to find the path to a sustainable future. Everything permeated by a new visual identity.",
         "tags": [
             "Website",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "The website that helps you think life cycle",
         "url": "https://www.knowit.se/kunder/handel-tjanster/swedish-life-cycle-center/swedish-life-cycle-center/"
@@ -468,8 +428,7 @@
         "company-name": "akademibokhandeln",
         "content": "Just in time for Christmas shopping, Akademibokhandeln's e-commerce was launched. With a true omnichannel experience, the chain has blurred the line between a store in the city and an online store. We were with all the way.",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "Akademibokhandelns e-handel - omnichannel for real",
         "url": "https://www.knowit.se/kunder/handel-tjanster/akademibokhandeln/akademibokhandelns-e-handel/"
@@ -480,8 +439,7 @@
         "content": "How do you make a real difference to your target audience on social media? For Libero, the answer came naturally. With a social strategy and innovative films, we helped Libero reach its target group - as a helping hand in everyday life.",
         "tags": [
             "Television",
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "Then Libero became a helpful friend in the flow",
         "url": "https://www.knowit.se/kunder/handel-tjanster/libero/libero/"
@@ -490,9 +448,7 @@
         "company-field": "Media & education",
         "company-name": "liber",
         "content": "When the publisher Liber wanted to strengthen its brand in an increasingly digital world, they took help from us. In close collaboration with Liber, we developed a new brand platform and a new visual identity, which clarified the publisher's position and direction - both internally and towards the market.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Knowledge that makes a difference - a brand journey with Liber",
         "url": "https://www.knowit.se/kunder/media-utbildning/liber/kunskap-som-gor-skillnad--en-varumarkesresa-med-liber/"
     },
@@ -500,10 +456,7 @@
         "company-field": "Public sector",
         "company-name": "sveriges riksdag",
         "content": "Sweden's Riksdag needed a platform where members of parliament, administrative staff and employees at party offices could quickly gain access to the right information, perform tasks, and strengthen the sense of belonging within the organization.",
-        "tags": [
-            "Intranet",
-            "IT"
-        ],
+        "tags": [],
         "title": "This is how we created the Riksdag's award-winning intranet",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/sveriges-riksdag/sveriges-riksdag/"
     },
@@ -512,8 +465,8 @@
         "company-name": "destination uppsala",
         "content": "Destination Uppsala's chatbot will inspire and guide visitors to Uppsala. Knowit has been responsible for strategy, content and production.",
         "tags": [
-            "Media",
-            "IT"
+            "Vehicle",
+            "Media"
         ],
         "title": "Chatbot guides you to Uppsala's strawberry places",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/destination-uppsala/chatbot-guidar-till-uppsalas-smultronstallen/"
@@ -524,8 +477,7 @@
         "content": "A home sale can be perceived as both nervous and a bit awkward. With Fastighetsbyråns Säljcoach, we created a web-based service that holds you as a seller in your hand all the way and provides a total overview. Forget paper forms and obscure emails - in the Sales Coach you collect all documents and have full control over the entire process.",
         "tags": [
             "Phone",
-            "User Experience",
-            "IT"
+            "User Experience"
         ],
         "title": "Smoother home sales with Fastighetsbyrå's Sales Coach",
         "url": "https://www.knowit.se/kunder/handel-tjanster/fastighetsbyran/saljcoachen/"
@@ -535,9 +487,8 @@
         "company-name": "liseberg",
         "content": "In 2016, we were commissioned to develop “a new website” for Liseberg.se with more than seven million visitors per year. Three years later, we now look back on a fast-paced journey with 25 percent increased revenue, a Swedish design award and a whole world of new experiences.",
         "tags": [
-            "Website",
             "Phone",
-            "IT"
+            "Website"
         ],
         "title": "Sweden's largest experience has become digital",
         "url": "https://www.knowit.se/kunder/handel-tjanster/liseberg/liseberg/"
@@ -547,11 +498,9 @@
         "company-name": "amf fastigheter",
         "content": "We have been part of AMF Fastigheter's digital everyday life since 2016. A fun and versatile assignment that has included everything from a new corporate website to social media productions.",
         "tags": [
-            "IT",
+            "Media",
             "Website",
-            "Photography",
-            "Episerver",
-            "Media"
+            "Episerver"
         ],
         "title": "AMF Fastigheter - to build a digital real estate company",
         "url": "https://www.knowit.se/kunder/handel-tjanster/amf-fastigheter/amf-fastigheter/"
@@ -561,8 +510,7 @@
         "company-name": "givewatts",
         "content": "We helped Givewatts digitize the distribution of sustainable energy solutions in East Africa. Among other things, so that more school students can do their homework when darkness falls.",
         "tags": [
-            "Phone",
-            "IT"
+            "Phone"
         ],
         "title": "Givewatts lights up East Africa",
         "url": "https://www.knowit.se/kunder/handel-tjanster/givewatts/givewatts/"
@@ -572,8 +520,8 @@
         "company-name": "libresse",
         "content": "WE helped Libresse reach its youngest target group with a supportive and smart content investment on Youtube.",
         "tags": [
-            "Media",
-            "Website"
+            "Website",
+            "Media"
         ],
         "title": "Bloody seriousness - An easy way to talk about menstruation",
         "url": "https://www.knowit.se/kunder/handel-tjanster/libresse/libresse/"
@@ -583,9 +531,8 @@
         "company-name": "libresse",
         "content": "How can we put the menstrual issue on the agenda in sports and at the same time increase loyalty to the Libresse brand? The solution was the Mens Challenge, where sports clubs challenge each other to break the menstrual cycle.",
         "tags": [
-            "Media",
             "Website",
-            "IT"
+            "Media"
         ],
         "title": "The mens challenge",
         "url": "https://www.knowit.se/kunder/halsa/libresse/mensutmaningen/"
@@ -595,9 +542,7 @@
         "company-name": "svenska fotbollsforbundet",
         "content": "Just in time for the World Cup, the Swedish Football Association launched a new website with our help. With a focus on making football accessible to more people, an easy-to-navigate website was launched just before kick-off.",
         "tags": [
-            "Phone",
             "User Experience",
-            "IT",
             "Website",
             "Image"
         ],
@@ -611,10 +556,8 @@
         "tags": [
             "Phone",
             "User Experience",
-            "IT",
-            "App",
-            "Image",
-            "Backend"
+            "Backend",
+            "Image"
         ],
         "title": "Tougher skin treatments are easier to implement with a mobile app",
         "url": "https://www.knowit.se/kunder/halsa/galderma/galderma/"
@@ -633,9 +576,7 @@
         "company-field": "Life science & medical",
         "company-name": "war on cancer",
         "content": "War On Cancer is a social network and an app for everyone who has been affected by cancer. It is a forum that is aimed at those who have been diagnosed with cancer, but where relatives of the victim can also receive support. How can preventive treatment diagnosis be improved with the help of AI and predictive analytics? Together with Knowit, War on Cancer works to develop even better support for mental health.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Better support for mental health in connection with cancer",
         "url": "https://www.knowit.se/kunder/halsa/war-on-cancer/war-on-cancer/"
     },
@@ -644,8 +585,7 @@
         "company-name": "kommun",
         "content": "When a municipality wanted to redo its sourcing model, they enlisted the help of Knowit. With an understanding of the business's conditions and needs, we developed a guiding tool for decisions in sourcing issues that support their goal of delivering digital service to the municipality in an efficient and secure manner.",
         "tags": [
-            "App",
-            "IT"
+            "App"
         ],
         "title": "Municipality receives tools for decisions on sourcing of IT and digital support",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/kommun/kommun-far-verktyg-for-beslut-om-sourcing-av-it/"
@@ -655,8 +595,7 @@
         "company-name": "organisation",
         "content": "An organization has enlisted the help of Knowit to procure a new agreement for a digital workplace in order to facilitate and streamline the work for its employees. At the same time, the agreements lay the foundation for long-term sourcing relationships where the collaboration is characterized by mutual development and participation.",
         "tags": [
-            "App",
-            "IT"
+            "App"
         ],
         "title": "Procurement of digital workplace in the public sector",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/organisation/upphandling-av-digital-arbetsplats-inom-offentlig-sektor/"
@@ -666,8 +605,7 @@
         "company-name": "region",
         "content": "With the help of Knowit, one of Sweden's larger regions has procured a new telephony agreement and managed to reduce costs by 40 percent. The agreement provides the region with a common telephone solution with business-adapted functions and a central telephony administration. For users, this means that they get a uniform, efficient and accessible function with associated support.",
         "tags": [
-            "Phone",
-            "IT"
+            "Phone"
         ],
         "title": "Region reduces its costs with a new telephony agreement",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/region/region-sanker-sina-kostnader-med-nytt-telefoniavtal/"
@@ -677,9 +615,8 @@
         "company-name": "region",
         "content": "One region has enlisted the help of Knowit to procure a new agreement that ensures a robust and flexible telephony solution, more efficient agreement follow-up and major cost savings. Together with the customer, we worked with anchoring and setting requirements to secure the region's telephony in the future.",
         "tags": [
-            "Image",
             "Phone",
-            "IT"
+            "Image"
         ],
         "title": "Procurement for future-proof telephony",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/region/upphandling-framtidssakrad-telefoni/"
@@ -688,9 +625,7 @@
         "company-field": "Public sector",
         "company-name": "kommun",
         "content": "One of the ten largest municipalities in Sweden has enlisted the help of Knowit to develop a supply strategy for IT and digital investments. The strategy guides the municipality in sourcing issues and ensures that what is procured in IT meets both the organization's goals and future needs.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Development and establishment of a supply strategy in the municipality",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/kommun/framtagning-och-etablering-av-forsorjningsstrategi-i-kommun/"
     },
@@ -699,9 +634,7 @@
         "company-name": "grieg seafood",
         "content": "What fish did I actually get on the hook? Soon, AI and machine learning can give you the answer in the Recreational Fishing app that Knowit has created for the Directorate of Fisheries in Norway.",
         "tags": [
-            "App",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "The app recognizes the catch with AI",
         "url": "https://www.knowit.se/kunder/industri/grieg-seafood/kanner-igen-fangsten-med-ai/"
@@ -711,9 +644,7 @@
         "company-name": "nynashamns kommun",
         "content": "The social administration in Nynäshamn municipality has enlisted the help of Knowit to procure a new agreement for the best possible operating system with the aim of making everyday life easier for the staff and giving them more time with the care recipients. A thorough feasibility study, a complete procurement support and a solid procurement strategy form the basis for the work.",
         "tags": [
-            "App",
-            "Phone",
-            "IT"
+            "Phone"
         ],
         "title": "Nynäshamn Municipality - feasibility study and procurement of the social administration's operating system",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/nynashamns-kommun/nynashamns-kommun---forstudie-och-upphandling-av-socialforvaltningens-verksamhetssystem/"
@@ -723,8 +654,7 @@
         "company-name": "vgr",
         "content": "The Västra Götaland region (VGR) has, together with Knowit, introduced smart working methods and flexible technology to facilitate the daily work of healthcare staff. Employees can now focus more on their patients and less on administration thanks to a better working environment, greater flexibility and increased security.",
         "tags": [
-            "Television",
-            "IT"
+            "Television"
         ],
         "title": "Improved IT environment at VGR",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/vgr/forbattrad-it-miljo-vgr/"
@@ -733,9 +663,7 @@
         "company-field": "Energy",
         "company-name": "nordic green energy",
         "content": "The electricity trading company Nordic Green Energy delivers energy solutions in the Swedish and Finnish markets and has a total of approximately 180,000 customers. Knowit has helped and supported the customer by changing the billing system from CAB to EnoroCIS.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Smooth change of billing system for Nordic Green Energy",
         "url": "https://www.knowit.se/kunder/energi/nordic-green-energy/byte-av-debiteringssystem-for-nordic-green-energy/"
     },
@@ -762,7 +690,6 @@
         "company-name": "samhallstjanster",
         "content": "Knowit worked together with the customer to develop more efficient teams with agile working methods, which improved both the customer's time to market and ability to innovate. Faster delivery of important community services, more efficient operations and an increased degree of innovation were the result.",
         "tags": [
-            "App",
             "Phone"
         ],
         "title": "Delivery of community services with agile teams",
@@ -775,7 +702,6 @@
         "tags": [
             "Website",
             "Frontend",
-            "IT",
             "Backend"
         ],
         "title": "SVA offers its products, referrals and publications via e-commerce",
@@ -799,10 +725,9 @@
         "content": "In order to reliably support its customers in creating safe workplaces, Ramudden needed to develop and modernize its own external website. The goal was to make the website the business's digital center - both for customers and employees in order to streamline work.",
         "tags": [
             "Phone",
-            "IT",
-            "Website",
-            "Episerver",
-            "Analytics"
+            "Analytics",
+            "Google Analytics",
+            "Episerver"
         ],
         "title": "Ramudden's new web & PIM system",
         "url": "https://www.knowit.se/kunder/handel-tjanster/ramudden/ramuddens-nya-webb-och-pim-system/"
@@ -844,8 +769,7 @@
         "company-name": "olagligt fiske",
         "content": "In Norway, the fishing industry is based on the principle of sustainable fishing and strict fishing regulations. Knowit created a solution where the Norwegian Coastal Service can effectively detect illegal fishing.",
         "tags": [
-            "Analytics",
-            "IT"
+            "Analytics"
         ],
         "title": "Identification of illegal fishing activities through robot-controlled automation and machine learning",
         "url": "https://www.knowit.se/kunder/industri/olagligt-fiske/olaglig-fiskeverksamhet/"
@@ -855,9 +779,8 @@
         "company-name": "ansiktsigenkanning",
         "content": "In troubled times due to war or natural disaster, families often fall apart and separate. Using data and face recognition makes it easier to help family members reunite.",
         "tags": [
-            "Image",
-            "IT",
-            "Backend"
+            "Backend",
+            "Image"
         ],
         "title": "Reunification of families with the help of data and facial recognition",
         "url": "https://www.knowit.se/kunder/halsa/ansiktsigenkanning/ansiktsigenkanning/"
@@ -867,9 +790,9 @@
         "company-name": "marqet",
         "content": "In the fast-growing retail industry, the brand and the digital presence are more important than ever. E-commerce is getting stronger, which makes it difficult for physical stores to keep up - something MQ got to feel. A clearer positioning in the market was required and by getting to know the own target group, a concept store chain was created that reflects the working life of the new era. MQ became MarQet.",
         "tags": [
-            "Episerver",
             "Website",
-            "Image"
+            "Image",
+            "Episerver"
         ],
         "title": "MQ becomes MarQet",
         "url": "https://www.knowit.se/kunder/handel-tjanster/marqet/mq-blir-marqet/"
@@ -890,10 +813,9 @@
         "content": "Ramundberget faced the challenge of developing a new digital platform in order to become clearer, achieve increased visibility and improved user-friendliness. The aim was to make it easier for guests to book accommodation, rent equipment and find relevant information about the destination. At the same time also to simplify the editorial work for its employees.",
         "tags": [
             "User Experience",
-            "IT",
             "Website",
-            "Episerver",
-            "Image"
+            "Image",
+            "Episerver"
         ],
         "title": "New digital platform for Ramundberget",
         "url": "https://www.knowit.se/kunder/handel-tjanster/ramundberget/ny-digital-plattform-for-ramundberget/"
@@ -902,9 +824,7 @@
         "company-field": "Retail & services",
         "company-name": "varuhuskedja",
         "content": "Increased competence and better capacity in testing and quality assurance was the need for one of Sweden's global department store chains. The investment yielded results and today deliveries take place at a faster pace with higher quality and customer satisfaction.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "The department store chain increased its competence and capacity in testing and quality assurance",
         "url": "https://www.knowit.se/kunder/handel-tjanster/varuhuskedja/varuhuskedja-okade-sin-kompetens-och-kapacitet-inom-test-och-kvalitetssakring/"
     },
@@ -913,7 +833,6 @@
         "company-name": "weum",
         "content": "When Weum Gas became its own business, they quickly needed to have their own IT environment in place. The need to take advantage of already available data was met with the new system while Weum gained increased agility and flexibility.",
         "tags": [
-            "IT",
             "Backend"
         ],
         "title": "Existing data in a new IT environment",
@@ -931,9 +850,7 @@
         "company-field": "Media & education",
         "company-name": "foretagarna",
         "content": "Entrepreneurs is an organization that drives development to create a better business climate. With a large number of memberships, there was a need for their management to be safer and more efficient. Together with Knowit, a cloud-based CRM solution was developed with a user-friendly platform for collecting, sharing and following up information.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Agile management of Entrepreneurs' CRM solution",
         "url": "https://www.knowit.se/kunder/media-utbildning/foretagarna/foretagarna/"
     },
@@ -941,9 +858,7 @@
         "company-field": "Retail & services",
         "company-name": "varuhuskedja",
         "content": "One of Sweden's global department store chains wanted to reduce its dependence on local IT suppliers and at the same time increase its competence and control of its own applications.\nTogether with the customer, Knowit developed a solution where the move to public cloud services was made, which provided a modern and future-proof platform.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Move IT solutions to the cloud",
         "url": "https://www.knowit.se/kunder/handel-tjanster/varuhuskedja/flytt-av-it-losningar-till-molnet/"
     },
@@ -963,9 +878,8 @@
         "company-name": "elnatsbolag",
         "content": "The electricity network companies in Sweden have used the same way of working for field services for over 80 years. The working method is largely controlled by ESA (electrical safety instructions) to prevent serious accidents from occurring. Knowit helped the electricity network company to run a project that aimed to streamline the working method and implement a digital interface without sacrificing security. The effect of the completed project provided great value for the customer.",
         "tags": [
-            "App",
             "Phone",
-            "IT"
+            "App"
         ],
         "title": "Electricity network company - operational efficiency with great value",
         "url": "https://www.knowit.se/kunder/energi/elnatsbolag/verksamhetseffektivisering-med-stort-varde/"
@@ -986,11 +900,10 @@
         "company-name": "folktandvarden stockholm",
         "content": "Folktandvården Stockholm gets a new modern website that meets the new government requirements regarding accessibility and gives users a simplified and user-friendly booking flow.",
         "tags": [
-            "Phone",
-            "IT",
+            "User Experience",
             "Website",
-            "Episerver",
-            "Frontend"
+            "Frontend",
+            "Episerver"
         ],
         "title": "Stripped design with flexible booking system",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/folktandvarden-stockholm/folktandvarden-externwebb/"
@@ -1001,7 +914,6 @@
         "content": "St. Erik's Eye Hospital's vision is to strengthen the image of being a center for eye care, research and education. Knowit was commissioned to help take a turn for the worse in content, tonality and expression in order to adapt the web to St. Erik's changed mission and vision.",
         "tags": [
             "Phone",
-            "IT",
             "Website",
             "Frontend",
             "Image"
@@ -1015,10 +927,9 @@
         "content": "Stockholm County's healthcare area, SLSO, was in need of an umbrella website for around 70 healthcare centers in Stockholm. We call it a macro website. The order was a mobile first solution with new design, structure and functionality that would also be a solution that can be reused for more businesses and on more websites within SLSO",
         "tags": [
             "Phone",
-            "IT",
             "Website",
-            "Episerver",
-            "Frontend"
+            "Frontend",
+            "Episerver"
         ],
         "title": "Macro website to increase availability and quality",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/stockholms-lans-sjukvardomrade/makrowebbplats-for-att-oka-tillganglighet-och-kvalitet/"
@@ -1037,9 +948,7 @@
         "company-field": "Public sector",
         "company-name": "samhall",
         "content": "Samhall's system support in customer care and sales was nearing the end of its life cycle and a new system support needed to be procured that not only covered current needs, but also supported the continued development. Knowit has supported Samhall in its work and through a new strategy and system support, the business now has the right conditions to achieve its growth goals.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Samhall - new strategy and system support in customer care and sales",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/samhall/ny-strategi-och-systemstod-inom-kundvard-och-forsaljning/"
     },
@@ -1047,9 +956,7 @@
         "company-field": "Energy",
         "company-name": "tekniska verken",
         "content": "Through a Group-wide product management model, Tekniska verken in Linköping can now create the conditions and tools to better prioritize and manage its product portfolio - based on both customer demand and the value of the products.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Tekniska verken - Group-wide product management model",
         "url": "https://www.knowit.se/kunder/energi/tekniska-verken/koncerngemensam-produktledningsmodell/"
     },
@@ -1058,9 +965,8 @@
         "company-name": "bokhandelsgruppen",
         "content": "In order to withstand the fierce competition from other players in the retail trade, Bokhandelsgruppen's IT needs to be at the forefront. Knowit was therefore commissioned to map the business's business capabilities, assess the system support and analyze the IT business. Through a clear current situation, conditions were created to meet the digital challenges of the future with higher quality.",
         "tags": [
-            "Image",
             "App",
-            "IT"
+            "Image"
         ],
         "title": "The bookstore group - conditions for meeting the digital challenges of the future with higher quality",
         "url": "https://www.knowit.se/kunder/handel-tjanster/bokhandelsgruppen/forutsattningar-for-att-mota-framtidens-digitala-utmaningar-med-hogre-kvalitet/"
@@ -1069,9 +975,7 @@
         "company-field": "Manufacturing industry",
         "company-name": "skogsindustri",
         "content": "Norrskog is a modern, highly efficient forest industry company with association members in Jämtland, Medelpad, Ångermanland and Southern Lapland that offers its customers forest services, courses and business policy work. With the help of Knowit, they are now making a major investment in digitization to strengthen both business and market development.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Norrskog strengthens its business through digitization",
         "url": "https://www.knowit.se/kunder/industri/skogsindustri/skogsindustri/norrskog/"
     },
@@ -1105,9 +1009,7 @@
         "company-field": "Energy",
         "company-name": "eon",
         "content": "In order for the energy system to meet the challenges of the future regarding renewable electricity production and reduced emissions, major changes are required. IT structure, communication and smart meters are just the beginning. Knowit has supported E.ON in a unique and complex project of strategic importance, where new technical solutions have both been developed and tested - and which in several ways lay the foundation for the electricity grid of the future. Welcome to Simris.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "E.ON - Simris, the sustainable energy system of the future",
         "url": "https://www.knowit.se/kunder/energi/eon/simris-framtidens-hallbara-energisystem/"
     },
@@ -1115,9 +1017,7 @@
         "company-field": "Banking, finance & insurance",
         "company-name": "skandia",
         "content": "Skandia has begun a transformation towards becoming an agile, fast, efficient and value-oriented business on a large scale. For better impact, effect and coordination, a new model for management and execution of investments and portfolios was requested. Knowit helped Skandia to a model with clear sub-portfolios and management teams.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Skandia - real benefit of agile development through portfolio management",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/skandia/riktig-nytta-av-agil-utveckling-genom-portfoljstyrning/"
     },
@@ -1125,9 +1025,7 @@
         "company-field": "Energy",
         "company-name": "elnatsbolag",
         "content": "The electricity network companies in Sweden are currently undergoing an extensive expansion of the electricity network infrastructure, where the new generation of meters provides significantly greater opportunities for data collection and connection. The choice of communication solution therefore becomes strategically important. We helped a customer in southern Sweden who chose to take this one step further than most others.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Electricity network company - pilot project for choice of communication solution",
         "url": "https://www.knowit.se/kunder/energi/elnatsbolag/pilotprojekt-for-val-av-kommunikationslosning/"
     },
@@ -1137,10 +1035,9 @@
         "content": "Stadsholmen manages a cultural treasure. The company's historic properties consist of everything from simple wooden huts to courtyards and palaces from the 18th and 19th centuries. Knowit was given the exciting task of delivering a new website for Stadsholmen, with easily accessible information and increased service to the tenants, all embedded in the feeling of pride and historic wings.",
         "tags": [
             "Phone",
-            "IT",
             "Website",
-            "Image",
-            "Backend"
+            "Backend",
+            "Image"
         ],
         "title": "Stadsholmen",
         "url": "https://www.knowit.se/kunder/handel-tjanster/stadsholmen/stadsholmen/"
@@ -1150,9 +1047,9 @@
         "company-name": "automotive",
         "content": "How do you work computer-driven to market used cars? How to create interesting content that works?",
         "tags": [
+            "IT",
             "Website",
-            "Automobile",
-            "IT"
+            "Automobile"
         ],
         "title": "Data-driven content work for used cars",
         "url": "https://www.knowit.se/kunder/industri/automotive/volkswagen-group-sverige/datadrivet-innehallsarbete-for-das-weltauto/"
@@ -1162,7 +1059,7 @@
         "company-name": "boob design",
         "content": "Knowit helped Boob Design to implement a digitization project with the aim of increasing its e-commerce business and driving business growth on its own website.",
         "tags": [
-            "IT"
+            "Website"
         ],
         "title": "Boob Design - Customer travel and action suggestions",
         "url": "https://www.knowit.se/kunder/handel-tjanster/boob-design/boob-design/"
@@ -1172,9 +1069,7 @@
         "company-name": "construction",
         "content": "The construction company is in a strong expansion phase and will, in parallel with this, make cost savings by streamlining working methods in production. Through improved leadership, collaboration and control, delivery precision has been clearly increased and collaboration efficiency improved.",
         "tags": [
-            "Website",
-            "Image",
-            "IT"
+            "Website"
         ],
         "title": "Construction companies in the housing market - increased delivery precision in production",
         "url": "https://www.knowit.se/kunder/industri/construction/byggbolag-pa-bostadsmarknaden/forhojd-leveransprecision-inom-produktion/"
@@ -1192,8 +1087,7 @@
         "company-name": "kommun",
         "content": "Today, higher demands are placed on digitization, service deliveries and on supply processes. In close collaboration, Knowit, together with a municipality, has created a structure for controlled contract and supplier management. There is now an established function for business support that constitutes a guarantor of structured and controlled supply, supplier management and follow-up of budgets and costs.",
         "tags": [
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "Municipality - business support for the digitization department",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/kommun/affarsstod-for-digitaliseringsavdelningen/"
@@ -1213,10 +1107,9 @@
         "company-name": "folktandvarden skane",
         "content": "Folktandvården Skåne has together with Knowit developed a modern and easy-to-navigate website with web time booking. The people of Skåne have taken the new site to heart and use it frequently, whether it is to find a nearby clinic, manage appointments or to get advice on good dental health.",
         "tags": [
-            "Episerver",
-            "Website",
             "Phone",
-            "IT"
+            "Website",
+            "Episerver"
         ],
         "title": "Folktandvården Skåne gets a new website with time booking",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/folktandvarden-skane/folktandvarden-skane/"
@@ -1225,9 +1118,7 @@
         "company-field": "Public sector",
         "company-name": "varmdo kommun",
         "content": "The development in digitalisation is accelerating and for the work that was going on in Värmdö municipality's operations, there was a need to clarify direction, create consensus and coordinate common development issues. Knowit was commissioned to revise the existing e-strategy and develop a digital agenda with a time horizon of 2020.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Värmdö municipality - a new digital agenda",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/varmdo-kommun/en-ny-digital-agenda/"
     },
@@ -1237,11 +1128,10 @@
         "content": "The property owners were in need of a new website whose most important task was to merge and reflect the entire organization, which consists of several different companies with different goals that previously had separate websites.",
         "tags": [
             "Phone",
-            "IT",
             "Website",
-            "Episerver",
             "Frontend",
-            "Image"
+            "Image",
+            "Episerver"
         ],
         "title": "Dynamic web with great editorial freedom",
         "url": "https://www.knowit.se/kunder/handel-tjanster/fastighetsagarna/fastighetsagarna-externwebb/"
@@ -1250,9 +1140,7 @@
         "company-field": "Energy",
         "company-name": "falbygdens energi",
         "content": "When Göteborgs Energi in 2013 decided to sell Falbygdens Energi, Knowit was commissioned to support the company's work to become an independent company. Knowit delivered program and project management for an IT separation project and for underlying projects.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Falbygdens Energi - business transformation",
         "url": "https://www.knowit.se/kunder/energi/falbygdens-energi/verksamhetsomstallning/"
     },
@@ -1260,9 +1148,7 @@
         "company-field": "Banking, finance & insurance",
         "company-name": "ticket validator",
         "content": "Ticket Validator is a component based on Microsoft .NET, which makes it possible to securely exchange information over open networks. Ticket Validator is developed based on Bankgirot's requirements for secure exchange of information over the Internet.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Ticket Validator",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/ticket-validator/ticket-validator/"
     },
@@ -1280,9 +1166,7 @@
         "company-field": "Energy",
         "company-name": "norsirk",
         "content": "The climate-smart circular economy is becoming increasingly important. In Norway, the product responsibility company Norsirk recycles electrical products for its customers. To optimize the work, Knowit has developed a new platform for Norsirk.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Climate-smart solution for recycling",
         "url": "https://www.knowit.se/kunder/energi/norsirk/norsirk/"
     },
@@ -1291,8 +1175,8 @@
         "company-name": "entercard",
         "content": "Modern and optimized web that contributes to increased profitability and customer loyalty.",
         "tags": [
-            "Website",
-            "App"
+            "App",
+            "Website"
         ],
         "title": "re: member credit cards and personal loans",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/entercard/remember/"
@@ -1318,8 +1202,7 @@
         "company-name": "help2help",
         "content": "Help to Help had a need to improve the customer experience on its crowdfunding site. Two of the biggest challenges were: How can we transform followers into donors? And how can we improve the customer experience for our existing donors so that the conversion rate increases?",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "User-driven innovation",
         "url": "https://www.knowit.se/kunder/media-utbildning/help2help/help2help/"
@@ -1338,9 +1221,7 @@
         "company-field": "Manufacturing industry",
         "company-name": "toyota material handling",
         "content": "Toyota has together with Knowit developed a new modern responsive e-commerce for used trucks. The aim of the project was to get a unified European channel for presentation and online sales of used trucks directly to the customer. Toyota focuses a lot on the customer experience and to now buy a new or used truck, or maybe rent has never been easier.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Toyota Material Handling Europe - E-commerce for used trucks",
         "url": "https://www.knowit.se/kunder/industri/toyota-material-handling/ehandel-for-begagnade-truckar/"
     },
@@ -1349,8 +1230,8 @@
         "company-name": "manufacturing",
         "content": "In 2016, we launched new websites for Corroventa in eight different languages. The wish was a fast and technically stable website with a focus on user experience and navigation. After the launch, the next step was to invest in web analysis and visualization of data. Corroventa needed a deeper insight into what visitors did on their various websites - and what was most important to measure. We helped to produce the most important key figures and visualize the data in a dashboard.",
         "tags": [
-            "Website",
-            "IT"
+            "User Experience",
+            "Website"
         ],
         "title": "From data to decision",
         "url": "https://www.knowit.se/kunder/industri/manufacturing/corroventa/visualiserad-data-hjalper-corroventa-att-ta-battre-beslut/"
@@ -1359,9 +1240,7 @@
         "company-field": "Public sector",
         "company-name": "bostadsbolag",
         "content": "The company was spun off from a large construction group and took over all operations related to the development of housing and residential areas. In connection with this, they were faced with creating a completely new IT environment from the beginning.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Integration architecture for newly established housing companies",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/bostadsbolag/bostadsbolag/"
     },
@@ -1370,12 +1249,9 @@
         "company-name": "automotive",
         "content": "When it came time to migrate Volkswagen Transportbilar's website from CQ5 to Adobe Experience Manager, it was not just the CMS that became new. The design and large parts of the content - as well as the whole idea of ​​how the brand is presented digitally - also changed fundamentally.",
         "tags": [
-            "Phone",
-            "Volkswagen",
-            "IT",
             "Website",
-            "Automobile",
-            "Analytics"
+            "Analytics",
+            "Automobile"
         ],
         "title": "New website increased the number of lead conversions by 228%",
         "url": "https://www.knowit.se/kunder/industri/automotive/volkswagen-group-sverige/ny-webbplats-okade-antalet-leadskonverteringar-med-228-procent/"
@@ -1385,9 +1261,9 @@
         "company-name": "telenor",
         "content": "Telenor wanted to give its corporate customers a modern website with more inspiring content, faster contact routes and better product pages. All based on customers' challenges and needs.",
         "tags": [
-            "Episerver",
+            "User Experience",
             "Website",
-            "IT"
+            "Episerver"
         ],
         "title": "Telenor",
         "url": "https://www.knowit.se/kunder/telekom/telenor/telenor/"
@@ -1396,10 +1272,7 @@
         "company-field": "Retail & services",
         "company-name": "craft",
         "content": "For four decades, Craft Sportswear has delivered optimal performance through functional sportswear. In recent years, they have made a major investment in their e-commerce in order to provide their customers with a simpler and more accessible shopping experience.",
-        "tags": [
-            "Website",
-            "IT"
-        ],
+        "tags": [],
         "title": "Craft Sportswear",
         "url": "https://www.knowit.se/kunder/handel-tjanster/craft/craft/"
     },
@@ -1408,8 +1281,8 @@
         "company-name": "jula",
         "content": "Both the creative home fixer and the full-fledged professional can find affordable products in Jula's wide range - which includes tools, machines, garden products, paint and household utensils. Jula's 92 department stores have now also been supplemented with easy-to-understand and inviting e-commerce.",
         "tags": [
-            "Episerver",
-            "Website"
+            "Website",
+            "Episerver"
         ],
         "title": "Jula's new investment in e-commerce with an optimized customer experience",
         "url": "https://www.knowit.se/kunder/handel-tjanster/jula/nysatsning-pa-e-handel-med-optimerad-kundupplevelse/"
@@ -1419,7 +1292,7 @@
         "company-name": "eon",
         "content": "E.ON Elnät was in need of modernizing and consolidating its measured value delivery. Knowit delivered important components in the project.",
         "tags": [
-            "IT"
+            "Vehicle"
         ],
         "title": "An important step towards a better measured value delivery",
         "url": "https://www.knowit.se/kunder/energi/eon/ett-viktigt-steg-mot-en-battre-matvardesleverans/"
@@ -1428,9 +1301,7 @@
         "company-field": "Public sector",
         "company-name": "alands landskapsregering",
         "content": "Knowit helped Åland's digitalisation council to get started with the strategy work ahead of the digital transition. Creative workshop methods helped to come up with the best ideas.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "The Digitization Council",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/alands-landskapsregering/digitaliseringsradet/"
     },
@@ -1439,10 +1310,9 @@
         "company-name": "tiohundra",
         "content": "The care company TioHundra is a unique collaboration between Norrtälje municipality and Stockholm County Council. TioHundra wanted a modern website that works for all units and in return the care company could share a basic solution with many other administrations within Stockholm County Council.",
         "tags": [
-            "Website",
             "Phone",
-            "Image",
-            "IT"
+            "Website",
+            "Image"
         ],
         "title": "TioHundra - a unique care company",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/tiohundra/tiohundra-ett-unikt-vardbolag/"
@@ -1452,8 +1322,7 @@
         "company-name": "winningtemp",
         "content": "Winningtemp collects and visualizes real-time data to provide an overall picture of employees' experience of leadership, stress and joy in the workplace. To meet the need for secure and cost-effective management of their system platform, they took our help.",
         "tags": [
-            "App",
-            "IT"
+            "App"
         ],
         "title": "Real-time data in the cloud",
         "url": "https://www.knowit.se/kunder/halsa/winningtemp/realtidsdata-i-molnet/"
@@ -1463,10 +1332,9 @@
         "company-name": "rattsmedicinalverket",
         "content": "Even before we started working with RMV, the pulse had gone up. First, they must be one of Sweden's most exciting authorities - with expert expertise in several exciting areas, they are an important part of the legal chain. Secondly, in five intensive months, we would deliver a modern, target group-adapted website with user-friendliness in focus.",
         "tags": [
-            "Website",
             "Phone",
             "User Experience",
-            "IT"
+            "Website"
         ],
         "title": "New website for the National Board of Forensic Medicine",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/rattsmedicinalverket/ny-webbplats-for-rattsmedicinalverket/"
@@ -1476,8 +1344,7 @@
         "company-name": "if metall",
         "content": "Ifmetall.se - a technically modern website for practical use for members and elected representatives that conveys the benefits of membership and the union's goals in an accessible and engaging way",
         "tags": [
-            "Website",
-            "IT"
+            "Website"
         ],
         "title": "IF Metall",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/if-metall/if-metall/"
@@ -1488,8 +1355,7 @@
         "content": "Kronhusbodarna is one of Gothenburg's oldest buildings and area. Today, the area is used as a place for galleries, cafes, shops and events. Knowit Experience had the honor of developing a website.",
         "tags": [
             "Website",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "Kronhusbodarna and Kronhusen",
         "url": "https://www.knowit.se/kunder/handel-tjanster/kronhusbodarna/kronhusbodarna-och-kronhusen/"
@@ -1509,8 +1375,8 @@
         "company-name": "stockholm vatten",
         "content": "Stockholmvatten.se - the natural channel for Stockholmers for information and\nwater and environment service",
         "tags": [
-            "Website",
-            "User Experience"
+            "User Experience",
+            "Website"
         ],
         "title": "Website Stockholm Water",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/stockholm-vatten/webbplats-stockholm-vatten/"
@@ -1520,10 +1386,9 @@
         "company-name": "food",
         "content": "Inspiring, solution-oriented, user-friendly and business-like characterize the new website",
         "tags": [
-            "Episerver",
-            "Website",
             "Phone",
-            "IT"
+            "Website",
+            "Episerver"
         ],
         "title": "Website Grow Sweden",
         "url": "https://www.knowit.se/kunder/industri/food/vaxa-sverige/webbplats-vaxa-sverige/"
@@ -1533,8 +1398,8 @@
         "company-name": "NilsonGroup",
         "content": "In the autumn of 2016, Knowit Experience launched a completely new e-commerce platform together with Nilson Group. Already a few months after launch, Nilson Group could see a significantly increased conversion and previous sales records have been beaten.",
         "tags": [
-            "Episerver",
-            "IT"
+            "User Experience",
+            "Episerver"
         ],
         "title": "New e-commerce breaks sales record",
         "url": "https://www.knowit.se/kunder/handel-tjanster/NilsonGroup/forsaljningsrekord-med-ny-e-handel/"
@@ -1543,9 +1408,7 @@
         "company-field": "Banking, finance & insurance",
         "company-name": "scor sweden re",
         "content": "SCOR Sweden Re needed to support its internal processes and develop a completely new web portal for the business's business customers.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Complete IT support for the entire business",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/scor-sweden-re/scor-sweden-re/"
     },
@@ -1554,7 +1417,6 @@
         "company-name": "automotive",
         "content": "If I do not like the site - will I like the car then? Today's websites for car brands set the bar high in terms of technology, function and content.",
         "tags": [
-            "Website",
             "Automobile"
         ],
         "title": "Content services for Skoda",
@@ -1565,10 +1427,9 @@
         "company-name": "tv2",
         "content": "As a media producer, it is necessary to know your audience. Which programs do your customers like, and which do they not? The challenge for TV 2 in Norway was to get to know what their audience thinks about their programs in order to create even better TV concepts and meet customers' needs. The solution was Program Monitor.",
         "tags": [
-            "Television",
-            "Media",
             "Phone",
-            "IT"
+            "Television",
+            "Media"
         ],
         "title": "Program Monitor for TV 2",
         "url": "https://www.knowit.se/kunder/media-utbildning/tv2/program-monitor/"
@@ -1578,8 +1439,8 @@
         "company-name": "synoptik",
         "content": "With the new solution, Brilleland has a solution that works on all devices, makes the working day easier for the web editor and automates a lot of work that was previously done manually.",
         "tags": [
-            "Episerver",
-            "Website"
+            "Website",
+            "Episerver"
         ],
         "title": "Brilleland.no - effective digital communication",
         "url": "https://www.knowit.se/kunder/handel-tjanster/synoptik/brilleland.no/"
@@ -1589,9 +1450,8 @@
         "company-name": "construction",
         "content": "The tree is an apartment complex a little out of the ordinary. With its 14 floors and 51 meters, the Tree will be the tallest wooden building in the world when it is completed at the end of 2016.",
         "tags": [
-            "Media",
             "Image",
-            "IT"
+            "Media"
         ],
         "title": "A world record of wood",
         "url": "https://www.knowit.se/kunder/industri/construction/bob/ett-varldsrekord-av-tra/"
@@ -1601,9 +1461,9 @@
         "company-name": "sport utilities",
         "content": "Suunto Customizer is a web-based tool that allows customers to create unique, personalized sports watches. Knowit has contributed with the visual design and functionality of Customizer, as well as with coordination of the technical implementation of the tool. The technical basis is provided by EPiServer and MyCustomizer.",
         "tags": [
-            "Episerver",
             "Website",
-            "IT"
+            "IT",
+            "Episerver"
         ],
         "title": "Suunto Customizer",
         "url": "https://www.knowit.se/kunder/industri/sport-utilities/suunto/customizer/"
@@ -1612,9 +1472,7 @@
         "company-field": "Media & education",
         "company-name": "BNO",
         "content": "With a new name and a clear idea of ​​the desired position, Bergen National Opera wants to make opera art visible to new audience segments and be the innovator who paves the way for larger opera houses. It's about the stage and the music, stage changes and a dynamic, hand-picked ensemble for each production. About the light, colors, materials and shades. Contrasts and surprises.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Bergen National Opera",
         "url": "https://www.knowit.se/kunder/media-utbildning/BNO/bergen-national-opera/"
     },
@@ -1623,10 +1481,9 @@
         "company-name": "talkmore",
         "content": "Talkmore's main focus was to create a seamless customer experience through all channels, which included a common user interface with a new design and identity on all devices.",
         "tags": [
-            "Website",
-            "App",
             "Phone",
-            "IT"
+            "User Experience",
+            "Website"
         ],
         "title": "Sales and self-service for mobile customers",
         "url": "https://www.knowit.se/kunder/telekom/talkmore/talkmore/"
@@ -1636,9 +1493,8 @@
         "company-name": "the consumer ombudsman and the market council",
         "content": "The Consumer Council (Norwegian Consumer Agency) wanted to update its website and make the content more accessible, provide a better overview of consumer rights and raise consumer policy issues.",
         "tags": [
-            "Website",
             "Phone",
-            "IT"
+            "Website"
         ],
         "title": "User-friendly website with a new visual identity",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/the-consumer-ombudsman-and-the-market-council/nytt-webbdesign-till-forbrukerradet.no/"
@@ -1664,9 +1520,9 @@
         "company-name": "sylvsmidja",
         "content": "With a love of craftsmanship, Sylvsmidja has created traditional silver jewelery for over 75 years. And now we have the pleasure of giving life to their new profile on the web, in ads and much more.",
         "tags": [
+            "IT",
             "Website",
-            "Image",
-            "IT"
+            "Image"
         ],
         "title": "The dazzling craft of a silversmith",
         "url": "https://www.knowit.se/kunder/handel-tjanster/sylvsmidja/sylvsmidja/"
@@ -1675,9 +1531,7 @@
         "company-field": "Retail & services",
         "company-name": "inventura",
         "content": "The purchasing specialist Inventera has many good stories to tell. We have helped to bring them to light.",
-        "tags": [
-            "Website"
-        ],
+        "tags": [],
         "title": "Show - don't tell",
         "url": "https://www.knowit.se/kunder/handel-tjanster/inventura/show-dont-tell/"
     },
@@ -1685,9 +1539,7 @@
         "company-field": "Energy",
         "company-name": "umea energi",
         "content": "Umeå Energi needed help in establishing a way of working to evaluate and realize business opportunities, which partly raises their position in the value chain, and gives them the opportunity to identify new business opportunities.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Umeå Energi - innovation-driven growth",
         "url": "https://www.knowit.se/kunder/energi/umea-energi/innovationsdriven-tillvaxt/"
     },
@@ -1696,8 +1548,8 @@
         "company-name": "monobank",
         "content": "Knowit has developed brand strategy, name, visual identity, web solution and concept development for a completely new bank: MONOBANK.",
         "tags": [
-            "Website",
-            "User Experience"
+            "User Experience",
+            "Website"
         ],
         "title": "A brand new bank",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/monobank/monobank/"
@@ -1715,7 +1567,7 @@
         "company-name": "botkyrka kommun",
         "content": "For Botkyrka municipality, it was a matter of course that their IT delivery would support their business, be efficient and at the same time efficient. We think this is a good condition for facing the future.",
         "tags": [
-            "IT"
+            "User Experience"
         ],
         "title": "Botkyrka municipality - business development program",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/botkyrka-kommun/verksamhetsutvecklingsprogram/"
@@ -1724,9 +1576,7 @@
         "company-field": "Manufacturing industry",
         "company-name": "food",
         "content": "Friele, Norway's oldest and most well-known coffee brand, asked us to create a well-balanced, thorough and stylish upgrade of the company's visual identity.\n\nIn April 2015, Knowits and Friele received the project \"Merket for godt design\" which is awarded by the Norwegian Design Council.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "Same old - brand new",
         "url": "https://www.knowit.se/kunder/industri/food/friele/ny-visuell-identitet/"
     },
@@ -1735,7 +1585,6 @@
         "company-name": "synoptik",
         "content": "The goal was to raise the digital platform to a higher level and make the website responsive.",
         "tags": [
-            "Episerver",
             "Website"
         ],
         "title": "Interoptik.no - seamless publishing",
@@ -1747,8 +1596,7 @@
         "content": "With the Swedish Courts Administration's campaign “Change jobs 15 days a year. Become a board member. ” was the overall goal to rejuvenate the jury and attract more younger people.",
         "tags": [
             "Website",
-            "Media",
-            "IT"
+            "Media"
         ],
         "title": "Rejuvenated jury",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/domstolsverket/bli-namndeman/"
@@ -1758,12 +1606,11 @@
         "company-name": "tele2",
         "content": "TELE2 shook up the mobile market when they abolished both lock-in periods and pre-packaged subscriptions. The customer can now put together what they want and change at any time free of charge - a shift that placed completely new demands on the website.",
         "tags": [
-            "Phone",
-            "IT",
-            "Website",
             "Tele2",
-            "Episerver",
-            "Analytics"
+            "Website",
+            "Analytics",
+            "Google Analytics",
+            "Episerver"
         ],
         "title": "Mobile e-commerce and website",
         "url": "https://www.knowit.se/kunder/telekom/tele2/tele2-webbplats-for-mobilkop/"
@@ -1773,10 +1620,8 @@
         "company-name": "trafikskadenamnden",
         "content": "Digitally available guidance for more effective assessment of appearance damage consequences provides fair assessment and reasonable compensation.",
         "tags": [
-            "Episerver",
-            "Photography",
             "Image",
-            "IT"
+            "Episerver"
         ],
         "title": "The scar service",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/trafikskadenamnden/arrtjansten/"
@@ -1786,9 +1631,8 @@
         "company-name": "food",
         "content": "Mjölk.se tells about the Swedish milk, cheese and butter. The website is part of the debate and a platform to present LRF's views through short, interesting and divisible facts.",
         "tags": [
-            "Website",
             "App",
-            "IT"
+            "Episerver"
         ],
         "title": "Mjölk.se",
         "url": "https://www.knowit.se/kunder/industri/food/lrf/mjolk.se/"
@@ -1799,8 +1643,7 @@
         "content": "The Attunda Fire Brigade is a municipal association with six member municipalities, Järfälla, Knivsta, Sigtuna, Sollentuna, Upplands-Bro and Upplands Väsby, which work to make the everyday life of municipal residents as safe and secure as possible. We got to create their website and intranet based on a user-centered approach.",
         "tags": [
             "Website",
-            "Intranet",
-            "IT"
+            "Intranet"
         ],
         "title": "Fire Brigade Attunda",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/brandkaren-attunda/brandkaren-attunda/"
@@ -1810,7 +1653,6 @@
         "company-name": "landshypotek bank",
         "content": "In the countryside since 1836, now also on the web.",
         "tags": [
-            "Website",
             "IT"
         ],
         "title": "Landshypotek Bank",
@@ -1822,13 +1664,11 @@
         "content": "New Fuji Direct is not only an online shop but also a powerful editing tool for photo products. Create your product in the app or directly via the responsive web.",
         "tags": [
             "Phone",
-            "IT",
-            "Automobile",
             "Photography",
-            "Episerver",
-            "App",
+            "Automobile",
+            "Backend",
             "Image",
-            "Backend"
+            "Episerver"
         ],
         "title": "Largest in Sweden in photo development",
         "url": "https://www.knowit.se/kunder/handel-tjanster/fujicolor/fuji-direkt-app-och-webbplats/"
@@ -1841,6 +1681,7 @@
             "Television",
             "App",
             "Analytics",
+            "Google Analytics",
             "IT"
         ],
         "title": "RiksTV Junior",
@@ -1850,10 +1691,7 @@
         "company-field": "Manufacturing industry",
         "company-name": "steel",
         "content": "With over 13,000 employees and operations in more than 50 countries, Hydro's intranet has a central role in the internal communication strategy.",
-        "tags": [
-            "Intranet",
-            "IT"
-        ],
+        "tags": [],
         "title": "Hydro Intranet",
         "url": "https://www.knowit.se/kunder/industri/steel/norsk-hydro/hydro-intranat/"
     },
@@ -1862,8 +1700,7 @@
         "company-name": "the consumer ombudsman and the market council",
         "content": "In collaboration with the Consumer Council's (Norwegian Consumer Agency) developers, we gave hvakostertannlegen.no a new visual expression in line with the new profile for Forbrukerrådet.no. We market the new websites with advertising on Google and Facebook in three steps. In step one, we informed about the new solution and introduced the new profile. In step two, we entertained consumers with movies and humorous ads. In the last step, we engaged the audience with riddles and dilemmas in ads and social media.",
         "tags": [
-            "Phone",
-            "IT"
+            "Phone"
         ],
         "title": "What does the dentist cost?",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/the-consumer-ombudsman-and-the-market-council/hvakostertannlegen.no/"
@@ -1873,9 +1710,8 @@
         "company-name": "oslo kommune",
         "content": "The goal is to improve dialogue with the population and to improve internal work processes. The assignment includes modernization, increased efficiency, improved time-to-market and improved user management.",
         "tags": [
-            "App",
             "Phone",
-            "IT"
+            "App"
         ],
         "title": "Oslo municipality",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/oslo-kommune/oslo-kommun/"
@@ -1892,9 +1728,7 @@
         "company-field": "Banking, finance & insurance",
         "company-name": "op pohjola group",
         "content": "Knowit has helped OP-Pohjola Group optimize its testing process to cut a number of long and extensive test steps. Instead of resource-intensive work with test data, they can now focus more on quality.",
-        "tags": [
-            "IT"
-        ],
+        "tags": [],
         "title": "OP-Pohjola Group",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/op-pohjola-group/optimerad-testprocess-som-sparar-tid-och-pengar/"
     },
@@ -1903,7 +1737,7 @@
         "company-name": "enkla elbolaget",
         "content": "We love innovation and we love challenges. When Enkla Elbolaget came to us with its idea, we were quickly up to speed with an innovative technical solution that met the high demands on accessibility, simplicity and flexibility that were set.",
         "tags": [
-            "IT"
+            "Vehicle"
         ],
         "title": "Simple electricity company",
         "url": "https://www.knowit.se/kunder/energi/enkla-elbolaget/enkla-elbolaget/"
@@ -1913,7 +1747,7 @@
         "company-name": "manufacturing",
         "content": "Siemens Industrial Turbomachinery reduced its lead times by 70% in its CAE process. A brilliant project simply.",
         "tags": [
-            "IT"
+            "User Experience"
         ],
         "title": "Siemens Industrial Turbomachinery - reduced lead times in CAE process",
         "url": "https://www.knowit.se/kunder/industri/manufacturing/siemens/minskade-ledtider-i-CAE-process/"
@@ -1933,8 +1767,8 @@
         "company-name": "vasttrafik",
         "content": "2,700 buses, trains, trams and boats. 22,000 stops. 39,000 miles driven per day (a distance equivalent to 9.6 revolutions around the earth). This makes Västtrafik Sweden's second largest public transport company, and that vasttrafik.se must live up to high expectations.",
         "tags": [
-            "Website",
-            "IT"
+            "Phone",
+            "Website"
         ],
         "title": "Western traffic",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/vasttrafik/vasttrafik/"
@@ -1944,9 +1778,8 @@
         "company-name": "statkraft",
         "content": "Statkraft is a leading company in hydropower internationally and is Europe's largest producer of renewable energy. That is, a global player who needed an intranet that strengthened their organization.",
         "tags": [
-            "Image",
             "Intranet",
-            "IT"
+            "Image"
         ],
         "title": "Powerful intranet",
         "url": "https://www.knowit.se/kunder/energi/statkraft/statkraft-intranat/"
@@ -1956,9 +1789,9 @@
         "company-name": "dnb bank",
         "content": "DNB came to us with a very exciting project where it needed help with developing a good user experience for an app that makes it possible to send money to your friends. The app would be fun and easy to use.",
         "tags": [
-            "App",
             "Phone",
-            "IT"
+            "User Experience",
+            "App"
         ],
         "title": "Vipps - buddy payment in the mobile",
         "url": "https://www.knowit.se/kunder/bank-finans-forsakring/dnb-bank/vipps/"
@@ -1975,9 +1808,7 @@
         "company-field": "Retail & services",
         "company-name": "transdev",
         "content": "An intranet in motion. From Haparanda in the north to Österlen in the south.",
-        "tags": [
-            "Intranet"
-        ],
+        "tags": [],
         "title": "Transdev Intranet",
         "url": "https://www.knowit.se/kunder/handel-tjanster/transdev/transdev-intranat/"
     },
@@ -1986,10 +1817,8 @@
         "company-name": "manufacturing",
         "content": "A fresh fan for better flow, both at work and in the indoor climate.",
         "tags": [
-            "Website",
             "App",
-            "Phone",
-            "IT"
+            "Website"
         ],
         "title": "Sweflow",
         "url": "https://www.knowit.se/kunder/industri/manufacturing/swegon/sweflow/"
@@ -1998,10 +1827,7 @@
         "company-field": "Public sector",
         "company-name": "myndigh. for vardanalys",
         "content": "The authority for care and nursing analysis examines care in society from a patient, user and citizen perspective. That is, from your, your neighbor's and everyone else's perspective. Therefore, it was important that their new responsive website would be accessible to everyone.",
-        "tags": [
-            "Website",
-            "IT"
-        ],
+        "tags": [],
         "title": "Care analysis",
         "url": "https://www.knowit.se/kunder/offentlig-sektor/myndigh.-for-vardanalys/vardanalys/"
     },
@@ -2021,7 +1847,6 @@
         "company-name": "santander consumer bank",
         "content": "Santander's vision is to create a personal digital bank that, in real time, matches each customer's needs. Based on the users' behavior, the site's editor must also be able to proactively conduct sales and dialogue with the logged-in customers. Knowit has been involved in realizing this vision by building a completely new Internet bank.",
         "tags": [
-            "Website",
             "App"
         ],
         "title": "The internet bank that knows every customer",
@@ -2032,10 +1857,8 @@
         "company-name": "ejendals",
         "content": "Ejendal's vision is to create a safe day without injuries to hands and feet, and wanted their e-commerce to contribute to it by getting more people to use the world's best protection products for hands and feet. We and Ejendals and I succeeded so well that we received an award for our work.",
         "tags": [
-            "Episerver",
             "Website",
-            "Phone",
-            "IT"
+            "Episerver"
         ],
         "title": "Award-winning e-commerce",
         "url": "https://www.knowit.se/kunder/handel-tjanster/ejendals/prisvinnande-ehandel/"
@@ -2045,12 +1868,9 @@
         "company-name": "automotive",
         "content": "Innovation, design, function and performance are four strong core values ​​at Porsche. For Knowit, the task was to deliver this on the new website for Porsche Sweden.",
         "tags": [
-            "IT",
             "Website",
-            "Automobile",
-            "Episerver",
-            "Media",
-            "Analytics"
+            "Analytics",
+            "Media"
         ],
         "title": "Porsche Sverige",
         "url": "https://www.knowit.se/kunder/industri/automotive/volkswagen-group-sverige/porsche/"
