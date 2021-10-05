@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from tkinter.constants import W
 import eventlet
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import ApiException, AssistantV2
@@ -7,9 +8,10 @@ import socketio
 from threading import Lock
 from time import sleep
 
+
 sio = socketio.Server(cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
-articles, assistant, auth = None, None, None
+articles, assistant, auth, offices = None, None, None, None
 clients_session = {}
 clients_lock = Lock()
 
@@ -104,6 +106,18 @@ def extract_message_from_response(response):
         'text': [item[item["response_type"]] for item in generic]
     }
     return res
+def load_offices(config):
+ 
+    return read_json_to_dict(config["office_location"])
+
+def find_offices(offices,city):
+    foundOffices= []
+    for office in offices:
+        if office["visit-adress"]["city"] == city:
+            foundOffices.append(office)
+    print(foundOffices)
+    return foundOffices
+
 
 def load_articles(config):
     return read_json_to_dict(config["scraped_articles"])
@@ -184,11 +198,13 @@ def message(sid, data):
 
 
 def main():
-    global articles, assistant, auth
+    global articles, assistant, auth, offices
     port = 80
     auth = read_json_to_dict("./auth.json")
     config = read_json_to_dict("./config.json")
     articles = load_articles(config)
+    offices = load_offices(config)
+
     
     assistant = create_assistant(auth)
     try:
