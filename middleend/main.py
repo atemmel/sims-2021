@@ -1,18 +1,16 @@
 #!/usr/bin/env python
-
 import eventlet
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson import ApiException, AssistantV2
-import json
 import socketio
 from time import sleep
 
-import common
 from backend_connection import BackendConnection
+import common
 
 sio = socketio.Server(cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
-articles = None
+articles = {}
 backend_connection = None
 
 def do_repl(articles, assistant, session_id, auth):
@@ -44,6 +42,18 @@ def extract_message_from_response(response):
         'text': [item[item["response_type"]] for item in generic]
     }
     return res
+
+def load_offices(config):
+    return common.read_json_to_dict(config["office_location"])
+
+def find_offices(offices,city):
+    foundOffices= []
+    for office in offices:
+        if office["visit-adress"]["city"] == city:
+            foundOffices.append(office)
+    print(foundOffices)
+    return foundOffices
+
 
 def load_articles(config):
     return common.read_json_to_dict(config["scraped_articles"])
@@ -127,6 +137,8 @@ def main():
     global articles, backend_connection
     config = common.read_json_to_dict("./config.json")
     articles = load_articles(config)
+    offices = load_offices(config)
+
     
     backend_connection = BackendConnection("./auth.json")
     try:

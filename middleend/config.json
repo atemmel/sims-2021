@@ -1,4 +1,5 @@
 {
-	"scraped_articles": "../scrapers/knowit-site/knowit-site-se-translated-to-en.json"
+	"scraped_articles": "../scrapers/knowit-site/knowit-site-se-translated-to-en.json",
+	"office_location": "../entity-uploader/offices.json",
 	"port": 80
 }
