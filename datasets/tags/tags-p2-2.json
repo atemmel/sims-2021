@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Streamline",
+        "synonyms": ["Make more effective"],
+        "implies": []
+    },
+    {
+        "name": "Robot",
+        "synonyms": [],
+        "implies": ["Automation"]
+    },
+    {
+        "name": "Automation",
+        "synonyms": ["Automate"],
+        "implies": []
+    },
+    {
+        "name": "Working methods",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Digitization",
+        "synonyms": [],
+        "implies": ["Digitalization", "Digital transformation"]
+    },
+    {
+        "name": "Modernise",
+        "synonyms": ["Modernize"],
+        "implies": []
+    },
+    {
+        "name": "Business development",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Wood industry",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Digitalization",
+        "synonyms": [],
+        "implies": ["Digital transformation"]
+    },
+    {
+        "name": "Digital transformation",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Mobile first",
+        "synonyms": [],
+        "implies": ["UX"]
+    },
+    {
+        "name": "Responsive design",
+        "synonyms": [],
+        "implies": ["UX"]
+    },
+    {
+        "name": "Customer relationship management",
+        "synonyms": ["CRM"],
+        "implies": []
+    },
+    {
+        "name": "Tablet",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Smartphone",
+        "synonyms": [],
+        "implies": ["Phone"]
+    },
+    {
+        "name": "Booking system",
+        "synonyms": ["Appointment booking system", "System of booking"],
+        "implies": []
+    },
+    {
+        "name": "Academy",
+        "synonyms": [],
+        "implies": ["Education"]
+    },
+    {
+        "name": "Science",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Quality assurance",
+        "synonyms": ["QA"],
+        "implies": []
+    },
+    {
+        "name": "Face recognition",
+        "synonyms": [],
+        "implies": ["Machine learning"]
+    },
+]
