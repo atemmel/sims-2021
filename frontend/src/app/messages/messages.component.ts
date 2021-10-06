@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MessageService } from '../message.service';
-import { Who } from '../who';
-
+import { Article } from '../article';
+import { Office } from '../botMessage';
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
@@ -12,11 +11,25 @@ export class MessagesComponent implements OnInit {
 
   // Make the enum Who available for MessageComponent
   // used in message.component.html
-  public Who = Who;
 
   constructor(public messageService: MessageService) { }
 
   ngOnInit(): void {
 
+  }
+
+  instanceOfArticle(additional: any) {
+    if (!Array.isArray(additional)) return false;
+    console.log(additional[0] instanceof Article);
+    return additional[0] instanceof Article;
+  }
+
+  instanceOfOffice(additional: any) {
+    if (additional === undefined) return false;
+    return additional instanceof Office;
+  }
+
+  instanceOfContacts(additional: any) {
+    // TODO: Implement contacts
   }
 }

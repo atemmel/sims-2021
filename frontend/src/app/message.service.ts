@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Message } from './message';
+import { BotMessage } from './botMessage';
+import { CustomerMessage } from './customerMessage';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,13 @@ import { Message } from './message';
 
 export class MessageService {
 
-  messages: Message[] = [];
+  messages: any[] = [];
+  
+  addBotMessage(message: BotMessage) {
+    this.messages.push(message);
+  }
 
-  add(message: Message) {
+  addCustomerMessage(message: CustomerMessage) {
     this.messages.push(message);
   }
 

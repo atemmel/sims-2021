@@ -1,48 +1,48 @@
 import { Injectable } from '@angular/core';
 import { io } from 'socket.io-client';
 import { Observable } from 'rxjs';
-import { Message } from './message';
-import { Who } from './who';
-import { MessageService } from './message.service'
+import { BotMessage, BotMessageContents, Office, VisitAddress, ContactInfo, PostAddress, buildContents } from './botMessage';
+  import { CustomerMessage } from './customerMessage';
+  import { MessageService } from './message.service'
+  import { Article } from './article';
 
-@Injectable({
-  providedIn: 'root'
-})
+  @Injectable({
+    providedIn: 'root'
+  })
 
-export class WebSocketService {
+  export class WebSocketService {
 
-  socket: any;
-  readonly uri: string = "ws://localhost:80";
+    socket: any;
+    readonly uri: string = "ws://localhost:80";
 
-  constructor(private messageService: MessageService) {
-    this.socket = io(this.uri);
+    constructor(private messageService: MessageService) {
+      this.socket = io(this.uri);
+    }
+
+    // Called when messages are received from the bot, gives the user a response
+    listen(eventName: string) {
+      return new Observable((subscriber) => {
+        this.socket.on(eventName, (data: any) => {
+
+          let message = new BotMessage();
+
+          for (let response of data.response) {
+            message.contents.push(buildContents(response));
+          }
+
+          this.messageService.addBotMessage(message);
+          subscriber.next(data);
+        })
+      });
+    }
+
+    // Sends data to the server, called from sendMessage() in
+    // app.component.html when the user clicks on the send button
+    emit(eventName: string, data: any) {
+      var message = new CustomerMessage();
+      message.text = data;
+
+      this.messageService.addCustomerMessage(message);
+      this.socket.emit(eventName, data);
+    }
   }
-
-  // Called when messages are received from the bot, gives the user a response
-  listen(eventName: string) {
-    return new Observable((subscriber) => {
-      this.socket.on(eventName, (data: any) => {
-
-        var message = new Message();
-        message.who = Who.Bot;
-        message.text = data.response.text;
-        message.articles = data.response.articles;
-
-        this.messageService.add(message);
-        subscriber.next(data);
-      })
-    });
-  }
-
-  // Sends data to the server, called from sendMessage() in
-  // app.component.html when the user clicks on the send button
-  emit(eventName: string, data: any) {
-
-    var message = new Message();
-    message.who = Who.Customer;
-    message.text = data;
-
-    this.messageService.add(message);
-    this.socket.emit(eventName, data);
-  }
-}
