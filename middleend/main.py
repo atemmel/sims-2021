@@ -106,6 +106,20 @@ def connect(sid, _):
     # Returns true/false, should perhaps be handled(?)
     backend_connection.connect_client(sid)
 
+    backend_connection.clients_lock.acquire()
+    session_id = backend_connection.clients_session[sid]
+    backend_connection.clients_lock.release()
+
+    response = backend_connection.send_message("", session_id)
+    if not backend_connection.send_message_succeeded(response):
+        print("Could not send message:")
+        print(json.dumps(response, indent=2))
+    else:
+        response = {"text": response["output"]["generic"][0]["text"]}
+
+    sio.emit('event', {'response': response}, room=sid)
+    print(response)
+
 @sio.on('disconnect')
 def disconnect(sid):
     print('disconnect', sid)
@@ -137,7 +151,9 @@ def main():
     global articles, backend_connection
     config = common.read_json_to_dict("./config.json")
     articles = load_articles(config)
-    offices = load_offices(config)
+
+    # Commenting this out temporary
+    # offices = load_offices(config)
 
     
     backend_connection = BackendConnection("./auth.json")
