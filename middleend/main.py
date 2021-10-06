@@ -174,9 +174,9 @@ def main():
             do_repl()
         else:
             eventlet.wsgi.server(eventlet.listen(('', config["port"])), app)
+            # Cleanup
+            sleep(1.0)
 
-        # Cleanup
-        sleep(0.5)
         backend_connection.clean_up_all_sessions()
     except ApiException as ex:
         print("Method failed with status code", str(ex.code) , ":" , ex.message)
