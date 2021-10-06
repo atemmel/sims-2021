@@ -1,7 +1,8 @@
 #!/usr/bin/env python
+import argparse
 import eventlet
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-from ibm_watson import ApiException, AssistantV2
+from ibm_watson import ApiException
+import json
 import socketio
 from time import sleep
 
@@ -13,21 +14,17 @@ app = socketio.WSGIApp(sio)
 articles = {}
 backend_connection = None
 
-def do_repl(articles, assistant, session_id, auth):
+def do_repl():
+    client = "cli"
+    backend_connection.connect_client(client)
+    session = backend_connection.get_session(client)
     while True:
         try:
             message = input(">> ")
-            response = backend_connection.send_message(assistant, session_id, auth, message)
+            response = backend_connection.send_message(message, session)
             if not backend_connection.send_message_succeeded(response):
                 print("Could not send message:")
-                print(json.dumps(response, indent=2))
-            else:
-                
-                if len(response["output"]["entities"]) > 0:
-                    print(replace_entities_in_response(response, articles))
-                else:
-                    print(extract_message_from_response(response))
-
+            print(json.dumps(generate_response(response, articles), indent=2))
 
         except (KeyboardInterrupt, EOFError):
             print("\nExiting...")
@@ -59,46 +56,63 @@ def load_articles(config):
     return common.read_json_to_dict(config["scraped_articles"])
     
 def find_article_category(articles, category):
-    foundArticles = []
+    found_articles = []
     for article in articles:
         if article["company-field"] == category:
-            foundArticles.append(article)
-    return foundArticles
+            found_articles.append(article)
+    return found_articles
 
-def replace_entities_in_response(response, articles):
-    message = response["output"]["generic"][0]["text"]
-    category = response["output"]["entities"][0]["value"]
-    articles_in_category = find_article_category(articles,category)
-    selected_articles = articles_in_category[:3]
-    string_of_articletext = ""
-    for article in selected_articles:
-        string_of_articletext += "\n" + article["title"] + "\n" + " (" +  article["url"] + ") \n"
-
-    string_to_replace = "{" + category + "}"
-    return message.replace(string_to_replace, string_of_articletext)
+def find_articles_with_tags(articles, tags):
+    found_articles = []
+    for article in articles:
+        for tag in tags:
+            if tag in article["tags"]:
+                found_articles.append(article)
+                break
+    return found_articles
 
 
-def get_articles_and_urls(response, articles):
-    message = response["output"]["generic"][0]["text"]
-    category = response["output"]["entities"][0]["value"]
-    articles_in_category = find_article_category(articles,category)
-    string_to_replace = "{" + category + "}"
-    message = message.replace(string_to_replace, '')
-    selected_articles = articles_in_category[:3]
-    selected_articles_response = []
-
-    for article in selected_articles:
-        temp_article = {
-            'title': article["title"],
-            'url': article["url"]
-        }
-        selected_articles_response.append(temp_article)
-
-    res = {
-        'text': message,
-        'articles': selected_articles_response
+def generate_response(response, articles):
+    entities = response["output"]["entities"]
+    # If the response has entities
+    if len(entities) > 0:
+        tags = [entity["value"] for entity in list(filter(lambda entity: entity["entity"] == "ArticleTag", entities))]
+        return get_articles_and_urls(response, articles, tags)
+    return {
+        "text": response["output"]["generic"][0]["text"],
+        "articles": [],
     }
-    return res
+
+def get_articles_and_urls(response, articles, tags):
+    message = response["output"]["generic"][0]["text"]
+    category = response["output"]["entities"][0]["value"]
+    articles_in_category = find_article_category(articles,category)
+    if len(articles_in_category) > 0:
+        string_to_replace = "{" + category + "}"
+        message = message.replace(string_to_replace, '')
+        selected_articles = articles_in_category[:3]
+        selected_articles_response = []
+
+        for article in selected_articles:
+            temp_article = {
+                'title': article["title"],
+                'url': article["url"]
+            }
+            selected_articles_response.append(temp_article)
+
+        res = {
+            'text': message,
+            'articles': selected_articles_response
+        }
+        return res
+    else:
+        articles_with_tag = find_articles_with_tags(articles, tags)
+        if len(articles_with_tag) > 3:
+            articles_with_tag = articles_with_tag[:3]
+        return {
+            "text": message,
+            "articles": articles_with_tag,
+        }
 
 @sio.on('connect')
 def connect(sid, _):
@@ -127,9 +141,7 @@ def disconnect(sid):
 
 @sio.on('event')
 def message(sid, data):
-    backend_connection.clients_lock.acquire()
-    session_id = backend_connection.clients_session[sid]
-    backend_connection.clients_lock.release()
+    session_id = backend_connection.get_session(sid)
 
     response = backend_connection.send_message(data, session_id)
     print(response)
@@ -137,18 +149,18 @@ def message(sid, data):
         print("Could not send message:")
         print(json.dumps(response, indent=2))
     else:
-        if len(response["output"]["entities"]) > 0:
-            #Might make a list and store each string in replace_entities depending on what the front gais want.
-            response = get_articles_and_urls(response, articles)
-        else:
-            response = extract_message_from_response(response)
-
+        response = generate_response(response, articles)
         sio.emit('event', {'response': response}, room=sid)
         print(response)
 
 
 def main():
     global articles, backend_connection
+
+    parser = argparse.ArgumentParser(description="Run middleend")
+    parser.add_argument("--cli", action="store_true", help="Run in cli-mode")
+    args = parser.parse_args()
+
     config = common.read_json_to_dict("./config.json")
     articles = load_articles(config)
 
@@ -158,10 +170,13 @@ def main():
     
     backend_connection = BackendConnection("./auth.json")
     try:
-        eventlet.wsgi.server(eventlet.listen(('', config["port"])), app)
+        if args.cli:
+            do_repl()
+        else:
+            eventlet.wsgi.server(eventlet.listen(('', config["port"])), app)
 
         # Cleanup
-        sleep(1)
+        sleep(0.5)
         backend_connection.clean_up_all_sessions()
     except ApiException as ex:
         print("Method failed with status code", str(ex.code) , ":" , ex.message)

@@ -1,5 +1,5 @@
 {
-	"scraped_articles": "../datasets/knowit-site-se-translated-to-en.json",
+	"scraped_articles": "../scrapers/tagger/tagged-articles.json",
 	"office_location": "../entity-uploader/offices.json",
 	"port": 80
 }

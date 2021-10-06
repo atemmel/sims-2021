@@ -1,5 +1,5 @@
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-from ibm_watson import ApiException, AssistantV2
+from ibm_watson import AssistantV2
 from threading import Lock
 
 import common
@@ -48,8 +48,14 @@ class BackendConnection:
             session_id = session_id,
         )
 
+    def get_session(self, client):
+        self.clients_lock.acquire()
+        session_id = self.clients_session[client]
+        self.clients_lock.release()
+        return session_id
+
     def clean_up_all_sessions(self):
-        for session in self.clients_session:
+        for session in self.clients_session.values():
             self.delete_session(session)
 
     def create_session_succeeded(self, response):
