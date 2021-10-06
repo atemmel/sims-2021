@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+from collections.abc import Iterable
 import eventlet
 from ibm_watson import ApiException
 import json
@@ -76,43 +77,74 @@ def generate_response(response, articles):
     entities = response["output"]["entities"]
     # If the response has entities
     if len(entities) > 0:
-        tags = [entity["value"] for entity in list(filter(lambda entity: entity["entity"] == "ArticleTag", entities))]
-        return get_articles_and_urls(response, articles, tags)
+
+        # Add new article-related entities here
+        entities_relevant_to_articles = [
+                {
+                    "backend_name": "ArticleTag", 
+                    "dataset_name": "tags",
+                },
+                {
+                    "backend_name": "CompanyField",
+                    "dataset_name": "company-field",
+                },
+        ]
+
+        article_filter = {"filters": entities_relevant_to_articles}
+        for relevant_entity in entities_relevant_to_articles:
+            article_filter[relevant_entity["dataset_name"]] = [entity["value"] for entity in list(filter(lambda entity: entity["entity"] == relevant_entity["backend_name"], entities))]
+
+        articles =  get_articles(articles, article_filter)
+        if len(articles) > 0:
+            return {
+                "text": response["output"]["generic"][0]["text"],
+                "articles": articles,
+            }
+        else:
+            return {
+                "text": "Sorry, I could not find any relevant articles to your case",
+                "articles": [],
+            }
     return {
         "text": response["output"]["generic"][0]["text"],
         "articles": [],
     }
 
-def get_articles_and_urls(response, articles, tags):
-    message = response["output"]["generic"][0]["text"]
-    category = response["output"]["entities"][0]["value"]
-    articles_in_category = find_article_category(articles,category)
-    if len(articles_in_category) > 0:
-        string_to_replace = "{" + category + "}"
-        message = message.replace(string_to_replace, '')
-        selected_articles = articles_in_category[:3]
-        selected_articles_response = []
+def get_articles(articles, article_filter):
+    article_score = [0] * len(articles)
 
-        for article in selected_articles:
-            temp_article = {
-                'title': article["title"],
-                'url': article["url"]
-            }
-            selected_articles_response.append(temp_article)
+    # Grade articles
+    for i in range(len(articles)):
+        for filt in article_filter["filters"]:
+            filter_property = filt["dataset_name"]
+            filter_values = article_filter[filter_property]
+            article_property = articles[i][filter_property]
 
-        res = {
-            'text': message,
-            'articles': selected_articles_response
-        }
-        return res
-    else:
-        articles_with_tag = find_articles_with_tags(articles, tags)
-        if len(articles_with_tag) > 3:
-            articles_with_tag = articles_with_tag[:3]
-        return {
-            "text": message,
-            "articles": articles_with_tag,
-        }
+            if isinstance(article_property, Iterable) and not isinstance(article_property, str):
+                for filter_value in filter_values:
+                    for string in article_property:
+                        if string == filter_value:
+                            article_score[i] += 1
+                            break
+            else:
+                for filter_value in filter_values:
+                    if article_property == filter_value:
+                        article_score[i] += 1
+                        break
+
+    # Select top scoring articles
+    selected_indicies = []
+    target_amount = 3
+    for i in range(target_amount):
+        max_score = max(article_score)
+        if max_score <= 0:
+            continue
+        max_score_index = article_score.index(max_score)
+        selected_indicies.append(max_score_index)
+        article_score[max_score_index] = -1
+
+    # Whoop whoop
+    return [articles[i] for i in selected_indicies]
 
 @sio.on('connect')
 def connect(sid, _):
