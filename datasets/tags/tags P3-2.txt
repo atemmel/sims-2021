@@ -1,0 +1,271 @@
+[
+
+	{
+		"name": "Website",
+		"synonyms": ["site","websites"],
+		"implies":["Frontend"]
+
+	},
+	{
+		"name": "Consumer rights",
+		"synonyms": [],
+		"implies":[]
+
+	},
+	{
+		"name": "User experience",
+		"synonyms": ["UX"],
+		"implies":["Frontend"]
+
+	},
+	{
+		"name": "Mobile carrier",
+		"synonyms": ["Mobile","carrier"],
+		"implies":["Phone"]
+
+	},
+	{
+		"name": "Self service",
+		"synonyms": [],
+		"implies":["Customer service"]
+
+	},
+	{
+		"name": "iOS",
+		"synonyms": ["Apple"],
+		"implies":["Operating system"]
+
+	},
+	
+	{
+		"name": "Android",
+		"synonyms": ["Samsung","Lg","OnePlus","Xiaomi","Google Pixel"],
+		"implies":["Operating system"]
+
+	},
+	{
+		"name": "Application",
+		"synonyms": ["App","Mobile app"],
+		"implies":[]
+
+	},
+	{
+		"name": "Sitecore",
+		"synonyms": [],
+		"implies":["Platform"]
+
+	},
+	{
+		"name": "Music",
+		"synonyms": ["Singing","Instrument"],
+		"implies":[]
+
+	},
+	{
+		"name": "Typography",
+		"synonyms": ["Designs","Logo","Text"],
+		"implies":["Frontend"]
+
+	},
+	{
+		"name": "EPiserver",
+		"synonyms": ["Website","Websites"],
+		"implies":["Backend"]
+
+	},
+	
+	{
+		"name": "Property",
+		"synonyms": ["Appartment","Real estate"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Advertising",
+		"synonyms": ["Ad","Ads"],
+		"implies":[]
+
+	},
+	{
+		"name": "Automatization",
+		"synonyms": ["Work flow",],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Media",
+		"synonyms": ["Tv","Television"],
+		"implies":[]
+
+	},
+	{
+		"name": "Big data",
+		"synonyms": ["Analyzing","Analyze"],
+		"implies":[]
+
+	},
+	{
+		"name": "Sharepoint",
+		"synonyms": [],
+		"implies":[]
+
+	},
+	{
+		"name": "Web portal",
+		"synonyms": ["site","websites"],
+		"implies":["Frontend"]
+
+	},
+	{
+		"name": "e-commerce",
+		"synonyms": ["Sales","Customer","Customers"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Farmer",
+		"synonyms": ["Farmers","Agriculture"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Digital marketing",
+		"synonyms": ["Marketing"],
+		"implies":[]
+
+	},
+
+
+	{
+		"name": "Truck",
+		"synonyms": ["Trucks"],
+		"implies":["Vehicle]
+
+	},
+	
+
+	{
+		"name": "Smart searching",
+		"synonyms": ["Search","Searching"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Unit Testing",
+		"synonyms": ["Testing","Test"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Digital marketing",
+		"synonyms": ["Marketing"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Platform migration",
+		"synonyms": [],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Digital marketing",
+		"synonyms": ["Marketing"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "The judiciary",
+		"synonyms": ["Law","Goverment","Authority"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Real time data",
+		"synonyms": ["Real-time data","RTD"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Data visualization",
+		"synonyms": ["Visualization"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Drupal",
+		"synonyms": [],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Responsive design",
+		"synonyms": ["Responsive","Wcag"],
+		"implies":["Frontend"]
+
+	},
+
+	{
+		"name": "Electricity",
+		"synonyms": ["Electricity provider"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Tools",
+		"synonyms": ["Equipment"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Adobe Experiance Manager",
+		"synonyms": ["Adobe"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Content management system",
+		"synonyms": ["CMS"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Transport",
+		"synonyms": [],
+		"implies":["Vehicle"]
+
+	},
+
+	{
+		"name": "Google analytics",
+		"synonyms": ["Analytics","Analyze","Analyzing"],
+		"implies":[]
+
+	},
+
+	{
+		"name": "Google data studio",
+		"synonyms": ["Google"],
+		"implies":[]
+
+	}
+
+
+]
