@@ -12,7 +12,8 @@ import common
 
 sio = socketio.Server(cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
-articles = {}
+articles, offices = {}, {}
+
 backend_connection = None
 
 def do_repl():
@@ -26,6 +27,7 @@ def do_repl():
             if not backend_connection.send_message_succeeded(response):
                 print("Could not send message:")
             print(json.dumps(generate_response(response, articles), indent=2))
+            
 
         except (KeyboardInterrupt, EOFError):
             print("\nExiting...")
@@ -72,6 +74,33 @@ def find_articles_with_tags(articles, tags):
                 break
     return found_articles
 
+def handle_entity_city(entity, response):
+    global offices
+    found_offices= []
+    for office in offices:
+        if entity["value"] == office["visit-adress"]["city"]:
+            formatted_office = {
+                "visitAddress": office["visit-adress"],
+                "contactInfo": office["contact-info"] ,
+                "postAddress":  { 
+                    "companyName":office["post-adress"]["company-name"],
+                    "street":office["post-adress"]["street"],
+                    "zip":office["post-adress"]["zip"],
+                    "city":office["post-adress"]["city"]
+                }
+             }
+            found_offices.append(formatted_office)
+
+
+
+
+    return [{
+        "text": response["output"]["generic"][0]["text"],
+        "offices": found_offices
+        
+
+    }]
+
 
 def generate_response(response, articles):
     entities = response["output"]["entities"]
@@ -89,6 +118,17 @@ def generate_response(response, articles):
                     "dataset_name": "company-field",
                 },
         ]
+        entities_not_relevant_to_articles = [
+            {
+                "backend_name": "CompanyCity",
+                "corresponding_function": handle_entity_city
+            },
+        ]
+        for entity in entities:
+            entity_name = entity["entity"]
+            for relevant_entity in entities_not_relevant_to_articles:
+                if relevant_entity["backend_name"] == entity_name:
+                    return relevant_entity["corresponding_function"](entity,response)
 
         article_filter = {"filters": entities_relevant_to_articles}
         for relevant_entity in entities_relevant_to_articles:
@@ -189,7 +229,7 @@ def message(sid, data):
 
 
 def main():
-    global articles, backend_connection
+    global articles, backend_connection, offices
 
     parser = argparse.ArgumentParser(description="Run middleend")
     parser.add_argument("--cli", action="store_true", help="Run in cli-mode")
@@ -199,7 +239,7 @@ def main():
     articles = load_articles(config)
 
     # Commenting this out temporary
-    # offices = load_offices(config)
+    offices = load_offices(config)
 
     
     backend_connection = BackendConnection("./auth.json")

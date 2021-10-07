@@ -25,8 +25,9 @@ export class MessagesComponent implements OnInit {
   }
 
   instanceOfOffice(additional: any) {
-    if (additional === undefined) return false;
-    return additional instanceof Office;
+    if (!Array.isArray(additional)) return false;
+    console.log(additional[0] instanceof Office);
+    return additional[0] instanceof Office;
   }
 
   instanceOfContacts(additional: any) {

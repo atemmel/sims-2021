@@ -6,7 +6,7 @@ export class BotMessage {
 
 export class BotMessageContents {
   text: string;
-  additional: Article[] | Office | undefined; // TODO: Implement contacts
+  additional: Article[] | Office[] | undefined; // TODO: Implement contacts
 }
 
 export class Office {
@@ -73,13 +73,17 @@ export function buildContents(response: any) {
 
       contents.additional = articles;
 
-    } else if (response.hasOwnProperty('office')) {
-      let office = response.office;
-      let visitAddress = new VisitAddress(office.visitAddress.country, office.visitAddress.street, office.visitAddress.city);
-      let contactInfo = new ContactInfo(office.contactInfo.phone, office.contactInfo.mail, office.contactInfo.fax);
-      let postAddress = new PostAddress(office.postAddress.companyName, office.postAddress.street, office.postAddress.zip, office.postAddress.city);
-
-      contents.additional = new Office(visitAddress, contactInfo, postAddress);
+    } else if (response.hasOwnProperty('offices')) {
+      let offices: Office[] = [];
+      //let office = response.office;
+      
+      for (let office of response.offices) {
+        let visitAddress = new VisitAddress(office.visitAddress.country, office.visitAddress.street, office.visitAddress.city);
+        let contactInfo = new ContactInfo(office.contactInfo.phone, office.contactInfo.mail, office.contactInfo.fax);
+        let postAddress = new PostAddress(office.postAddress.companyName, office.postAddress.street, office.postAddress.zip, office.postAddress.city);
+        offices.push(new Office(visitAddress, contactInfo, postAddress));
+      }
+      contents.additional = offices
 
     } else if (response.hasOwnProperty('contacts')) {
       // TODO: Implement contacts

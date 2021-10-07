@@ -1,5 +1,5 @@
 {
 	"scraped_articles": "../scrapers/tagger/tagged-articles.json",
-	"office_location": "../entity-uploader/offices.json",
+	"office_location": "../datasets/offices.json",
 	"port": 80
 }
