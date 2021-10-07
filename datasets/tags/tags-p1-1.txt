@@ -1,0 +1,123 @@
+[
+    {
+        "name": "digitization
+",
+        "synonyms": [“digital development”],
+        "implies": ["digital transformation"]
+    },
+	{
+		"name": "Stockholm",
+		"synonyms": [],
+		"implies": []
+	},
+	{
+		"name": "security process",
+		"synonyms": [“Compliance”],
+		"implies": [“security”, "security requirements”,”decentralized security”,”resilient”]
+	},
+	{
+		"name": "roaming",
+		"synonyms": [],
+		"implies": ["traffic”,”pricing system”]
+	},
+	{
+		"name": "IT infrastructure",
+		"synonyms": [],
+		"implies": ["infrastructure"]
+	},
+	{
+		"name": "scaled up",
+		"synonyms": [],
+		"implies": [“scaled down”,”workload”]
+	},
+	{
+		"name": "government services",
+		"synonyms": ["government service"],
+		"implies": [“government”,”voting”,”vote”]
+	},
+	{
+		"name": "holistic",
+		"synonyms": [],
+		"implies": []
+	},
+	{
+		"name": "ID service",
+		"synonyms": [“ID”],
+		"implies": []
+	},
+	{
+		"name": "automatically identify people",
+		"synonyms": [“identify”, "identify people”],
+		"implies": []
+	},
+	{
+		"name": "sustainability",
+		"synonyms": [“sustainable”],
+		"implies": [“environment”]
+	},
+	{
+		"name": "documents electronically",
+		"synonyms": [“electronic document”,”electronic documents”],
+		"implies": [“sustainability”]
+	},
+	{
+		"name": "resilient",
+		"synonyms": ["Site"],
+		"implies": [“safe”]
+	},
+	{
+		"name": "sewing machine",
+		"synonyms": ["sewing”, “stitching”],
+		"implies": []
+	},
+	{
+		"name": "Internet connection",
+		"synonyms": [“Internet”],
+		"implies": [”IoT”,”internet of things”]
+	},
+	{
+		"name": "mobile application",
+		"synonyms": [“App”,”app’s”],
+		"implies": [“mobile”]
+	},
+	{
+		"name": "outdoor products",
+		"synonyms": [“outdoor”],
+		"implies": ["Husqvarna"]
+	},
+	{
+		"name": "back-end",
+		"synonyms": [“back end”],
+		"implies": []
+	},
+	{
+		"name": "front-end",
+		"synonyms": [“front end”],
+		"implies": []
+	},
+	{
+		"name": "User Experience",
+		"synonyms": ["UX", "Ease of use"],
+		"implies": []
+	},
+	{
+		"name": “IoT”,
+		"synonyms": [“Internet-of-Things”,”Internet of Things”],
+		"implies": []
+	},
+	{
+		"name": “robotics”,
+		"synonyms": [],
+		"implies": [“automation”]
+	},
+	{
+		"name": “GPS tracking”,
+		"synonyms": [“GPS”,”tracking”,”tracker”],
+		"implies": []
+	},
+	{
+		"name": "lawnmower",
+		"synonyms": [],
+		"implies": [“Husqvarna”,”robotics”]
+	}
+]+
