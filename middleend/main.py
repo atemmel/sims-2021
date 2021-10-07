@@ -96,19 +96,21 @@ def generate_response(response, articles):
 
         articles =  get_articles(articles, article_filter)
         if len(articles) > 0:
-            return {
+            return [{
                 "text": response["output"]["generic"][0]["text"],
                 "articles": articles,
-            }
+            }, {
+                "text": response["output"]["generic"][1]["text"]
+            }]
         else:
-            return {
+            return [{
                 "text": "Sorry, I could not find any relevant articles to your case",
                 "articles": [],
-            }
-    return {
+            }]
+    return [{
         "text": response["output"]["generic"][0]["text"],
         "articles": [],
-    }
+    }]
 
 def get_articles(articles, article_filter):
     article_score = [0] * len(articles)
@@ -161,7 +163,7 @@ def connect(sid, _):
         print("Could not send message:")
         print(json.dumps(response, indent=2))
     else:
-        response = {"text": response["output"]["generic"][0]["text"]}
+        response = [{"text": response["output"]["generic"][0]["text"]}]
 
     sio.emit('event', {'response': response}, room=sid)
     print(response)
