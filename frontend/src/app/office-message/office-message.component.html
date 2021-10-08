@@ -1,0 +1,29 @@
+<div *ngFor="let office of botMessageContents.additional">
+  <div class="chat-bubble p-2 mb-2 rounded">
+    <b>Visitor address:</b>
+    <br/>
+    {{office.visitAddress.street}}
+    <br/>
+    {{office.visitAddress.city}}
+    <br/><br/>
+    <div *ngIf="office.contactInfo.phone !== ''">
+      <b>Phone:</b> {{office.contactInfo.phone}}
+    </div>
+    <div *ngIf="office.contactInfo.mail !== ''">
+      <b>E-mail:</b> {{office.contactInfo.mail}}
+    </div>
+    <div *ngIf="office.contactInfo.fax !== ''">
+      <b>Fax:</b> {{office.contactInfo.fax}}
+    </div>
+    <br/>
+    <b>Postal address:</b>
+    <br/>
+    <div *ngIf="office.postAddress.companyName !== ''">
+      {{office.postAddress.companyName}}
+    </div>
+    <div *ngIf="office.postAddress.companyName !== ''">
+      {{office.postAddress.street}}
+    </div>
+    {{office.postAddress.zip}} {{office.postAddress.city}}
+  </div>
+</div>

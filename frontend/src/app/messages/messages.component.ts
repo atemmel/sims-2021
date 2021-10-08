@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from '../message.service';
+import { ArticleMessageComponent } from '../article-message/article-message.component';
 import { Article } from '../article';
-import { Office } from '../botMessage';
+import { Office } from '../office';
+
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
@@ -28,9 +30,5 @@ export class MessagesComponent implements OnInit {
     if (!Array.isArray(additional)) return false;
     console.log(additional[0] instanceof Office);
     return additional[0] instanceof Office;
-  }
-
-  instanceOfContacts(additional: any) {
-    // TODO: Implement contacts
   }
 }

@@ -13,7 +13,25 @@ h2 {
   border-radius: 4px;
   font-size: 1rem;
 }
+
 .clear:hover {
   color: white;
   background-color: #42545C;
+}
+
+.chat-bubble {
+  background-color: #efefef;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.right {
+  margin-right: 0px;
+  margin-left: 30px;
+}
+
+.right:after {
+    content:"";
+    clear:both;
+    display:block;
 }

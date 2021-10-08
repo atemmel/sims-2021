@@ -1,0 +1,7 @@
+<div class="chat-bubble p-2 mb-2 rounded">
+  <div *ngFor="let article of botMessageContents.additional">
+    {{article.title}}
+    <a [attr.href]="article.url" target="_blank">{{article.url}}</a>
+    <br/><br/>
+  </div>
+</div>

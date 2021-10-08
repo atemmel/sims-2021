@@ -3,52 +3,23 @@
 
     <!-- Checks if the message is from the customer -->
     <div *ngIf="message.constructor.name === 'CustomerMessage'">
-      <b>You: </b>{{message.text}}
+      <div class="right">
+        <div class="chat-bubble p-2 mb-2 rounded bg-primary text-white right float-right">{{message.text}}</div>
+      </div>
     </div>
 
     <!-- Checks if the message is from the bots -->
     <div *ngIf="message.constructor.name === 'BotMessage'">
-      <div *ngFor="let botMessage of message.contents">
+      <div *ngFor="let botMessageContents of message.contents">
 
-        <b>Bot: </b>{{botMessage.text}}
+        <div class="chat-bubble p-2 mb-2 rounded">{{botMessageContents.text}}</div>
 
-        <div *ngIf="instanceOfArticle(botMessage.additional)">
-          <!-- If the bot has suggestions for articles it goes through them here -->
-          <div *ngFor="let article of botMessage.additional">
-            <a [attr.href]="article.url" target="_blank">{{article.title}}</a>
-          </div>
+        <div *ngIf="instanceOfArticle(botMessageContents.additional)">
+          <app-article-message [botMessageContents]=botMessageContents></app-article-message>
         </div>
 
-        <div *ngIf="instanceOfOffice(botMessage.additional)">
-          <div *ngFor="let office of botMessage.additional">
-            <br/>
-            <b>Visitor address:</b>
-            <br/>
-            {{office.visitAddress.street}}
-            <br/>
-            {{office.visitAddress.city}}
-            <br/><br/>
-            <div *ngIf="office.contactInfo.phone !== ''">
-              <b>Phone:</b> {{office.contactInfo.phone}}
-            </div>
-            <div *ngIf="office.contactInfo.mail !== ''">
-              <b>E-mail:</b> {{office.contactInfo.mail}}
-            </div>
-            <div *ngIf="office.contactInfo.fax !== ''">
-              <b>Fax:</b> {{office.contactInfo.fax}}
-            </div>
-            <br/>
-            <b>Postal address:</b>
-            <br/>
-            <div *ngIf="office.postAddress.companyName !== ''">
-              {{office.postAddress.companyName}}
-            </div>
-            <div *ngIf="office.postAddress.companyName !== ''">
-              {{office.postAddress.street}}
-            </div>
-            {{office.postAddress.zip}} {{office.postAddress.city}}
-            <br/><br/>
-          </div>
+        <div *ngIf="instanceOfOffice(botMessageContents.additional)">
+          <app-office-message [botMessageContents]=botMessageContents></app-office-message>
         </div>
       </div>
     </div>
