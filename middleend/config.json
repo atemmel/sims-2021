@@ -1,5 +1,6 @@
 {
 	"scraped_articles": "../scrapers/tagger/tagged-articles.json",
 	"office_location": "../datasets/offices.json",
+	"people_with_skills_location": "../datasets/cinode-data/CompanyUserSkillsAmount.json",
 	"port": 80
 }
