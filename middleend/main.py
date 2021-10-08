@@ -27,7 +27,7 @@ def do_repl():
             if not backend_connection.send_message_succeeded(response):
                 print("Could not send message:")
             print(json.dumps(generate_response(response, articles), indent=2))
-            
+
 
         except (KeyboardInterrupt, EOFError):
             print("\nExiting...")
@@ -57,7 +57,7 @@ def find_offices(offices,city):
 
 def load_articles(config):
     return common.read_json_to_dict(config["scraped_articles"])
-    
+
 def find_article_category(articles, category):
     found_articles = []
     for article in articles:
@@ -74,31 +74,43 @@ def find_articles_with_tags(articles, tags):
                 break
     return found_articles
 
+def format_office(office):
+    return {
+        "visitAddress": office["visit-adress"],
+        "contactInfo": office["contact-info"],
+        "postAddress": {
+            "companyName": office["post-adress"]["company-name"],
+            "street": office["post-adress"]["street"],
+            "zip": office["post-adress"]["zip"],
+            "city": office["post-adress"]["city"]
+        }
+    }
+
 def handle_entity_city(entity, response):
     global offices
-    found_offices= []
+    found_offices = []
     for office in offices:
         if entity["value"] == office["visit-adress"]["city"]:
-            formatted_office = {
-                "visitAddress": office["visit-adress"],
-                "contactInfo": office["contact-info"] ,
-                "postAddress":  { 
-                    "companyName":office["post-adress"]["company-name"],
-                    "street":office["post-adress"]["street"],
-                    "zip":office["post-adress"]["zip"],
-                    "city":office["post-adress"]["city"]
-                }
-             }
-            found_offices.append(formatted_office)
-
-
-
-
+            found_offices.append(format_office(office))
     return [{
         "text": response["output"]["generic"][0]["text"],
         "offices": found_offices
-        
+    }]
 
+def handle_entity_skill(entity, response):
+    found_offices = []
+
+    # Checks if a city was entered in the same message as a skill
+    index_of_city = next((i for i, item in enumerate(response["output"]["entities"]) if item['entity'] == 'CompanyCity'), -1)
+    if index_of_city != -1:
+        print(index_of_city)
+        global offices
+        for office in offices:
+            if response["output"]["entities"][index_of_city]["value"] == office["visit-adress"]["city"]:
+                found_offices.append(format_office(office))
+    return [{
+        "text": response["output"]["generic"][0]["text"],
+        "offices": found_offices
     }]
 
 
@@ -110,7 +122,7 @@ def generate_response(response, articles):
         # Add new article-related entities here
         entities_relevant_to_articles = [
                 {
-                    "backend_name": "ArticleTag", 
+                    "backend_name": "ArticleTag",
                     "dataset_name": "tags",
                 },
                 {
@@ -123,7 +135,12 @@ def generate_response(response, articles):
                 "backend_name": "CompanyCity",
                 "corresponding_function": handle_entity_city
             },
+            {
+                "backend_name": "Skill",
+                "corresponding_function": handle_entity_skill
+            },
         ]
+
         for entity in entities:
             entity_name = entity["entity"]
             for relevant_entity in entities_not_relevant_to_articles:
@@ -241,7 +258,7 @@ def main():
     # Commenting this out temporary
     offices = load_offices(config)
 
-    
+
     backend_connection = BackendConnection("./auth.json")
     try:
         if args.cli:

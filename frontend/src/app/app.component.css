@@ -10,6 +10,7 @@ h1 {
 .card {
   height: 400px;
   overflow-y: auto;
+  overflow-x: none;
 }
 
 .bottom {
