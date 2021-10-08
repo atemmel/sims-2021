@@ -114,10 +114,6 @@ def handle_entity_skill(entity, response):
     # Checks if a city was entered in the same message as a skill
     index_of_city = next((i for i, item in enumerate(response["output"]["entities"]) if item['entity'] == 'CompanyCity'), -1)
     if index_of_city == -1:
-
-        print("EEENTTIETITY")
-        print(entity)
-
         skill_amount = lookup_skill(entity["value"])
         text_response = response["output"]["generic"][0]["text"].format(amount=skill_amount)
         return [{
@@ -125,7 +121,6 @@ def handle_entity_skill(entity, response):
             "offices": found_offices
         }]
     else:
-        print(index_of_city)
         global offices
         for office in offices:
             if response["output"]["entities"][index_of_city]["value"] == office["visit-adress"]["city"]:
