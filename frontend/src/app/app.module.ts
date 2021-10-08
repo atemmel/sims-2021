@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ArticleMessageComponent } from './article-message/article-message.component';
+import { OfficeMessageComponent } from './office-message/office-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
+    ArticleMessageComponent,
+    OfficeMessageComponent,
   ],
   imports: [
     BrowserModule,

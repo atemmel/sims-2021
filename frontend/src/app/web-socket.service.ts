@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { io } from 'socket.io-client';
 import { Observable } from 'rxjs';
-import { BotMessage, BotMessageContents, Office, VisitAddress, ContactInfo, PostAddress, buildContents } from './botMessage';
-  import { CustomerMessage } from './customerMessage';
-  import { MessageService } from './message.service'
-  import { Article } from './article';
+import { BotMessage, BotMessageContents, buildContents } from './botMessage';
+import { CustomerMessage } from './customerMessage';
+import { MessageService } from './message.service'
+import { Office } from './office';
+import { Article } from './article';
 
   @Injectable({
     providedIn: 'root'
