@@ -13,6 +13,7 @@ import common
 sio = socketio.Server(cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
 articles, offices = {}, {}
+skill_amounts = []
 
 backend_connection = None
 
@@ -58,6 +59,9 @@ def find_offices(offices,city):
 def load_articles(config):
     return common.read_json_to_dict(config["scraped_articles"])
 
+def load_people_with_skills(config):
+    return common.read_json_to_dict(config["people_with_skills_location"])
+
 def find_article_category(articles, category):
     found_articles = []
     for article in articles:
@@ -86,6 +90,13 @@ def format_office(office):
         }
     }
 
+def lookup_skill(skill):
+    global skill_amounts
+    for i, obj in enumerate(skill_amounts):
+        if obj["Skill"] == skill:
+            return obj["Amount"]
+    return -1
+
 def handle_entity_city(entity, response):
     global offices
     found_offices = []
@@ -102,8 +113,14 @@ def handle_entity_skill(entity, response):
 
     # Checks if a city was entered in the same message as a skill
     index_of_city = next((i for i, item in enumerate(response["output"]["entities"]) if item['entity'] == 'CompanyCity'), -1)
-    if index_of_city != -1:
-        print(index_of_city)
+    if index_of_city == -1:
+        skill_amount = lookup_skill(entity["value"])
+        text_response = response["output"]["generic"][0]["text"].format(amount=skill_amount)
+        return [{
+            "text": text_response,
+            "offices": found_offices
+        }]
+    else:
         global offices
         for office in offices:
             if response["output"]["entities"][index_of_city]["value"] == office["visit-adress"]["city"]:
@@ -246,7 +263,7 @@ def message(sid, data):
 
 
 def main():
-    global articles, backend_connection, offices
+    global articles, backend_connection, offices, skill_amounts
 
     parser = argparse.ArgumentParser(description="Run middleend")
     parser.add_argument("--cli", action="store_true", help="Run in cli-mode")
@@ -254,9 +271,8 @@ def main():
 
     config = common.read_json_to_dict("./config.json")
     articles = load_articles(config)
-
-    # Commenting this out temporary
     offices = load_offices(config)
+    skill_amounts = load_people_with_skills(config)
 
 
     backend_connection = BackendConnection("./auth.json")
