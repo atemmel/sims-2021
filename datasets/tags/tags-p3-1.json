@@ -1,0 +1,200 @@
+[
+    {
+
+		"name": "Public Procurement",
+
+		"synonyms": ["Procurements"],
+
+		"implies": []
+
+    },
+	{
+
+		"name": "Energy system",
+
+		"synonyms": [],
+
+		"implies": ["Energy"]
+
+	},
+	{
+
+		"name": "Agile development",
+
+		"synonyms": ["Agile"],
+
+		"implies": []
+
+	},
+
+	{
+
+		"name": "Narrowband Internet of Things",
+
+		"synonyms": ["NB-IoT"],
+
+		"implies": ["Internet of Things"]
+
+	},
+
+	{
+
+		"name": "Website",
+
+		"synonyms": ["Webpage", "homepage"],
+
+		"implies": []
+
+	},
+
+	{
+
+		"name": "Data analytics",
+
+		"synonyms": ["Big data"],
+
+		"implies": ["Data, analytics"]
+
+	},
+
+	{
+
+		"name": "e-commerce",
+
+		"synonyms": ["electronic-commerce"],
+
+		"implies": []
+
+	},
+
+	{
+
+		"name": "Management control",
+
+		"synonyms": ["Control management"],
+
+		"implies": ["Management"]
+
+	},
+
+	{
+
+		"name": "Portfolio management",
+
+		"synonyms": [],
+
+		"implies": ["Management"]
+
+	},
+
+	{
+
+		"name": "Business support",
+
+		"synonyms": [],
+
+		"implies": ["Business, support"]
+
+	},
+
+	{
+
+		"name": "Support center",
+
+		"synonyms": [],
+
+		"implies": ["support"]
+
+	},
+
+	{
+
+		"name": "Dynamic webiste",
+
+		"synonyms": [],
+
+		"implies": ["Webiste","Dynamic"]
+
+	},
+
+	{
+
+		"name": "Digital agenda",
+
+		"synonyms": [],
+
+		"implies": ["digitization", "digitisation"]
+
+	},
+
+	{
+
+		"name": "Project management",
+
+		"synonyms": [],
+
+		"implies": ["Management"]
+
+	},
+
+	{
+
+		"name": "Information security",
+
+		"synonyms": ["Cyber security", "Cyber threat"],
+
+		"implies": ["Security"]
+
+	},
+
+	{
+
+		"name": "Robotics",
+
+		"synonyms": ["Robot, Robots"],
+
+		"implies": ["Robot, Robots"]
+
+	},
+
+	{
+
+		"name": "Platform",
+
+		"synonyms": ["Digital platform"],
+
+		"implies": []
+
+	},
+
+	{
+
+        "name": "User interface",   
+
+        "synonyms": ["UI"],
+
+        "implies": []
+
+	},
+
+	{
+
+		"name": "Graphic Design",
+
+		"synonyms": [],
+
+		"implies": ["Design"]
+
+	},
+
+	{
+
+        "name": "Microservices",   
+
+        "synonyms": [],
+
+        "implies": []
+
+    }
+
+]
