@@ -21,7 +21,7 @@ def do_repl():
     client = "cli"
     backend_connection.connect_client(client)
     session = backend_connection.get_session(client)
-    load_employees()
+
     while True:
         try:
             message = input(">> ")
@@ -63,10 +63,13 @@ def load_articles(config):
 def load_people_with_skills(config):
     return common.read_json_to_dict(config["people_with_skills_location"])
 
-def load_employees(config):
-    return common.read_json_to_dict(config["company_users"])
-
-
+def find_article_category(articles, category):
+    found_articles = []
+    for article in articles:
+        if article["company-field"] == category:
+            found_articles.append(article)
+    return found_articles
+    
 def find_articles_with_tags(articles, tags):
     found_articles = []
     for article in articles:
@@ -288,7 +291,7 @@ def main():
     articles = load_articles(config)
     offices = load_offices(config)
     skill_amounts = load_people_with_skills(config)
-    employees=load_employees(config)
+
 
 
     backend_connection = BackendConnection("./auth.json")
