@@ -21,6 +21,7 @@ def do_repl():
     client = "cli"
     backend_connection.connect_client(client)
     session = backend_connection.get_session(client)
+    load_employees()
     while True:
         try:
             message = input(">> ")
@@ -62,12 +63,9 @@ def load_articles(config):
 def load_people_with_skills(config):
     return common.read_json_to_dict(config["people_with_skills_location"])
 
-def find_article_category(articles, category):
-    found_articles = []
-    for article in articles:
-        if article["company-field"] == category:
-            found_articles.append(article)
-    return found_articles
+def load_employees(config):
+    return common.read_json_to_dict(config["company_users"])
+
 
 def find_articles_with_tags(articles, tags):
     found_articles = []
@@ -133,19 +131,36 @@ def handle_entity_skill(entity, response):
 
 def generate_response(response, articles):
     entities = response["output"]["entities"]
+    intents = response["output"]["intents"]
+    print(response)
+    if len(intents) > 0:
+        intent = intents[0]["intent"]
+        print(intent)
+        relevant_intents = [
+            {
+                "intent_name": "NumberOfOffices",
+                "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(offices))),
+                }]
+            }
+        ]
+        for relevant_intent in relevant_intents:
+            if relevant_intent["intent_name"] == intent:
+                return relevant_intent["corresponding_function"](response)
+
+    
     # If the response has entities
     if len(entities) > 0:
 
         # Add new article-related entities here
         entities_relevant_to_articles = [
-                {
-                    "backend_name": "ArticleTag",
-                    "dataset_name": "tags",
-                },
-                {
-                    "backend_name": "CompanyField",
-                    "dataset_name": "company-field",
-                },
+            {
+                "backend_name": "ArticleTag",
+                "dataset_name": "tags"
+            },
+            {
+                "backend_name": "CompanyField",
+                "dataset_name": "company-field"
+            }
         ]
         entities_not_relevant_to_articles = [
             {
@@ -155,7 +170,7 @@ def generate_response(response, articles):
             {
                 "backend_name": "Skill",
                 "corresponding_function": handle_entity_skill
-            },
+            }
         ]
 
         for entity in entities:
@@ -273,6 +288,7 @@ def main():
     articles = load_articles(config)
     offices = load_offices(config)
     skill_amounts = load_people_with_skills(config)
+    employees=load_employees(config)
 
 
     backend_connection = BackendConnection("./auth.json")
