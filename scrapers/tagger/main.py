@@ -51,8 +51,7 @@ def tags_of_string(string, tags):
     return list(set(found_tags))
 
 articles = load_json("../../datasets/knowit-site-se-translated-to-en.json")
-# TODO: Change this to final tag file
-tags = load_json("../../datasets/tags/tags-p1-2.json")
+tags = load_json("../../datasets/tags/tags-compiled-formatted.json")
 url_tags_dict = {}
 
 for i in range(len(articles)):

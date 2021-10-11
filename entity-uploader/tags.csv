@@ -1,21 +1,127 @@
-ArticleTag,Automobile,Car,Vehicle,Cars
+ArticleTag,Digitalization,digital development
+ArticleTag,security process,Compliance
+ArticleTag,roaming
+ArticleTag,IT infrastructure
+ArticleTag,voting,vote
+ArticleTag,ID service
+ArticleTag,automatically identify people,identify people
+ArticleTag,sustainability,sustainable
+ArticleTag,electronic documents,electronic document,electronic documents
+ArticleTag,sewing machine,sewing,stitching
+ArticleTag,Internet connection,Internet
+ArticleTag,outdoor products,outdoor
+ArticleTag,User Experience,UX,Ease of use
+ArticleTag,IoT,Internet-of-Things,Internet of Things
+ArticleTag,GPS tracking,GPS,tracking,tracker
+ArticleTag,lawnmower
+ArticleTag,Automobile,Car,Cars
+ArticleTag,Vehicle,V,e,h,i,c,l,e,s
 ArticleTag,Google Analytics
 ArticleTag,Adobe Analytics
-ArticleTag,Volkswagen,VW
-ArticleTag,Impact Mapping,IM
+ArticleTag,Impact Mapping
 ArticleTag,Phone,Telephone,Mobile
-ArticleTag,Tele2
 ArticleTag,Episerver
 ArticleTag,Website,Site,Websites
-ArticleTag,Backend,Server
-ArticleTag,Frontend
-ArticleTag,Website,Site
+ArticleTag,Backend,Server,back end,back-end
+ArticleTag,Frontend,front end,front-end
 ArticleTag,Image,Image,Images,Picture,Pictures
 ArticleTag,App,Application
 ArticleTag,Photography,Photo
 ArticleTag,Television,TV,Video
 ArticleTag,Media
 ArticleTag,IT
-ArticleTag,User Experience,UX,Ease of use
 ArticleTag,Intranet
 ArticleTag,Analytics
+ArticleTag,Social media,Socials,Facebook,Instagram
+ArticleTag,Interaction design
+ArticleTag,Health,Healthcare
+ArticleTag,Mental health
+ArticleTag,AI,Artificial Intelligence
+ArticleTag,Education,Learning,Educations
+ArticleTag,User Interface,UI
+ArticleTag,Machine Learning,ML
+ArticleTag,CMS,Content Management System
+ArticleTag,Cloud
+ArticleTag,Azure,Microsoft Azure
+ArticleTag,Web service,Web services
+ArticleTag,E-commerce
+ArticleTag,B2B,Business-to-Business
+ArticleTag,B2C,Business-to-Customer
+ArticleTag,E-service,E-services
+ArticleTag,Google Cloud,GCP
+ArticleTag,Pattern,Patterns
+ArticleTag,Chatbot,Chatbots,Bot
+ArticleTag,Award,Awards
+ArticleTag,Automation,Automate,Automating
+ArticleTag,Digitization
+ArticleTag,Modernise,Modernize
+ArticleTag,Business development
+ArticleTag,Wood industry
+ArticleTag,Digitalization,Digital transformatiln
+ArticleTag,Digital transformation
+ArticleTag,Mobile first
+ArticleTag,Responsive design
+ArticleTag,Customer relationship management,CRM
+ArticleTag,Tablet
+ArticleTag,Smartphone
+ArticleTag,Booking system,Appointment booking system,System of booking
+ArticleTag,Academy
+ArticleTag,Science
+ArticleTag,Quality assurance,QA
+ArticleTag,Face recognition
+ArticleTag,Public Procurement,Procurements
+ArticleTag,Energy system
+ArticleTag,Agile development,Agile
+ArticleTag,Narrowband Internet of Things,NB-IoT
+ArticleTag,Data analytics,Big data
+ArticleTag,e-commerce,electronic-commerce
+ArticleTag,Management control,Control management
+ArticleTag,Portfolio management
+ArticleTag,Business support
+ArticleTag,Support center
+ArticleTag,Dynamic webiste
+ArticleTag,Digital agenda
+ArticleTag,Project management
+ArticleTag,Information security,Cyber security,Cyber threat
+ArticleTag,Robotics,Robot,Robots
+ArticleTag,Platform,Digital platform
+ArticleTag,Graphic Design
+ArticleTag,Microservices
+ArticleTag,Consumer rights
+ArticleTag,Mobile carrier,Mobile,carrier
+ArticleTag,Self service
+ArticleTag,iOS,Apple
+ArticleTag,Android,Samsung,Lg,OnePlus,Xiaomi,Google Pixel
+ArticleTag,Operating System
+ArticleTag,Application,App,Mobile app
+ArticleTag,Sitecore
+ArticleTag,Music,Singing,Instrument
+ArticleTag,Typography,Designs,Logo,Text
+ArticleTag,EPiserver,Website,Websites
+ArticleTag,Property,Appartment,Real estate
+ArticleTag,Advertising,Ad,Ads
+ArticleTag,Automatization,Workflow
+ArticleTag,Media,Tv,Television
+ArticleTag,Big data,Analyzing,Analyze
+ArticleTag,Sharepoint
+ArticleTag,Web portal,site,websites
+ArticleTag,Farmer,Farmers,Agriculture
+ArticleTag,Digital marketing,Marketing
+ArticleTag,Truck,Trucks
+ArticleTag,Smart searching,Search,Searching
+ArticleTag,Unit Testing,Testing,Test
+ArticleTag,Digital marketing,Marketing
+ArticleTag,Platform migration
+ArticleTag,Digital marketing,Marketing
+ArticleTag,The judiciary,Law,Goverment,Authority
+ArticleTag,Real time data,Real-time data,RTD
+ArticleTag,Data visualization,Visualization
+ArticleTag,Drupal
+ArticleTag,Responsive design,Responsive,Wcag
+ArticleTag,Electricity,Electricity provider
+ArticleTag,Tools,Equipment
+ArticleTag,Adobe Experiance Manager,Adobe
+ArticleTag,Content management system,CMS
+ArticleTag,Transport
+ArticleTag,Google analytics,Analytics,Analyze,Analyzing
+ArticleTag,Google data studio
