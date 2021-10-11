@@ -56,6 +56,8 @@ def find_offices(offices,city):
     print(foundOffices)
     return foundOffices
 
+def load_employees(config):
+    return common.read_json_to_dict(config["company_users"])
 
 def load_articles(config):
     return common.read_json_to_dict(config["scraped_articles"])
@@ -142,9 +144,13 @@ def generate_response(response, articles):
         relevant_intents = [
             {
                 "intent_name": "NumberOfOffices",
-                "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(offices))),
-                }]
+                "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(offices)))}]
+            },
+            {
+                "intent_name": "NumberOfEmployees",
+                "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(number_of_employees)))}]
             }
+
         ]
         for relevant_intent in relevant_intents:
             if relevant_intent["intent_name"] == intent:
@@ -281,7 +287,7 @@ def message(sid, data):
 
 
 def main():
-    global articles, backend_connection, offices, skill_amounts
+    global articles, backend_connection, offices, skill_amounts, number_of_employees
 
     parser = argparse.ArgumentParser(description="Run middleend")
     parser.add_argument("--cli", action="store_true", help="Run in cli-mode")
@@ -291,7 +297,7 @@ def main():
     articles = load_articles(config)
     offices = load_offices(config)
     skill_amounts = load_people_with_skills(config)
-
+    number_of_employees = load_employees(config)
 
 
     backend_connection = BackendConnection("./auth.json")
