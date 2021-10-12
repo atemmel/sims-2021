@@ -13,5 +13,5 @@ def kind_of_json_to_json(input_file, output_file):
         json.dump(better_json, outfile, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
 
 
-kind_of_json_to_json("../datasets/cinode-data/CompanyUser.json", "cinode-data/BetterCompanyUser.json")
-kind_of_json_to_json("../datasets/cinode-data/CompanyUserSkills.json", "cinode-data/BetterCompanyUserSkills.json")
+kind_of_json_to_json("../datasets/cinode-data/CompanyUser.json", "../datasets/cinode-data/cinode-data/BetterCompanyUser.json")
+kind_of_json_to_json("../datasets/cinode-data/CompanyUserSkills.json", "../datasets/cinode-data/cinode-data/BetterCompanyUserSkills.json")
