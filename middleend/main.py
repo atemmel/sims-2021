@@ -81,6 +81,18 @@ def find_articles_with_tags(articles, tags):
                 break
     return found_articles
 
+def find_article_with_company_name(entity, response):
+    global articles
+    found_articles = []
+
+    for article in articles:
+        if entity["value"].lower() == article["company-name"].lower():
+            found_articles.append(article)
+    return [{
+        "text": response["output"]["generic"][0]["text"],
+        "articles": found_articles
+    }]
+
 def format_office(office):
     return {
         "visitAddress": office["visit-adress"],
@@ -179,6 +191,10 @@ def generate_response(response, articles):
             {
                 "backend_name": "Skill",
                 "corresponding_function": handle_entity_skill
+            },
+            {
+                "backend_name": "CompanyInArticle",
+                "corresponding_function": find_article_with_company_name
             }
         ]
 
