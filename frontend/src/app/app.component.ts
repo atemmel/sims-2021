@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { WebSocketService } from './web-socket.service';
 import { MessagesComponent } from './messages/messages.component';
@@ -16,18 +16,14 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.webSocketService.listen('event').subscribe((data) => {
-      console.log(data)
+      this.scrollDown();
     });
   }
 
   // Called when the user clicks on the send button in app.component.html.
   // Sends the users input to the server
   sendMessage(input: any) {
-
-    // Remove whitespace before and after the input string
     let text = input.value.trim();
-
-    // Clear the input field
     input.value = "";
 
     // Do nothing if the input field is empty when the user
@@ -38,5 +34,13 @@ export class AppComponent implements OnInit {
 
     // Send the string to the middleend
     this.webSocketService.emit('event', text);
+    this.scrollDown();
+  }
+
+  scrollDown() {
+    setTimeout(() => {
+      let chatWindowElement = Array.from(document.getElementsByClassName("chat-window") as HTMLCollectionOf<HTMLElement>);
+      chatWindowElement[0].scrollTop = chatWindowElement[0].scrollHeight;
+    });
   }
 }
