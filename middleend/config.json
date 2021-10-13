@@ -2,6 +2,6 @@
 	"scraped_articles": "../scrapers/tagger/tagged-articles.json",
 	"office_location": "../datasets/offices.json",
 	"people_with_skills_location": "../datasets/cinode-data/CompanyUserSkillsAmount.json",
-	"company_users": "../datasets/companies.json",
+	"company_users": "../datasets/cinode-data/BetterCompanyUser.json",
 	"port": 80
 }
