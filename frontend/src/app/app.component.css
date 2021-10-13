@@ -7,7 +7,7 @@ h1 {
   margin-top: 50px;
 }
 
-.card {
+.chat-window {
   height: 400px;
   overflow-y: auto;
   overflow-x: none;

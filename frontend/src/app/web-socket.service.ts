@@ -26,7 +26,6 @@ import { Article } from './article';
         this.socket.on(eventName, (data: any) => {
 
           let message = new BotMessage();
-
           for (let response of data.response) {
             message.contents.push(buildContents(response));
           }
@@ -42,7 +41,6 @@ import { Article } from './article';
     emit(eventName: string, data: any) {
       var message = new CustomerMessage();
       message.text = data;
-
       this.messageService.addCustomerMessage(message);
       this.socket.emit(eventName, data);
     }
