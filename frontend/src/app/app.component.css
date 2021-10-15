@@ -25,3 +25,7 @@ button {
   position: absolute;
   top: 0;
 }
+
+::placeholder {
+	font-style: italic;
+}
