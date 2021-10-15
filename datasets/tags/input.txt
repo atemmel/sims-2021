@@ -1,0 +1,145 @@
+\chapter{Implementation}
+
+\begin{comment}
+The Design or Implementation chapter often appears in technical reports, but not always in scientific reports. Here, the analysis of the problem is implemented and a technical requirement specification is formulated. At this stage, the most important principles in the suggested alternatives for solution are described and formulated in preparation for evaluation at a later point in the report. The description is sometimes placed before, but generally after the methodology/model chapter, if included at all.
+The reader is seldom interested in extremely detailed documentation of computer program code, algorithms, electrical circuit diagrams, user guidance, etc. Such details are placed in the appendices.
+As mentioned in the Introduction chapter you have during earlier studies mainly worked with small well defined tasks that have taken minutes or as most hours to solve. In comparison an exam work or a project course can sometimes appear to be an almost overwhelming amount of information because it is so extensive, and this may cause anxiety with regards to where to start. One way to facilitate big projects is to use the top-down-method, i.e. to divide the problem or the structure into smaller problem parts or system parts, and to state specification of  requirements, problem analysis and proposed solution for each part. Eventually small and concrete information will have been identified with similar characteristics to those found in your previous studies.
+It is not always practically possible to apply the top-down-method, since the problem may be too complex and initially very difficult to visualise the complete overview. It might prove necessary to alternate between the top-down - and bottom-up-method. The latter means that you start with parts already known to you and from simple problems that have been tackled previously you  make use of that knowledge for aspects that you expect to resolve at a later stage in the project. Gradually increase these parts into the bigger systems and problems and then pursue the direction of project's objective.
+The top-down-method has the advantage of giving the report a solid structure, which makes it easier for the reader. The documentation therefore often follows the top-down-method. It is thus possible to divide the structure part into several chapters, and to name them after each problem part and system part, i.e. “Specification of requirements”, “Algorithms”, “User interface”, “Program documentation”, “Prototype” and “Implementation”.
+\end{comment}
+
+
+
+%In this chapter all identified solutions are presented and explained without a completed and well defined solution. The results are presented in the next chapter \ref{ch:results}.
+This chapter is structured around the three sprints, which are the core steps in this project.  
+
+\section{Sprint 1}
+The main aim of the first sprint was to understand the problem complete and in great detail. 
+\subsection{Possible Solutions}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{pictures/Problem.png}
+    \caption{Graphic showing the different paths for customers to get relevant articles.}
+\label{fig:Problem_intro}
+\end{figure}
+
+\paragraph{Chatbot}
+There are two different approaches for an AI based chatbot solution, which are explained in chapter \ref{ch:AI_theory}. One is a rule based AI and the other a data based AI, also known as weak and strong AI. A chatbot based on either of both AI approaches can be implemented. As explained in chapter \ref{ch:AI_theory}, the weak AI demands a well defined task an can not cope with a big deviation of the designed task and therefore can not emulate a human like chat experience. A weak AI is a rule based system, which are defined through interviews with experts of the field in which the AI will perform its task. In the case of Knowit the experts are the employees and the customers of Knowit who would be interviewed. 
+On the other hand, the strong AI's aim is it to act as similar as possible like a human, which is needed for a chatbot application. The strong AI is a data driven system, which requires a significant amount of structured or unstructured data to design the AI model. In the case of Knowit the database would be the articles about past projects and optionally the internal database about Knowit's employees and their individual skills.  
+
+
+\paragraph{Optimised search bar}
+On Knowit's website is an already existing search bar for finding information on this website. At the current state the search bar is powered by google, which also enables google analytic for the search bar. 
+An alternative search engine cloud be Wolfram Alpha \cite{Wolfram}, which is a knowledge and answer engine. Further research is needed to determine the best search engine for this application. 
+
+\paragraph{Optimised Google search}
+It is assumed that many customer are using Google for finding a suitable consultant firm. It is of great importance, if and how high in the search result Knowit shows up and which place of Knowit's website is getting shown. Theses factors can be manipulated thorough different adaptations in the website architecture and design \cite{google_search}.
+\paragraph{Smart newsletter}
+The aim of a smart newsletter is to inform customers with just the relevant news for each individual customer. In contrast to the three other options, see above, the newsletter is proactive and informs the costumer with information, which potentially inspires the customer for future projects. 
+The content of the newsletter will be adopted to the interests of the customer and to the associated industry sector. Knowit already has a customer database with information, which could be used for a smart newsletter. Furthermore, generated data from the chatbot, which is developed within the framework of this project, can be used to increase the grade of the personalisation of the newsletter. 
+
+\paragraph{Social media}
+Social media is also proactive way to engage with costumers and potential new customers, similar to the smart newsletter motioned above. For an effective social media presents, a professional marketing strategy is needed, which Knowit already has. 
+
+\subsection{Data}
+\subsection{Data collection}
+For the chatbot to be useful it is imperative that it can access data of interest in order to give the visitors an adequate response when they interact by asking questions, for instance. This data mainly revolves around articles about Knowit's clients and their cases, with attributes such as the names of the companies and the fields they operate in, the title of the articles and the content of the articles. The chatbot should also provide links to the visitors when it suggests articles based on the visitors input, which makes urls that takes the visitor to the articles an important part of the data collection.
+
+Data of this character is typically stored in a database, which we do not have access to in this project. To overcome this challenge, we built a web scraper in Python that extracts data from specific HTML-tags and classes found in web pages that displays articles on Knowit’s website containing the information we need. Data collected from the web scraper is then outputted to JSON files that are based on the language of the content. The web scraper targets both Swedish and English articles, and it came to our attention that there are far more articles written in Swedish than there are in English. To be able to make the chatbot serve visitors who understand English but not Swedish with the same selection of articles, the web scraper was modified by the addition of a translation feature that translates the Swedish articles into English.
+
+A second web scraper was built, targeting the website allabolag.se, to collect company names along with the cities and company fields they operate in. This data is used to make it easier for the bot to understand what the goal of the visitor's interaction with the bot is. When a visitor enters a company name to the chatbot, matched company fields can be found and that facilitates the process of finding articles that might help the visitor to make up their mind if Knowit is the consultant company they should hire. The cities of the companies can then be used to provide contact information about offices in or nearby these cities.
+
+Knowit uses the skills management platform Cinode in which the competences of Knowit’s employees are listed, among other things. This data was fetched by an API provided by Cinode to make it possible for the bot to inform a visitor the number of employees that has a specific skill when appropriate.
+\subsection{Cloud Provider Comparison}
+
+
+\subsection{Cloud Provider Hands-on practical Comparison}
+
+\subsection{Design plan}
+
+\subsection{Middleend construction}
+
+\subsection{Frontend construction}
+
+\subsection{WebSocket communication}
+
+\section{Sprint 2}
+\subsection{Data we need}
+\subsection{Questions/Tasks}
+
+
+
+\section{Sprint 3}
+\subsection{Increase Guidance }
+\subsection{Optimize the Front End}
+\subsection{Usability Test}
+
+
+\chapter{Theory}
+\begin{comment}
+In the report's theory study, sometimes called Related work, there may be additional facts required for the reader's understanding of the report. At this point a summary of background material in the area should be provided, i.e. standards, scientific articles, books, magazines, documents on the web, technical reports and user manuals. Explain pedagogically with clear examples and many illustrations.
+It should be demonstrated that you have an awareness of the context and the background of your work in addition to that carried out by you within the project. Explain the aim of the technology that you describe, and not only how the technology works. For D-level you should display an awareness of the key research within the area, in order to ensure that your work has a certain news value. However it is vital that you do not deviate too much from your research problem.
+Your assignment is not to write a textbook. It is important to find an appropriate balance between related work and your own results. The theory study should only constitute a minor portion of a thesis.
+Instead of “Theory” or “Related work”, the heading may very well be a specific topic, for example “The GSM standard” or ”A survey on the research field of X".
+If the theoretical study section is rather brief then it is possible to include it within the Introduction chapter.
+%%%%%%%%
+If your method is to undertake a critical literature study you normally do not have to have a separate chapter with background material because all sources you refer to are summarized in the results chapter. Your criticism of the sources and the arguments for your personal opinions are thus placed in the concluding chapter.
+%%%%%%%
+
+2.1	Definition of terms and abbreviations
+Terms and abbreviations that are important for the reader's continued understanding are explained in this chapter. The first time you insert text that uses a concept or an abbreviation you should also explain it, even if it is already defined in the terminology section. The concept is typed using the italic style.
+The first time an abbreviation (abbr.) is used it is typed within the parenthesis after its explanation, as illustrated in this sentence.
+
+2.1.1	Example of level 3 heading
+Avoid too many heading levels.
+
+
+2.2	To review or quote
+You review when you reproduce content using your own words.
+Example: Forslund [4]  recommends more informative headings be used in technical reports and that one should, in particular, provide important information in the sub headings.
+You quote when you literally reproduce a phrase, a sentence or paragraph. Quotations under 50 words are to be placed within quotation marks. To quote Strömqvist could be a suitable illustration in this context: “It may be difficult to write, but it is also fun” [3] .
+Quotations over 50 words should be reproduced in the form of block quotations. The text block is centered on the page without quotes and in small caps. The source is stated in direct connection to the block quotation.
+Normally you review instead of using quotes. You can use direct quotations if you wish to reproduce established definitions of concepts, which you believe an author has formulated himself in a particularly suitable manner, when you require aid of an authority, or when you wish to demonstrate that an author is wrong.
+
+
+2.3	References and source references 
+Kindly observe! To reproduce a text without stating its source is to be considered as plagiarism and is thus defined as serious cheating.
+A list of references is placed at the end of the report in order to give the reader overall information regarding all reviewed sources, quotes or for any other reasons that you need to refer to in the text. The sources should be carefully stated so that the reader can check if it is available in libraries or on the internet. Sometimes it might be that verbal sources and other correspondence are included in the source list, but this is unusual in technical reports.
+Refrain from using less trustworthy sources, instead stick to using material written by authorities in the subject matter. Private sites and exam papers are seen as having a low reliability as sources. This is especially true if the exam paper is of a lower level then your own paper.
+Use only sources in the list that you refer to or quote in the continuous text. All sources that are used in the source list should be linked to the report through reference in the continuous text, according to the Vancouver-system, which commonly occurs in reports regarding technical matters.
+According to the Vancouver-system the source list is arranged in the same order as the sources appear in the continuous text, the source reference is to be stated in the text with a figure within square brackets, i.e. [1]  or [2] ,[3] . They should also be stated in this order in the source list. Examples of source reference: According to Eriksson [2]  dynamic SFNs can provide significant performance improvements.
+
+\end{comment}
+
+
+
+
+
+\section{AI}
+\label{ch:AI_theory}
+In general Artificial intelligence and their applications falls under two broad categories. These are Weak AI and Strong AI. \cite{flowers_strong_2019}
+\paragraph{Weak AI} This type of artificial intelligence is also called "Narrow AI" and works in a limited and well-defined task domain. It is a simulation of human intelligence on a specific use case. The focus is on a excellent execution of a defined task. The application shows little flexibility. Narrow AI is already widespread and integrated into our everyday life. At the present time it is a very successful realization of artificial intelligence. With a focus on performing specific tasks, Narrow AI has made numerous breakthroughs over the past decade and will be continually redistributed in a wide variety of applications \cite{builtin_what_2021}.
+
+\paragraph{Strong AI}It is characterized by a general intelligence and can, similar to a human, apply this intelligence to solve a variety of different problems.
+It is constantly evolving and learning from the past. With the ability to adapt. With strong AI, machines can actually think and carry out tasks on their own. They can process and make independent decisions. Therefore strong AI has a complex algorithm that helps it act in different situations \cite{magazine_strong_2019}.
+
+\section{Scrum}
+\label{ch:scrum_theory}
+While the approach for traditional development methods is linear, agile methods follow an iterative process. The projects are divided into sprints of a short period of time, usually one to four weeks, where the team works on an increment of the project.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=\textwidth]{pictures/scrum_cycle.jpg}
+    \caption{An overview of the scrum framework \cite{scrum_overview_image}.}
+\label{fig:scrum_cycle}
+\end{figure}
+
+Scrum is an agile method where a team of a product owner, a scrum master, and developers works together on a project \cite{what_is_scrum}. Figure \ref{fig:scrum_cycle} above illustrates an overview of the scrum framework. In scrum, the developers work in sprints to consistently deliver an increment to the product owners by the end of each sprint. The project is divided into tasks that are ordered by priority in a product backlog. Each sprint is initiated by a sprint planning phase where the product backlog is organized by reordering the tasks and adding or removing tasks if necessary. The developers then selects tasks from the product backlog to get done before the end of the sprint. During a sprint the product backlog may be refined. A sprint review takes place at the end of a sprint where the developers presents the results of their work to key stakeholders and get feedback. Lastly, the scrum team have a discussion in a sprint retrospective event about how the sprint went and what can be improved for the sprint. This process is repeated until the project is done.
+
+\section{Web scraper}
+
+
+
+
+
