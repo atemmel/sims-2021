@@ -1,14 +1,25 @@
+<app-knowit-background></app-knowit-background>
+
 <div class="container">
-  <h2> Chatbot </h2>
-  <div class="chat-window card shadow-sm p-2">
+  <div class="card shadow-lg p-2">
+    <div class="card-header bg-white mb-2">
+      <h5 class="float-left">Chatbot</h5>
+      <button type="button" class="close mx-auto p-0" aria-label="Close" (click)="closeChatbotWindow()">
+        <span aria-hidden="true" class="float-right">&times;</span>
+      </button>
+    </div>
+    <div class="chat-window mb-2">
       <app-messages></app-messages>
-  </div>
+    </div>
+    <div class="bottom rounded">
+      <div class="border-top"> </div>
+      <input id="message" type="text" placeholder="{{this.placeholderText}}"
+             (keydown.enter)="sendMessage(input)" class="d-inline-block p-1" #input>
 
-  <div class="bottom bg-primary">
-    <input id="message" type="text" placeholder="Type something"
-    (keydown.enter)="sendMessage(input)" class="w-75 d-inline-block p-1" #input>
-
-    <button type="button" class="btn btn-primary w-25 d-inline-block p-1"
-    (click)="sendMessage(input)">send</button>
+      <img src="../assets/icons/sendmessage.png" class="send-btn d-inline-block p-1"
+              (click)="sendMessage(input)">
+    </div>
   </div>
 </div>
+
+<button type="button" class="chatbot-button" (click)="showChatbotWindow()"></button>

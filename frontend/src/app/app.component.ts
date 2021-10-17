@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 export class AppComponent implements OnInit {
   title = 'chatbot';
+  placeholderText = "";
 
   constructor(private webSocketService: WebSocketService) {}
 
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
     this.webSocketService.listen('event').subscribe((data) => {
       this.scrollDown();
     });
+    this.placeholderText = this.createPlaceholderText();
   }
 
   // Called when the user clicks on the send button in app.component.html.
@@ -43,4 +45,26 @@ export class AppComponent implements OnInit {
       chatWindowElement[0].scrollTop = chatWindowElement[0].scrollHeight;
     });
   }
+
+  createPlaceholderText() {
+    let prospects = ["IoT", "Apps", "UX", "AI"];
+    return "Try asking for solutions using " + prospects[Math.floor(Math.random() * prospects.length)];
+  }
+
+  showChatbotWindow() {
+    let chatWindowElement = Array.from(document.getElementsByClassName("container") as HTMLCollectionOf<HTMLElement>);
+    let chatButtonElement = Array.from(document.getElementsByClassName("chatbot-button") as HTMLCollectionOf<HTMLElement>);
+
+    chatWindowElement[0].style.display = "block";
+    chatButtonElement[0].style.display = "none";
+  }
+
+  closeChatbotWindow() {
+    let chatWindowElement = Array.from(document.getElementsByClassName("container") as HTMLCollectionOf<HTMLElement>);
+    let chatButtonElement = Array.from(document.getElementsByClassName("chatbot-button") as HTMLCollectionOf<HTMLElement>);
+
+    chatWindowElement[0].style.display = "none";
+    chatButtonElement[0].style.display = "block";
+  }
+
 }
