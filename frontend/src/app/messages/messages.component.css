@@ -23,6 +23,7 @@ h2 {
   background-color: #efefef;
   display: inline-block;
   margin-right: 30px;
+  max-width: 90%;
 }
 
 .chat-bubble-customer {
