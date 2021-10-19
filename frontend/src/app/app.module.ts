@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ArticleMessageComponent } from './article-message/article-message.component';
 import { OfficeMessageComponent } from './office-message/office-message.component';
 import { KnowitBackgroundComponent } from './knowit-background/knowit-background.component';
+import { AttentionBubbleComponent } from './attention-bubble/attention-bubble.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { KnowitBackgroundComponent } from './knowit-background/knowit-background
     ArticleMessageComponent,
     OfficeMessageComponent,
     KnowitBackgroundComponent,
+    AttentionBubbleComponent,
   ],
   imports: [
     BrowserModule,
