@@ -11,9 +11,10 @@ class BackendConnection:
     clients_session = {}
     clients_lock = Lock()
     timeout_callback = None
+    keep_looking_for_timeouts = True
 
     def look_for_timeouts(self):
-        while True:
+        while self.keep_looking_for_timeouts:
             self.clients_lock.acquire()
             keys = list(self.clients_session.keys())
             self.clients_lock.release()
@@ -88,7 +89,10 @@ class BackendConnection:
         return session_id
 
     def clean_up_all_sessions(self):
-        for session in self.clients_session.values():
+        self.keep_looking_for_timeouts = False
+        if self.clients_lock.locked():
+            self.clients_lock.release()
+        for session in list(self.clients_session.values()):
             self.delete_session(session)
 
     def create_session_succeeded(self, response):
