@@ -69,7 +69,10 @@ export class AppComponent implements OnInit {
     let chatButtonElement = Array.from(document.getElementsByClassName("chatbot-button") as HTMLCollectionOf<HTMLElement>);
     let attentionBubble = Array.from(document.getElementsByClassName("attention-bubble") as HTMLCollectionOf<HTMLElement>);
 
-    chatWindowElement[0].style.display = "block";
+	//chatWindowElement[0].style.display = "block";
+	chatWindowElement[0].style.height = "auto";
+	chatWindowElement[0].style.maxHeight = "600px";
+	chatWindowElement[0].style.width = "400px";
     chatButtonElement[0].style.display = "none";
     attentionBubble[0].style.display = "none";
 
@@ -81,7 +84,10 @@ export class AppComponent implements OnInit {
     let chatWindowElement = Array.from(document.getElementsByClassName("container") as HTMLCollectionOf<HTMLElement>);
     let chatButtonElement = Array.from(document.getElementsByClassName("chatbot-button") as HTMLCollectionOf<HTMLElement>);
 
-    chatWindowElement[0].style.display = "none";
+	//chatWindowElement[0].style.display = "none";
+	chatWindowElement[0].style.height = "0";
+	chatWindowElement[0].style.width = "0";
+	chatWindowElement[0].style.maxHeight = "0";
     chatButtonElement[0].style.display = "block";
   }
 }

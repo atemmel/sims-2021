@@ -3,11 +3,15 @@ h1 {
 }
 
 .container {
-  width: 400px;
+  width: 0;;
   position: fixed;
   right: 15px;
   bottom: 15px;
-  display: none;
+  /*display: none;*/
+  height: 0;
+  max-height: 0px;;
+  overflow: hidden;
+  transition: max-height 0.3s, width 0.2s
 }
 
 .attention-bubble {
