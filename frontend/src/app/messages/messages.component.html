@@ -4,7 +4,7 @@
     <!-- Checks if the message is from the customer -->
     <div *ngIf="message.constructor.name === 'CustomerMessage'">
       <div class="right">
-        <div class="chat-bubble p-2 mb-2 rounded bg-primary text-white right float-right">{{message.text}}</div>
+        <div class="chat-bubble-customer p-2 mb-2 rounded text-white right float-right">{{message.text}}</div>
       </div>
     </div>
 
@@ -12,7 +12,13 @@
     <div *ngIf="message.constructor.name === 'BotMessage'">
       <div *ngFor="let botMessageContents of message.contents">
 
-        <div class="chat-bubble p-2 mb-2 rounded">{{botMessageContents.text}}</div>
+        <div *ngIf="botMessageContents.italic" class="chat-bubble p-2 mb-2 rounded">
+			<i>{{botMessageContents.text}}</i>
+		</div>
+
+        <div *ngIf="!botMessageContents.italic" class="chat-bubble p-2 mb-2 rounded">
+			{{botMessageContents.text}}
+		</div>
 
         <div *ngIf="instanceOfArticle(botMessageContents.additional)">
           <app-article-message [botMessageContents]=botMessageContents></app-article-message>

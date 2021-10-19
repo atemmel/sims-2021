@@ -1,7 +1,8 @@
 <div class="chat-bubble p-2 mb-2 rounded">
-  <div *ngFor="let article of botMessageContents.additional">
-    {{article.title}}
-    <a [attr.href]="article.url" target="_blank">{{article.url}}</a>
-    <br/><br/>
+  <div *ngFor="let article of botMessageContents.additional; let i = index">
+      <a [attr.href]="article.url" target="_blank">{{article.title}}</a>
+    <div *ngIf=" i < botMessageContents.additional.length - 1">
+      <br/>
+    </div>
   </div>
 </div>

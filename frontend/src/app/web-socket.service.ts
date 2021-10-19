@@ -26,10 +26,19 @@ import { Article } from './article';
         this.socket.on(eventName, (data: any) => {
 
           let message = new BotMessage();
-
           for (let response of data.response) {
             message.contents.push(buildContents(response));
           }
+
+		  // A farmers solution, this is
+		  if(message.contents[message.contents.length - 1].text
+			 === "Hi, I can help you find articles, office information and more. \n") {
+			message.contents.push({
+				"text": "For example: \"Show me articles related to healthcare\"",
+				"additional": null,
+				"italic": true,
+			});
+		  }
 
           this.messageService.addBotMessage(message);
           subscriber.next(data);
@@ -42,7 +51,6 @@ import { Article } from './article';
     emit(eventName: string, data: any) {
       var message = new CustomerMessage();
       message.text = data;
-
       this.messageService.addCustomerMessage(message);
       this.socket.emit(eventName, data);
     }

@@ -9,6 +9,7 @@ export class BotMessage {
 export class BotMessageContents {
   text: string;
   additional: any;
+  italic: boolean;
 
   // TODO: below doesn't work with ArticleMessageComponent
   // and officeMessageComponent, get smarter and fix it

@@ -4,24 +4,89 @@ h1 {
 
 .container {
   width: 400px;
-  margin-top: 50px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
 }
 
-.card {
+.attention-bubble {
+  position: fixed;
+  display: none;
+  right: 20px;
+  bottom: 100px;
+}
+
+.chat-window {
   height: 400px;
   overflow-y: auto;
   overflow-x: none;
+  padding: 10px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .bottom {
   position: relative;
 }
 
-input, button {
+.bottom input {
+  margin: 10px;
+  width: 80%;
+  border: none;
+}
+
+.bottom input:focus {
+  outline: none;
+}
+
+.bottom input, .bottom button {
   display: inline-block;
 }
 
-button {
-  position: absolute;
-  top: 0;
+.container .send-btn {
+  height: 30px;
+}
+
+.container .send-btn:hover {
+  cursor: pointer;
+}
+
+.chatbot-button {
+  width: 80px;
+  height: 80px;
+  background: none;
+  background-image: url("../assets/icons/chaticon.png");
+  background-size: 80px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+.chatbot-button:hover {
+  cursor: pointer;
+}
+
+::placeholder {
+  font-style: italic;
 }

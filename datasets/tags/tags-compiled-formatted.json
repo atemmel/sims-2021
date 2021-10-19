@@ -1,0 +1,943 @@
+[
+    {
+        "name": "Digitalization",
+        "synonyms": [
+            "digital development"
+        ],
+        "implies": [
+            "digital transformation"
+        ]
+    },
+    {
+        "name": "security process",
+        "synonyms": [
+            "Compliance"
+        ],
+        "implies": [
+            "security",
+            "security requirements",
+            "decentralized security",
+            "resilient"
+        ]
+    },
+    {
+        "name": "roaming",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "IT infrastructure",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "voting",
+        "synonyms": [
+            "vote"
+        ],
+        "implies": [
+            "government services"
+        ]
+    },
+    {
+        "name": "ID service",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "automatically identify people",
+        "synonyms": [
+            "identify people"
+        ],
+        "implies": []
+    },
+    {
+        "name": "sustainability",
+        "synonyms": [
+            "sustainable"
+        ],
+        "implies": []
+    },
+    {
+        "name": "electronic documents",
+        "synonyms": [
+            "electronic document",
+            "electronic documents"
+        ],
+        "implies": [
+            "sustainability"
+        ]
+    },
+    {
+        "name": "sewing machine",
+        "synonyms": [
+            "sewing",
+            "stitching"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Internet connection",
+        "synonyms": [
+            "Internet"
+        ],
+        "implies": []
+    },
+    {
+        "name": "outdoor products",
+        "synonyms": [
+            "outdoor"
+        ],
+        "implies": []
+    },
+    {
+        "name": "User Experience",
+        "synonyms": [
+            "UX",
+            "Ease of use"
+        ],
+        "implies": []
+    },
+    {
+        "name": "IoT",
+        "synonyms": [
+            "Internet-of-Things",
+            "Internet of Things"
+        ],
+        "implies": []
+    },
+    {
+        "name": "GPS tracking",
+        "synonyms": [
+            "GPS",
+            "tracking",
+            "tracker"
+        ],
+        "implies": []
+    },
+    {
+        "name": "lawnmower",
+        "synonyms": [],
+        "implies": [
+            "Robotics"
+        ]
+    },
+    {
+        "name": "Automobile",
+        "synonyms": [
+            "Car",
+            "Cars"
+        ],
+        "implies": [
+            "Vehicle"
+        ]
+    },
+    {
+        "name": "Vehicle",
+        "synonyms": "Vehicles",
+        "implies": []
+    },
+    {
+        "name": "Google Analytics",
+        "synonyms": [],
+        "implies": [
+            "Google",
+            "Analytics"
+        ]
+    },
+    {
+        "name": "Adobe Analytics",
+        "synonyms": [],
+        "implies": [
+            "Adobe",
+            "Analytics"
+        ]
+    },
+    {
+        "name": "Impact Mapping",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Phone",
+        "synonyms": [
+            "Telephone",
+            "Mobile"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Episerver",
+        "synonyms": [],
+        "implies": [
+            "Backend"
+        ]
+    },
+    {
+        "name": "Website",
+        "synonyms": [
+            "Site",
+            "Websites"
+        ],
+        "implies": [
+            "Frontend"
+        ]
+    },
+    {
+        "name": "Backend",
+        "synonyms": [
+            "Server",
+            "back end",
+            "back-end"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Frontend",
+        "synonyms": [
+            "front end",
+            "front-end"
+        ],
+        "implies": [
+            "UX"
+        ]
+    },
+    {
+        "name": "Image",
+        "synonyms": [
+            "Image",
+            "Images",
+            "Picture",
+            "Pictures"
+        ],
+        "implies": [
+            "Media"
+        ]
+    },
+    {
+        "name": "App",
+        "synonyms": [
+            "Application"
+        ],
+        "implies": [
+            "Frontend"
+        ]
+    },
+    {
+        "name": "Photography",
+        "synonyms": [
+            "Photo"
+        ],
+        "implies": [
+            "Image"
+        ]
+    },
+    {
+        "name": "Television",
+        "synonyms": [
+            "TV",
+            "Video"
+        ],
+        "implies": [
+            "Media"
+        ]
+    },
+    {
+        "name": "Media",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "IT",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Intranet",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Analytics",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Social media",
+        "synonyms": [
+            "Socials",
+            "Facebook",
+            "Instagram"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Interaction design",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Health",
+        "synonyms": [
+            "Healthcare"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Mental health",
+        "synonyms": [],
+        "implies": [
+            "Health"
+        ]
+    },
+    {
+        "name": "AI",
+        "synonyms": [
+            "Artificial Intelligence"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Education",
+        "synonyms": [
+            "Learning",
+            "Educations"
+        ],
+        "implies": []
+    },
+    {
+        "name": "User Interface",
+        "synonyms": [
+            "UI"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Machine Learning",
+        "synonyms": [
+            "ML"
+        ],
+        "implies": [
+            "AI"
+        ]
+    },
+    {
+        "name": "CMS",
+        "synonyms": [
+            "Content Management System"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Cloud",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Azure",
+        "synonyms": [
+            "Microsoft Azure"
+        ],
+        "implies": [
+            "Cloud"
+        ]
+    },
+    {
+        "name": "Web service",
+        "synonyms": [
+            "Web services"
+        ],
+        "implies": []
+    },
+    {
+        "name": "E-commerce",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "B2B",
+        "synonyms": [
+            "Business-to-Business"
+        ],
+        "implies": [
+            "E-commerce"
+        ]
+    },
+    {
+        "name": "B2C",
+        "synonyms": [
+            "Business-to-Customer"
+        ],
+        "implies": [
+            "E-commerce"
+        ]
+    },
+    {
+        "name": "E-service",
+        "synonyms": [
+            "E-services"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Google Cloud",
+        "synonyms": [
+            "GCP"
+        ],
+        "implies": [
+            "Cloud"
+        ]
+    },
+    {
+        "name": "Pattern",
+        "synonyms": [
+            "Patterns"
+        ],
+        "implies": [
+            "Machine Learning"
+        ]
+    },
+    {
+        "name": "Chatbot",
+        "synonyms": [
+            "Chatbots",
+            "Bot"
+        ],
+        "implies": [
+            "AI"
+        ]
+    },
+    {
+        "name": "Award",
+        "synonyms": [
+            "Awards"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Automation",
+        "synonyms": [
+            "Automate",
+            "Automating"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Digitization",
+        "synonyms": [],
+        "implies": [
+            "Digitalization"
+        ]
+    },
+    {
+        "name": "Modernise",
+        "synonyms": [
+            "Modernize"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Business development",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Wood industry",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Digitalization",
+        "synonyms": [
+            "Digital transformatiln"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Digital transformation",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Mobile first",
+        "synonyms": [],
+        "implies": [
+            "UX"
+        ]
+    },
+    {
+        "name": "Responsive design",
+        "synonyms": [],
+        "implies": [
+            "UX"
+        ]
+    },
+    {
+        "name": "Customer relationship management",
+        "synonyms": [
+            "CRM"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Tablet",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Smartphone",
+        "synonyms": [],
+        "implies": [
+            "Phone"
+        ]
+    },
+    {
+        "name": "Booking system",
+        "synonyms": [
+            "Appointment booking system",
+            "System of booking"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Academy",
+        "synonyms": [],
+        "implies": [
+            "Education"
+        ]
+    },
+    {
+        "name": "Science",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Quality assurance",
+        "synonyms": [
+            "QA"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Face recognition",
+        "synonyms": [],
+        "implies": [
+            "Machine learning"
+        ]
+    },
+    {
+        "name": "Public Procurement",
+        "synonyms": [
+            "Procurements"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Energy system",
+        "synonyms": [],
+        "implies": [
+            "Energy"
+        ]
+    },
+    {
+        "name": "Agile development",
+        "synonyms": [
+            "Agile"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Narrowband Internet of Things",
+        "synonyms": [
+            "NB-IoT"
+        ],
+        "implies": [
+            "IoT"
+        ]
+    },
+    {
+        "name": "Data analytics",
+        "synonyms": [
+            "Big data"
+        ],
+        "implies": [
+            "analytics"
+        ]
+    },
+    {
+        "name": "e-commerce",
+        "synonyms": [
+            "electronic-commerce"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Management control",
+        "synonyms": [
+            "Control management"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Portfolio management",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Business support",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Support center",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Dynamic webiste",
+        "synonyms": [],
+        "implies": [
+            "Website"
+        ]
+    },
+    {
+        "name": "Digital agenda",
+        "synonyms": [],
+        "implies": [
+            "Digitization",
+            "Digitalization"
+        ]
+    },
+    {
+        "name": "Project management",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Information security",
+        "synonyms": [
+            "Cyber security",
+            "Cyber threat"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Robotics",
+        "synonyms": [
+            "Robot",
+            "Robots"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Platform",
+        "synonyms": [
+            "Digital platform"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Graphic Design",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Microservices",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Consumer rights",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Mobile carrier",
+        "synonyms": [
+            "Mobile",
+            "carrier"
+        ],
+        "implies": [
+            "Phone"
+        ]
+    },
+    {
+        "name": "Self service",
+        "synonyms": [],
+        "implies": [
+            "Customer service"
+        ]
+    },
+    {
+        "name": "iOS",
+        "synonyms": [
+            "Apple"
+        ],
+        "implies": [
+            "Operating System"
+        ]
+    },
+    {
+        "name": "Android",
+        "synonyms": [
+            "Samsung",
+            "Lg",
+            "OnePlus",
+            "Xiaomi",
+            "Google Pixel"
+        ],
+        "implies": [
+            "Operating System"
+        ]
+    },
+    {
+        "name": "Operating System",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Application",
+        "synonyms": [
+            "App",
+            "Mobile app"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Sitecore",
+        "synonyms": [],
+        "implies": [
+            "Platform"
+        ]
+    },
+    {
+        "name": "Music",
+        "synonyms": [
+            "Singing",
+            "Instrument"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Typography",
+        "synonyms": [
+            "Designs",
+            "Logo",
+            "Text"
+        ],
+        "implies": [
+            "Frontend"
+        ]
+    },
+    {
+        "name": "EPiserver",
+        "synonyms": [
+            "Website",
+            "Websites"
+        ],
+        "implies": [
+            "Backend"
+        ]
+    },
+    {
+        "name": "Property",
+        "synonyms": [
+            "Appartment",
+            "Real estate"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Advertising",
+        "synonyms": [
+            "Ad",
+            "Ads"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Automatization",
+        "synonyms": [
+            "Workflow"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Media",
+        "synonyms": [
+            "Tv",
+            "Television"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Big data",
+        "synonyms": [
+            "Analyzing",
+            "Analyze"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Sharepoint",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Web portal",
+        "synonyms": [
+            "site",
+            "websites"
+        ],
+        "implies": [
+            "Frontend"
+        ]
+    },
+    {
+        "name": "Farmer",
+        "synonyms": [
+            "Farmers",
+            "Agriculture"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Digital marketing",
+        "synonyms": [
+            "Marketing"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Truck",
+        "synonyms": [
+            "Trucks"
+        ],
+        "implies": [
+            "Vehicle"
+        ]
+    },
+    {
+        "name": "Smart searching",
+        "synonyms": [
+            "Search",
+            "Searching"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Unit Testing",
+        "synonyms": [
+            "Testing",
+            "Test"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Digital marketing",
+        "synonyms": [
+            "Marketing"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Platform migration",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Digital marketing",
+        "synonyms": [
+            "Marketing"
+        ],
+        "implies": []
+    },
+    {
+        "name": "The judiciary",
+        "synonyms": [
+            "Law",
+            "Goverment",
+            "Authority"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Real time data",
+        "synonyms": [
+            "Real-time data",
+            "RTD"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Data visualization",
+        "synonyms": [
+            "Visualization"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Drupal",
+        "synonyms": [],
+        "implies": []
+    },
+    {
+        "name": "Responsive design",
+        "synonyms": [
+            "Responsive",
+            "Wcag"
+        ],
+        "implies": [
+            "Frontend"
+        ]
+    },
+    {
+        "name": "Electricity",
+        "synonyms": [
+            "Electricity provider"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Tools",
+        "synonyms": [
+            "Equipment"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Adobe Experiance Manager",
+        "synonyms": [
+            "Adobe"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Content management system",
+        "synonyms": [
+            "CMS"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Transport",
+        "synonyms": [],
+        "implies": [
+            "Vehicle"
+        ]
+    },
+    {
+        "name": "Google analytics",
+        "synonyms": [
+            "Analytics",
+            "Analyze",
+            "Analyzing"
+        ],
+        "implies": []
+    },
+    {
+        "name": "Google data studio",
+        "synonyms": [],
+        "implies": []
+    }
+]

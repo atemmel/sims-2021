@@ -10,7 +10,7 @@ import { CustomerMessage } from './customerMessage';
 export class MessageService {
 
   messages: any[] = [];
-  
+
   addBotMessage(message: BotMessage) {
     this.messages.push(message);
   }

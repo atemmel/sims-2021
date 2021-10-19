@@ -3,7 +3,7 @@ import csv
 import json
 tags = None
 
-with open("../datasets/tags/tags-p1-2.json", "r", encoding="UTF-8") as file:
+with open("../datasets/tags/tags-compiled-formatted.json", "r", encoding="UTF-8") as file:
    tags = json.loads(file.read())
 
 ENTITY_NAME = "ArticleTag"

@@ -1,3 +1,8 @@
 .idea/
-datasets/cinode-data/
+datasets/cinode-data/BetterCompanyUser.json
+datasets/cinode-data/BetterCompanyUserSkills.json
+datasets/cinode-data/Company.json
+datasets/cinode-data/CompanyAddressUsers.json
+datasets/cinode-data/CompanyUser.json
+datasets/cinode-data/CompanyUserSkills.json
 scrapers/allabolag/chromedriver.exe

@@ -11,24 +11,17 @@ import { Office } from '../office';
 })
 export class MessagesComponent implements OnInit {
 
-  // Make the enum Who available for MessageComponent
-  // used in message.component.html
-
   constructor(public messageService: MessageService) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   instanceOfArticle(additional: any) {
     if (!Array.isArray(additional)) return false;
-    console.log(additional[0] instanceof Article);
     return additional[0] instanceof Article;
   }
 
   instanceOfOffice(additional: any) {
     if (!Array.isArray(additional)) return false;
-    console.log(additional[0] instanceof Office);
     return additional[0] instanceof Office;
   }
 }

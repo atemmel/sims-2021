@@ -1,3 +1,4 @@
+import re
 import csv
 import json
 
@@ -9,6 +10,14 @@ def companies_to_csv(input_name, output_name):
         companies_json = json.loads(file.read())
         writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_ALL)
         for company in companies_json:
-            writer.writerow(["CompanyName", company["name"]])
+            csv_row = ["CompanyName", company["name"]]
+            company_split = company["name"].split()
+            if "AB" in company_split:
+                csv_row.append(re.sub(r"\bAB\b", "", company["name"]).strip())
+            elif "Aktiebolag" in company_split:
+                csv_row.append(re.sub(r"\bAktiebolag\b", "", company["name"]).strip())
+            elif "Aktiebolaget" in company_split:
+                csv_row.append(re.sub(r"\bAktiebolaget\b", "", company["name"]).strip())
+            writer.writerow(csv_row)
 
 companies_to_csv("../datasets/companies.json", "companies.csv")
