@@ -144,11 +144,6 @@ def handle_entity_swedish_city(entity,response):
             "offices": closest_offices
         }]
     
-    
-        
-
-
-
 def lookup_skill(skill):
     global skill_amounts
     for i, obj in enumerate(skill_amounts):
@@ -193,21 +188,64 @@ def handle_entity_skill(entity, response):
 def generate_response(response, articles):
     entities = response["output"]["entities"]
     intents = response["output"]["intents"]
+
+    relevant_intents = [
+        {
+            "intent_name": "NumberOfOffices",
+            "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(offices)))}]
+        },
+        {
+            "intent_name": "NumberOfEmployees",
+            "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(number_of_employees)))}]
+        }
+
+    ]
+
+    # Add new article-related entities here
+    entities_relevant_to_articles = [
+        {
+            "backend_name": "ArticleTag",
+            "dataset_name": "tags"
+        },
+        {
+            "backend_name": "CompanyField",
+            "dataset_name": "company-field"
+        }
+        
+    ]
+
+    entities_not_relevant_to_articles = [
+        {
+            "backend_name": "CompanyCity",
+            "corresponding_function": handle_entity_city
+        },
+        {
+            "backend_name": "Skill",
+            "corresponding_function": handle_entity_skill
+        },
+        {
+            "backend_name": "CompanyInArticle",
+            "corresponding_function": find_article_with_company_name
+        },
+        {
+            "backend_name": "SwedishCities",
+            "corresponding_function": handle_entity_swedish_city
+        }
+    ]
+
+    num_intents = len(intents)
+    num_unique_entities = len(set([entity["entity"] for entity in entities]))
+
+    # Incomprehensible
+    if num_intents >= 1 and num_unique_entities >= 2 or num_unique_entities >= 3:
+        return [{
+            "text": "I didn't understand. You can try rephrasing.",
+        }]
+
     print(response)
     if len(intents) > 0:
         intent = intents[0]["intent"]
         print(intent)
-        relevant_intents = [
-            {
-                "intent_name": "NumberOfOffices",
-                "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(offices)))}]
-            },
-            {
-                "intent_name": "NumberOfEmployees",
-                "corresponding_function" : lambda response: [{"text": response["output"]["generic"][0]["text"].replace("{number}", str(len(number_of_employees)))}]
-            }
-
-        ]
         for relevant_intent in relevant_intents:
             if relevant_intent["intent_name"] == intent:
                 return relevant_intent["corresponding_function"](response)
@@ -215,37 +253,6 @@ def generate_response(response, articles):
     
     # If the response has entities
     if len(entities) > 0:
-
-        # Add new article-related entities here
-        entities_relevant_to_articles = [
-            {
-                "backend_name": "ArticleTag",
-                "dataset_name": "tags"
-            },
-            {
-                "backend_name": "CompanyField",
-                "dataset_name": "company-field"
-            }
-            
-        ]
-        entities_not_relevant_to_articles = [
-            {
-                "backend_name": "CompanyCity",
-                "corresponding_function": handle_entity_city
-            },
-            {
-                "backend_name": "Skill",
-                "corresponding_function": handle_entity_skill
-            },
-            {
-                "backend_name": "CompanyInArticle",
-                "corresponding_function": find_article_with_company_name
-            },
-            {
-                "backend_name": "SwedishCities",
-                "corresponding_function": handle_entity_swedish_city
-            }
-        ]
 
         for entity in entities:
             entity_name = entity["entity"]
