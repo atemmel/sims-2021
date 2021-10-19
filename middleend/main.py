@@ -5,6 +5,8 @@ import eventlet
 from ibm_watson import ApiException
 import json
 import socketio
+from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
 from time import sleep
 
 from backend_connection import BackendConnection
@@ -12,7 +14,7 @@ import common
 
 sio = socketio.Server(cors_allowed_origins='*')
 app = socketio.WSGIApp(sio)
-articles, offices = {}, {}
+articles, offices,number_of_employees, office_coordinates= {}, {}, {}, {}
 skill_amounts = []
 
 backend_connection = None
@@ -48,6 +50,9 @@ def extract_message_from_response(response):
 def load_offices(config):
     return common.read_json_to_dict(config["office_location"])
 
+def load_office_coordinates(config):
+    return common.read_json_to_dict(config["office_coordinates_location"])
+
 def find_offices(offices,city):
     foundOffices= []
     for office in offices:
@@ -55,6 +60,21 @@ def find_offices(offices,city):
             foundOffices.append(office)
     print(foundOffices)
     return foundOffices
+
+def find_closest_office(location,office_coordinates):
+    user_city = location.latitude, location.longitude
+    first_city = office_coordinates[0]["y"]+","+office_coordinates[0]["x"]
+    dist = geodesic(user_city, first_city).km
+    closest_city = office_coordinates[0]["city"]
+    
+    for i in office_coordinates:
+        c = i["y"]+","+i["x"]
+        new_distance = geodesic(user_city, c).km
+        if new_distance < dist:
+            dist = new_distance
+            closest_city= i["city"]
+
+    return closest_city
 
 def load_employees(config):
     return common.read_json_to_dict(config["company_users"])
@@ -104,6 +124,30 @@ def format_office(office):
             "city": office["post-adress"]["city"]
         }
     }
+
+def handle_entity_swedish_city(entity,response):
+    global office_coordinates,offices
+    geolocator = Nominatim(user_agent="Your_Name") 
+    location = geolocator.geocode(entity["value"])
+    if location == None:
+        print ("Could not find location", entity["value"])
+        return [{
+            "text":"Could not find location " + entity["value"]+"."
+        }]
+
+
+    closest_office = find_closest_office(location, office_coordinates)
+    print(closest_office)
+    closest_offices = [format_office(office) for office in offices if office["visit-adress"]["city"] == closest_office]
+    return [{
+            "text": response["output"]["generic"][0]["text"],
+            "offices": closest_offices
+        }]
+    
+    
+        
+
+
 
 def lookup_skill(skill):
     global skill_amounts
@@ -182,6 +226,7 @@ def generate_response(response, articles):
                 "backend_name": "CompanyField",
                 "dataset_name": "company-field"
             }
+            
         ]
         entities_not_relevant_to_articles = [
             {
@@ -195,6 +240,10 @@ def generate_response(response, articles):
             {
                 "backend_name": "CompanyInArticle",
                 "corresponding_function": find_article_with_company_name
+            },
+            {
+                "backend_name": "SwedishCities",
+                "corresponding_function": handle_entity_swedish_city
             }
         ]
 
@@ -323,7 +372,7 @@ def on_timeout(sid):
     print(response)
 
 def main():
-    global articles, backend_connection, offices, skill_amounts, number_of_employees
+    global articles, backend_connection, offices, skill_amounts, number_of_employees, office_coordinates
 
     parser = argparse.ArgumentParser(description="Run middleend")
     parser.add_argument("--cli", action="store_true", help="Run in cli-mode")
@@ -332,6 +381,7 @@ def main():
     config = common.read_json_to_dict("./config.json")
     articles = load_articles(config)
     offices = load_offices(config)
+    office_coordinates = load_office_coordinates(config)
     skill_amounts = load_people_with_skills(config)
     number_of_employees = load_employees(config)
 
