@@ -12,6 +12,8 @@ import { MessagesComponent } from './messages/messages.component';
 export class AppComponent implements OnInit {
   title = 'chatbot';
   placeholderText = "";
+  showAttentionBubbleTimeout: any;
+  closeAttentionBubbleTimeout: any;
 
   constructor(private webSocketService: WebSocketService) {}
 
@@ -20,6 +22,17 @@ export class AppComponent implements OnInit {
       this.scrollDown();
     });
     this.placeholderText = this.createPlaceholderText();
+  }
+
+  ngAfterViewInit() {
+    let attentionBubble = Array.from(document.getElementsByClassName("attention-bubble") as HTMLCollectionOf<HTMLElement>);
+
+    this.showAttentionBubbleTimeout = setTimeout(() => {
+      attentionBubble[0].style.display = "block";
+      this.closeAttentionBubbleTimeout = setTimeout(()=> {
+        attentionBubble[0].style.display = "none";
+      }, 5000);
+    }, 3000);
   }
 
   // Called when the user clicks on the send button in app.component.html.
@@ -54,9 +67,14 @@ export class AppComponent implements OnInit {
   showChatbotWindow() {
     let chatWindowElement = Array.from(document.getElementsByClassName("container") as HTMLCollectionOf<HTMLElement>);
     let chatButtonElement = Array.from(document.getElementsByClassName("chatbot-button") as HTMLCollectionOf<HTMLElement>);
+    let attentionBubble = Array.from(document.getElementsByClassName("attention-bubble") as HTMLCollectionOf<HTMLElement>);
 
     chatWindowElement[0].style.display = "block";
     chatButtonElement[0].style.display = "none";
+    attentionBubble[0].style.display = "none";
+
+    clearTimeout(this.showAttentionBubbleTimeout);
+    clearTimeout(this.closeAttentionBubbleTimeout);
   }
 
   closeChatbotWindow() {
@@ -66,5 +84,4 @@ export class AppComponent implements OnInit {
     chatWindowElement[0].style.display = "none";
     chatButtonElement[0].style.display = "block";
   }
-
 }
