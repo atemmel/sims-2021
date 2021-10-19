@@ -294,7 +294,7 @@ def message(sid, data):
         session_id = backend_connection.get_session(sid)
         response = [
             {
-                "text": "Alright, I'm back now. Need me to find interesting cases again?",
+                "text": "Alright, I'm back now. What kind of cases are you interested in?",
             }
         ]
         sio.emit('event', {'response': response}, room=sid)

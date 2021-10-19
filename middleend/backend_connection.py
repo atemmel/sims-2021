@@ -22,7 +22,7 @@ class BackendConnection:
                 self.clients_lock.acquire()
                 value = self.clients_session[key]
                 self.clients_lock.release()
-                if now - value["timestamp"] >= 60 * 3:
+                if now - value["timestamp"] >= 60 * 4:
                     self.timeout_callback(key)
                     self.disconnect_client(key)
             time.sleep(2)
