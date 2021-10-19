@@ -30,6 +30,16 @@ import { Article } from './article';
             message.contents.push(buildContents(response));
           }
 
+		  // A farmers solution, this is
+		  if(message.contents[message.contents.length - 1].text
+			 === "Hi, I can help you find articles, office information and more. \n") {
+			message.contents.push({
+				"text": "For example: \"Show me articles related to healthcare\"",
+				"additional": null,
+				"italic": true,
+			});
+		  }
+
           this.messageService.addBotMessage(message);
           subscriber.next(data);
         })

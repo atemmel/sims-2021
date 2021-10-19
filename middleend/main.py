@@ -25,7 +25,7 @@ def do_repl():
     while True:
         try:
             message = input(">> ")
-            response = backend_connection.send_message(message, session)
+            response = backend_connection.send_message(message, session, "cli")
             if not backend_connection.send_message_succeeded(response):
                 print("Could not send message:")
             print(json.dumps(generate_response(response, articles), indent=2))
@@ -268,11 +268,9 @@ def connect(sid, _):
     # Returns true/false, should perhaps be handled(?)
     backend_connection.connect_client(sid)
 
-    backend_connection.clients_lock.acquire()
-    session_id = backend_connection.clients_session[sid]
-    backend_connection.clients_lock.release()
+    session_id = backend_connection.get_session(sid)
 
-    response = backend_connection.send_message("", session_id)
+    response = backend_connection.send_message("", session_id, sid)
     if not backend_connection.send_message_succeeded(response):
         print("Could not send message:")
         print(json.dumps(response, indent=2))
@@ -289,10 +287,23 @@ def disconnect(sid):
 
 @sio.on('event')
 def message(sid, data):
-    session_id = backend_connection.get_session(sid)
+    try:
+        session_id = backend_connection.get_session(sid)
+    except KeyError:
+        backend_connection.connect_client(sid)
+        session_id = backend_connection.get_session(sid)
+        response = [
+            {
+                "text": "Alright, I'm back now. Need me to find interesting cases again?",
+            }
+        ]
+        sio.emit('event', {'response': response}, room=sid)
+        print(response)
+        return
 
-    response = backend_connection.send_message(data, session_id)
+    response = backend_connection.send_message(data, session_id, sid)
     print(response)
+
     if not backend_connection.send_message_succeeded(response):
         print("Could not send message:")
         print(json.dumps(response, indent=2))
@@ -301,6 +312,15 @@ def message(sid, data):
         sio.emit('event', {'response': response}, room=sid)
         print(response)
 
+def on_timeout(sid):
+    print(sid, "timed out")
+    response = [
+        {
+            "text": "You haven't spoken with me in a while, so I'll go back to sleep for the time being. Write me something cool to wake me up again!",
+        }
+    ]
+    sio.emit('event', {'response': response}, room=sid)
+    print(response)
 
 def main():
     global articles, backend_connection, offices, skill_amounts, number_of_employees
@@ -315,12 +335,12 @@ def main():
     skill_amounts = load_people_with_skills(config)
     number_of_employees = load_employees(config)
 
-
-    backend_connection = BackendConnection("./auth.json")
+    backend_connection = BackendConnection("./auth.json", on_timeout)
     try:
         if args.cli:
             do_repl()
         else:
+            eventlet.monkey_patch()
             eventlet.wsgi.server(eventlet.listen(('', config["port"])), app)
             # Cleanup
             sleep(1.0)
