@@ -236,12 +236,13 @@ def generate_response(response, articles):
     backend_names = [entity["backend_name"] for entity in entities_relevant_to_articles]
     num_article_relevant_entities = len([entity for entity in entities if entity["entity"] in backend_names])
     if num_article_relevant_entities == len(entities):
-        # Discrad intents if entities solely discusses articles
+        # Discard intents if entities solely discusses articles
         intents = []
 
     has_article_entities = num_article_relevant_entities > 0
     has_article_irrelevant_entities = len(entities) - num_article_relevant_entities > 0
     has_article_help_intent = "HelpWithArticles" in [intent["intent"] for intent in intents]
+    has_number_of_employees_intent = "NumberOfEmployees" in [intent["intent"] for intent in intents]
 
     if has_article_help_intent and has_article_entities and has_article_irrelevant_entities:
         entities = [entity for entity in entities if entity["entity"] in backend_names]
@@ -254,6 +255,9 @@ def generate_response(response, articles):
         return [{
             "text": "I didn't understand. You can try rephrasing.",
         }]
+
+    if has_number_of_employees_intent and len(intents) == 1 and num_unique_entities == 1 and entities[0]["entity"] == "Skill":
+        intents = []
 
     print(response)
     if len(intents) > 0:
